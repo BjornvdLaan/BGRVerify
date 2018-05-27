@@ -63,6 +63,23 @@ library BigNumber {
         r.bitlen = bitlen;
     }
 
+    function xor(instance a, instance b) internal returns(instance r) {
+        n = a.bitlen;
+        m = b.bitlen;
+
+        //if one is an empty string, use the convention from paper
+        if (n == 0) {
+            return b;
+        } else if (m == 0) {
+            return a;
+        } else if (n == m) {
+            res = a.val ^ b.val;
+            return _new(res, false, true);
+        } else {
+            //TODO: BREAK!!
+        }
+    }
+
     /** @dev prepare_add: Initially prepare bignum instances for addition operation; internally calls actual addition/subtraction, depending on inputs.
       *                   In order to do correct addition or subtraction we have to handle the sign.
       *                   This function discovers the sign of the result based on the inputs, and calls the correct operation.
