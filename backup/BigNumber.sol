@@ -64,8 +64,9 @@ library BigNumber {
     }
 
     function xor(instance a, instance b) internal returns(instance r) {
-        n = a.bitlen;
-        m = b.bitlen;
+        uint n = a.bitlen;
+        uint m = b.bitlen;
+        bytes memory res;
 
         //if one is an empty string, use the convention from paper
         if (n == 0) {
@@ -73,7 +74,13 @@ library BigNumber {
         } else if (m == 0) {
             return a;
         } else if (n == m) {
-            res = a.val ^ b.val;
+            bytes memory a_val = a.val;
+            bytes memory b_val = b.val;
+
+            for (uint i = 0; i < n; i++) {
+                res[i] = a.val[i] ^ b.val[i];
+            }
+
             return _new(res, false, true);
         } else {
             //TODO: BREAK!!

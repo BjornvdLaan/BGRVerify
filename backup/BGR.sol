@@ -4,17 +4,16 @@ import "./BigNumber.sol";
 
 contract BGR {
     using BigNumber for *;
-    using BGRUtils for *;
 
-    //simulation of PKI
-    public int e = 66576; //TODO check this number.
-    public string[] modulus = ["abc", "def"]; //TODO put keys here
+    //Simulation of PKI
+    uint e = 66576; //TODO check this number.
+    string[] modulus = ["abc", "def"]; //TODO put keys here
 
-    function verify(bytes x, bytes h, bytes[] r, bytes[] b) {
-        x_prev = x;
-        h_prev = h;
+    function verify(bytes x, bytes h, bytes32[] r, bytes32[] b) {
+        bytes memory x_prev = x;
+        bytes memory h_prev = h;
 
-        for (i = modulus.length; i > 0; i--) {
+        for (uint i = modulus.length; i > 0; i--) {
             //Line 2
             //X := split_inverse(signature.b[i], x_prev)
             //y := pi(X, publickeys[i])

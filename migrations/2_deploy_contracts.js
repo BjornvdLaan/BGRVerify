@@ -1,4 +1,4 @@
-const BGR = artifacts.require("./BGR.sol");
+const BGR = artifacts.require("./BGRSmall.sol");
 
 module.exports = function(deployer) {
     deployer.deploy(BGR);
