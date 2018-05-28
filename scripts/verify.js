@@ -45,7 +45,7 @@ function sendRequest(bgrcontract) {
                 const b_extra_enc = "0x" + "0".repeat(63) + ((b_neg === true) ? "1" : "0") + b_msb_enc;
                 const mod_extra_enc = "0x" + "0".repeat(63) + ((mod_neg === true) ? "1" : "0") + mod_msb_enc;
 
-                return bgr.modexp.call(a_val_enc, a_extra_enc, b_val_enc, b_extra_enc, mod_val_enc, mod_extra_enc, {
+                return bgr.verify.call(a_val_enc, a_extra_enc, b_val_enc, b_extra_enc, mod_val_enc, mod_extra_enc, {
                     from: requester,
                     gas: 1000000,
                     value: 0
@@ -80,6 +80,7 @@ function test(bgrcontract) {
                 })
                     .then(function (result) {
                         console.log(result);
+                        console.log(web3.utils.hexToBytes(result));
                         process.exit();
                     })
                     .catch(e => {

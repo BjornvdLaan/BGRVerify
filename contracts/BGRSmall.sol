@@ -3,26 +3,25 @@ pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
 
-    bytes32 x = bytes32(997553209795998839);
-    bytes32 h = bytes32(997553209795998839);
+    bytes32 x = bytes32(41513988299157049973613847631072792265114147516378221252311245718813854225273);
+    bytes32 h = bytes32(80301163518557209160327257243075188899345325040434022335849314277093177124118);
 
-    bool[] b = [true, false];
-    bytes2[] r = [bytes2(2), bytes2(2)];
+    bool[] b = [false];
+    bytes2[] r = [bytes2(29493)];
 
-    string[] messages = [
-    "MESSAGE 1",
-    "MESSAGE 2"
+
+string[] messages = [
+    "MESSAGE 0"
     ];
 
     //Simulation of PKI
-    uint e = 65537;
-    uint[] modulus = [
-        111407148525508025767718379751758291964614386688624532754672299329456855794899,
-        102283952970760354931552657672140997299422871062984001550601562917514908012187
+    uint256 e = 65537;
+    uint256[] modulus = [
+    102488116108293820529229285762625314778121049973643030703015180599557523220559
     ];
 
     //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
-    function verify() returns (bool) {
+    function verify() returns (bytes32) {
         bytes32 x_prev = x;
         bytes32 h_prev = h;
 
@@ -31,6 +30,7 @@ contract BGRSmall {
         bytes32 y;
         bytes32 X;
 
+        /*
         for (uint i = modulus.length - 1; i > 0; i--) {
             //Line 2
             X = split_inverse(b[i], x_prev);
@@ -48,13 +48,16 @@ contract BGRSmall {
             //Line 6
             h_prev = h_prev ^ eta;
         }
+        */
 
         //Line 7
-        bytes32 h_hash = keccak256(modulus[0], messages[0], r[0], bytes32(0));
-        bytes32 g_hash = keccak256(h_prev);
+        bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0));// this is tested
+        bytes32 g_hash = GHash(h_prev); //this is tested
+
         bytes32 pig = pi(split_inverse(b[0], x_prev), 0);
 
-        return (h_prev == h_hash) && (pig == g_hash);
+        return h_hash;
+        //return (h_prev == h_hash) && (pig == g_hash);
     }
 
     function GHash(bytes32 x) pure returns (bytes32) {
@@ -63,13 +66,22 @@ contract BGRSmall {
         return hash;
     }
 
-    function HHash(uint pk, string m, bytes2 r, bytes32 x) pure returns (bytes32) {
+    function HHash(uint256 pk, string m, bytes2 r, bytes32 x) pure returns (bytes32) {
         return keccak256(pk, m, r, x);
+        //return keccak256(pk, m, r, x);
     }
 
-    function pi(bytes32 val, uint signer) returns (bytes32) {
-        uint res = (uint(val)^e) % modulus[signer];
-        return bytes32(res);
+    function pi(bytes32 val, uint256 signer) returns (bytes32) {
+        return bytes32(modExp(uint256(val), e, modulus[signer]));
+    }
+
+    function modExp(uint256 base, uint256 exp, uint256 mod) internal returns (uint256 result)  {
+        result = 1;
+        for (uint count = 1; count <= exp; count *= 2) {
+            if (exp & count != 0)
+                result = mulmod(result, base, mod);
+            base = mulmod(base, base, mod);
+        }
     }
 
     function stringToBytes32(string memory source) returns (bytes32 result) {
@@ -83,9 +95,9 @@ contract BGRSmall {
         }
     }
 
-    function split_inverse(bool b, bytes32 x) returns (bytes32) {
+    function split_inverse(bool b, bytes32 x) internal returns (bytes32) {
         if (b) {
-            return bytes32(uint(x) - 128);
+            return bytes32(uint256(x) - 128);
         }
         else {
             return x;
