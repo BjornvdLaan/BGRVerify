@@ -2,6 +2,18 @@ pragma solidity 0.4.21;
 pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
+
+    bytes32 x = bytes32(997553209795998839);
+    bytes32 h = bytes32(997553209795998839);
+
+    bool[] b = [true, false];
+    bytes2[] r = [bytes2(2), bytes2(2)];
+
+    string[] messages = [
+    "MESSAGE 1",
+    "MESSAGE 2"
+    ];
+
     //Simulation of PKI
     uint e = 65537;
     uint[] modulus = [
@@ -9,61 +21,39 @@ contract BGRSmall {
         102283952970760354931552657672140997299422871062984001550601562917514908012187
     ];
 
-
-    function test() returns (bool) {
-        string[] messages;
-        for(uint i = 0; i < 2; i++) {
-            messages[i] = "MESSAGE ";
-        }
-
-        bytes32 x = bytes32(997553209795998839);
-        bytes32 h = bytes32(997553209795998839);
-
-        bool[] b;
-        b[0] = true;
-        b[1] = false;
-
-        bytes2[] r; //= [byte(2), byte(2), byte(2), byte(2), byte(2)];
-        r[0] = bytes2(2);
-        r[1] = bytes2(2);
-
-        return verify(messages, x, h, r, b);
-    }
-
-    function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
+    //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
+    function verify() returns (bool) {
         bytes32 x_prev = x;
         bytes32 h_prev = h;
 
         bytes32 g;
         bytes32 eta;
         bytes32 y;
+        bytes32 X;
 
-
-        /*
-        for (uint i = modulus.length; i > 0; i--) {
+        for (uint i = modulus.length - 1; i > 0; i--) {
             //Line 2
-            //X := split_inverse(signature.b[i], x_prev)
-            y = pi(x_prev, i); //pi(X, publickeys[i])
+            X = split_inverse(b[i], x_prev);
+            y = pi(x_prev, i);
 
-            //Line 3
-            g = GHash(h_prev);
+            //Line 3 G
+            g = keccak256(h_prev);
 
             //Line 4
             x_prev = g ^ y;
 
-            //Line 5
-            eta = HHash(r[i]);
+            //Line 5 H
+            eta = keccak256(modulus[i], messages[i], r[i], x_prev);
 
             //Line 6
             h_prev = h_prev ^ eta;
-        }*/
+        }
 
         //Line 7
-        bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0)); //H(publickeys[0], messages[0], r[0], []byte{})
-        bytes32 g_hash = GHash(h_prev);
-        bytes32 pig = pi(x_prev, 0); //pi(split_inverse(signature.b[0], x_prev), publickeys[0])
+        bytes32 h_hash = keccak256(modulus[0], messages[0], r[0], bytes32(0));
+        bytes32 g_hash = keccak256(h_prev);
+        bytes32 pig = pi(split_inverse(b[0], x_prev), 0);
 
-        //return h_prev_num.Cmp(HHash_num) == 0 && pig_num.Cmp(GHash_num) == 0;
         return (h_prev == h_hash) && (pig == g_hash);
     }
 
@@ -78,7 +68,6 @@ contract BGRSmall {
     }
 
     function pi(bytes32 val, uint signer) returns (bytes32) {
-        //uint numval = uint(val);
         uint res = (uint(val)^e) % modulus[signer];
         return bytes32(res);
     }
@@ -94,4 +83,12 @@ contract BGRSmall {
         }
     }
 
+    function split_inverse(bool b, bytes32 x) returns (bytes32) {
+        if (b) {
+            return bytes32(uint(x) - 128);
+        }
+        else {
+            return x;
+        }
+    }
 }
