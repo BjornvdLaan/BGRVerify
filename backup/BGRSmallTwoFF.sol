@@ -58,7 +58,7 @@ contract BGRSmall {
         bytes32 h_hash = HHashBase(modulus[0], messages[0], r[0]);
         bytes32 g_hash = GHash(h_prev); //this is tested
 
-        bytes32 pig = pi(split_inverse(b[0], x_prev), 0); //this is tested
+        bytes32 pig = pi(x_prev, 0); //this is tested
 
         return g_hash == pig && h_hash == h_prev;
     }
