@@ -19,7 +19,6 @@ contract BGRSmallBase {
     101512114568340950887010048880300901107587236119931590350595534951329361870577
     ];
 
-
     //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
     function verify() returns (bool) {
         bytes32 x_prev = x;
