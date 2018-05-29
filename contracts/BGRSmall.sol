@@ -3,22 +3,26 @@ pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
 
-    bytes32 x = bytes32(41513988299157049973613847631072792265114147516378221252311245718813854225273);
+    bytes32 x = bytes32(21815010946920326725448554161391577562219037378072594164779468615641707773797);
     bytes32 h = bytes32(80301163518557209160327257243075188899345325040434022335849314277093177124118);
 
     bool[] b = [false];
     bytes2[] r = [bytes2(29493)];
 
 
-string[] messages = [
-    "MESSAGE 0"
+    string[] messages = [
+        "MESSAGE 0"
     ];
 
     //Simulation of PKI
     uint256 e = 65537;
     uint256[] modulus = [
-    102488116108293820529229285762625314778121049973643030703015180599557523220559
+    73992665385593046613433232500063923994334720920550463039164095254361992303669
     ];
+
+    function test() returns (bytes32) {
+        return bytes32(modExp(uint256(21815010946920326725448554161391577562219037378072594164779468615641707773797), e, modulus[0]));
+    }
 
     //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
     function verify() returns (bytes32) {
@@ -51,12 +55,12 @@ string[] messages = [
         */
 
         //Line 7
-        bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0));// this is tested
+        bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0)); //this is tested
         bytes32 g_hash = GHash(h_prev); //this is tested
 
-        bytes32 pig = pi(split_inverse(b[0], x_prev), 0);
+        bytes32 pig = pi(split_inverse(b[0], x_prev), 0); //this is only tested for b=false
 
-        return h_hash;
+        return pig;
         //return (h_prev == h_hash) && (pig == g_hash);
     }
 
