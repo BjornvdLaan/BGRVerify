@@ -1,7 +1,7 @@
 pragma solidity 0.4.21;
 pragma experimental ABIEncoderV2;
 
-contract BGRSmall {
+contract BGRSmallBase {
 
     bytes32 x = bytes32(54246772988623878666130737933778763861701211658513702228860328065872587667063);
     bytes32 h = bytes32(686247715909750596135325064604597544989919342482424756002022515589561628091);
@@ -10,7 +10,7 @@ contract BGRSmall {
     bytes2[] r = [bytes2(60771)];
 
     string[] messages = [
-        "MESSAGE 0"
+    "MESSAGE 0"
     ];
 
     //Simulation of PKI
@@ -20,7 +20,7 @@ contract BGRSmall {
     ];
 
 
-//function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
+    //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
     function verify() returns (bool) {
         bytes32 x_prev = x;
         bytes32 h_prev = h;
