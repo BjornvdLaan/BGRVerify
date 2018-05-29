@@ -3,12 +3,11 @@ pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
 
-    bytes32 x = bytes32(21815010946920326725448554161391577562219037378072594164779468615641707773797);
-    bytes32 h = bytes32(80301163518557209160327257243075188899345325040434022335849314277093177124118);
+    bytes32 x = bytes32(54246772988623878666130737933778763861701211658513702228860328065872587667063);
+    bytes32 h = bytes32(686247715909750596135325064604597544989919342482424756002022515589561628091);
 
     bool[] b = [false];
-    bytes2[] r = [bytes2(29493)];
-
+    bytes2[] r = [bytes2(60771)];
 
     string[] messages = [
         "MESSAGE 0"
@@ -17,15 +16,12 @@ contract BGRSmall {
     //Simulation of PKI
     uint256 e = 65537;
     uint256[] modulus = [
-    73992665385593046613433232500063923994334720920550463039164095254361992303669
+    101512114568340950887010048880300901107587236119931590350595534951329361870577
     ];
 
-    function test() returns (bytes32) {
-        return bytes32(modExp(uint256(21815010946920326725448554161391577562219037378072594164779468615641707773797), e, modulus[0]));
-    }
 
-    //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
-    function verify() returns (bytes32) {
+//function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
+    function verify() returns (bool) {
         bytes32 x_prev = x;
         bytes32 h_prev = h;
 
@@ -55,13 +51,13 @@ contract BGRSmall {
         */
 
         //Line 7
-        bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0)); //this is tested
+        //bytes32 h_hash = HHash(modulus[0], messages[0], r[0], bytes32(0)); //this is tested
+        bytes32 h_hash = keccak256(modulus[0], messages[0], r[0]); // this seems to work if Go uses nil
         bytes32 g_hash = GHash(h_prev); //this is tested
 
-        bytes32 pig = pi(split_inverse(b[0], x_prev), 0); //this is only tested for b=false
+        bytes32 pig = pi(x_prev, 0); //this is tested
 
-        return pig;
-        //return (h_prev == h_hash) && (pig == g_hash);
+        return g_hash == pig && h_hash == h_prev;
     }
 
     function GHash(bytes32 x) pure returns (bytes32) {
@@ -101,7 +97,7 @@ contract BGRSmall {
 
     function split_inverse(bool b, bytes32 x) internal returns (bytes32) {
         if (b) {
-            return bytes32(uint256(x) - 128);
+            return bytes32(uint256(x) - 2147483648); //2 ** 31
         }
         else {
             return x;
