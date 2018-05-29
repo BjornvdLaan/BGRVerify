@@ -39,13 +39,13 @@ contract BGRSmall {
             y = pi(x_prev, i);
 
             //Line 3 G
-            g = keccak256(h_prev);
+            g = GHash(h_prev);
 
             //Line 4
             x_prev = g ^ y;
 
             //Line 5 H
-            eta = keccak256(modulus[i], messages[i], r[i], x_prev);
+            eta = HHash(modulus[i], messages[i], r[i], x_prev);
 
             //Line 6
             h_prev = h_prev ^ eta;
@@ -101,9 +101,11 @@ contract BGRSmall {
         }
     }
 
+    //this is tested
     function split_inverse(bool b, bytes32 x) internal returns (bytes32) {
         if (b) {
-            return bytes32(uint256(x) - 2147483648); //2 ** 31
+            return bytes32(uint256(x) + uint256(57896044618658097711785492504343953926634992332820282019728792003956564819968));
+            //NOTE: 2 ** 255 = 57896044618658097711785492504343953926634992332820282019728792003956564819968
         }
         else {
             return x;
