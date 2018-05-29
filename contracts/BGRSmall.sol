@@ -19,14 +19,13 @@ contract BGRSmall {
     72929305810002043507619804809205202485847149948104996985858670357851653292683
     ];
 
-    function test() returns (int256) {
-        bytes32 x = bytes32(487670593740862315430319396702514703259307367722539249477064700793573449442);
-        bytes32 hash = keccak256(x);
-        return int256(hash) - int256(57896044618658097711785492504343953926634992332820282019728792003956564819968);
+    function test() returns (bytes32) {
+        bytes32 x = bytes32(14057056051238853966630044202408128904814383695727292847851000326720893329122);
+        return GHash(x);
         //return hash;//uint256(hash);
 
     }
-    //Solidity uint is circular and Go big int can go negative.
+    //Solidity uint is circular and Go big int can go negative. int works, but does not work for modexp.
 
     /*
     x_i: [94 174 1 149 209 38 241 132 198 77 127 199 228 178 157 116 233 91 190 240 115 235 37 155 83 232 192 237 185 120 236 74]
