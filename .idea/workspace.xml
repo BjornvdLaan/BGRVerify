@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGRSmall.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGRSmall.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGRSmall.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGRSmall.sol" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/contracts/BGRSmall.sol">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="22" column="105" selection-start-line="22" selection-start-column="105" selection-end-line="22" selection-end-column="105" />
+              <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -208,16 +205,15 @@
       <workItem from="1527530323063" duration="6438000" />
       <workItem from="1527583054414" duration="4441000" />
       <workItem from="1527596128141" duration="13247000" />
-      <workItem from="1527614702032" duration="6435000" />
+      <workItem from="1527614702032" duration="7480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50059000" />
+    <option name="totallyTimeSpent" value="51104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13815434" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -563,7 +559,7 @@
     <entry file="file://$PROJECT_DIR$/contracts/BGRSmall.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="22" column="105" selection-start-line="22" selection-start-column="105" selection-end-line="22" selection-end-column="105" />
+          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
         </state>
       </provider>
     </entry>
