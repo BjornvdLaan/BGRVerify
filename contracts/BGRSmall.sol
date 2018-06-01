@@ -3,11 +3,11 @@ pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
 
-    bytes32 x = bytes32(35989684215998928688250553109532684381160432167769137337020123361440026195220);
-    bytes32 h = bytes32(29029916475003526299323762758742155272566406074526398220295381244911060096267);
+    bytes32 x = bytes32(28382982496846575821687578920925882275744793523622016317564012175120064155990);
+    bytes32 h = bytes32(28985572685570651067735126542460483521419604682504347023579801604738275793099);
 
-    bool[] b = [false];
-    bytes2[] r = [bytes2(32658)];
+    bool[] b = [true];
+    bytes2[] r = [bytes2(11906)];
 
     string[] messages = [
     "MESSAGE 0"
@@ -16,7 +16,7 @@ contract BGRSmall {
     //Simulation of PKI
     uint256 e = 65537;
     uint256[] modulus = [
-    78377268098329894125568879697958940438779534682520249950282829213582436852697
+    87717266589798529993548625762514656705959139540962453387006116321928477089197
     ];
 
     /*
@@ -55,7 +55,7 @@ contract BGRSmall {
         bytes32 h_hash = HHashBase(modulus[0], messages[0], r[0]);
         bytes32 g_hash = GHash(h_prev);
 
-        bytes32 pig = pi(x_prev, modulus[0]); //split_inverse(b[0], x_prev)
+        bytes32 pig = pi(split_inverse(b[0], x_prev), modulus[0]);
 
         return g_hash == pig && h_hash == h_prev;
     }
@@ -63,7 +63,6 @@ contract BGRSmall {
     function GHash(bytes32 x) internal pure returns (bytes32) {
         bytes32 hash = keccak256(x);
         return hash & 0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;
-        //return bytes32(uint256(hash) - uint256(57896044618658097711785492504343953926634992332820282019728792003956564819968));
     }
 
     function HHash(uint256 pk, string m, bytes2 r, bytes32 x) internal pure returns (bytes32) {

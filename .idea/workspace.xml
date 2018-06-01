@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/backup/BGRCURRENT.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/BGRSmall.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGRSmall.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGRSmall.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGRSmall.sol" afterDir="false" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="BGRSmall.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BGRSmall.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="342">
+              <caret line="64" column="89" lean-forward="true" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -32,7 +30,7 @@
       <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/verify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="1350">
               <caret line="75" column="38" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="38" />
             </state>
           </provider>
@@ -120,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,11 +202,12 @@
       <workItem from="1527614702032" duration="7480000" />
       <workItem from="1527622541463" duration="53000" />
       <workItem from="1527837785830" duration="1686000" />
+      <workItem from="1527848662934" duration="680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52843000" />
+    <option name="totallyTimeSpent" value="53523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -219,8 +218,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -547,7 +546,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/verify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="1350">
           <caret line="75" column="38" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="38" />
         </state>
       </provider>
@@ -561,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGRSmall.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="342">
+          <caret line="64" column="89" lean-forward="true" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
         </state>
       </provider>
     </entry>
