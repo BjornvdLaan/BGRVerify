@@ -3,11 +3,11 @@ pragma experimental ABIEncoderV2;
 
 contract BGRSmall {
 
-    bytes32 x = bytes32(48574670302110873900186887930825348864862875264737285835557344117607811371373);
-    bytes32 h = bytes32(32874016276410785723952341262669264316082375692834943036671182319508755362748);
+    bytes32 x = bytes32(18543443660615378932570643235507234660096354137208764184642877548079534371636);
+    bytes32 h = bytes32(64400662436092399894576493291672880472113578065623983671695867450760513872280);
 
-    bool[] b = [false, false, false];
-    bytes2[] r = [bytes2(55093), bytes2(64784), bytes2(13966)];
+    bool[] b = [true, true, true];
+    bytes2[] r = [bytes2(36874), bytes2(58969), bytes2(30396)];
 
     string[] messages = [
     "MESSAGE 0",
@@ -18,14 +18,10 @@ contract BGRSmall {
     //Simulation of PKI
     uint256 e = 65537;
     uint256[] modulus = [
-    71592459438769366555287905212920150282388951853471084808236715516732226882039,
-    76723212719259523646191797913083315208539844433174054239968451621612127126299,
-    92733209039681599712767330020819907773031548378901671974778944208981299740979
+    73612464816052335400992580047668557085341025725554142784066508858772488150019,
+    84905985520890542895799364674735873487301560068085832675359034793436421612461,
+    87991568628308038867285581482124837672338016636575992667921349036047738079133
     ];
-
-    /*
-        NOTE: test de split en split_inverse of die ook problemen hebben door circular.
-    */
 
     //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
     function verify() returns (bool) {
@@ -40,7 +36,7 @@ contract BGRSmall {
         for (uint i = modulus.length - 1; i > 0; i--) {
             //Line 2
             X = split_inverse(b[i], x_prev);
-            y = pi(x_prev, modulus[i]);
+            y = pi(X, modulus[i]);
 
             //Line 3 G
             g = GHash(h_prev);
