@@ -5,7 +5,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 const web3helpers = require('../web3helpers');
 
-const bgrsmall = web3helpers.initTruffleContract(web3, 'BGRSmall');
+const bgrsmall = web3helpers.initTruffleContract(web3, 'BGRBig');
 
 function test(bgrcontract) {
     web3.eth.getAccounts().then((accounts) => {
@@ -17,7 +17,7 @@ function test(bgrcontract) {
             .then((bgr) => {
                 return bgr.test.call({
                     from: requester,
-                    gas: 10000000000,
+                    gas: 100000000000,
                     value: 0
                 })
                     .then(function (result) {
