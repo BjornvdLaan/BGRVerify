@@ -16,8 +16,8 @@ contract BGRBig {
     ];
 
     //Simulation of PKI
-    uint256 e = 65537;
-    bytes[] modulus = [
+    uint256 constant e = 65537;
+    string[] moduli = [
     hex"c96b966f08643fcb17d438dc949c746817ec9fae47bc4917b5f66c8d55f6902683fb760490ab181af74c0fd52a5bf492e338871e3e209014ad8ca4308569c1b2a7db5bdceb676b7a244565dd466234dde9ec0d3922c8defcff9d348c20e140fc23239ff9d65e9828022f0fb58d804d84a76b527ab4e87e2f83816d158ea18a206195a9d4025b948fd26cbd98c756229d6670c7c461ba68e4dca6bbcbb1ea745019d2bff4728f3b6ff2734e42843c1a548909952aebe5003efe418d315cec58ce6a906e01ba33c11505f79a451fc21d3f50b78719d455e2691e2cf818298879fbe6ea93eca4aa7562834e39eb5835f16aec4427cf8e71d3dcefb62a6bd9fda18b",
     hex"c96b966f08643fcb17d438dc949c746817ec9fae47bc4917b5f66c8d55f6902683fb760490ab181af74c0fd52a5bf492e338871e3e209014ad8ca4308569c1b2a7db5bdceb676b7a244565dd466234dde9ec0d3922c8defcff9d348c20e140fc23239ff9d65e9828022f0fb58d804d84a76b527ab4e87e2f83816d158ea18a206195a9d4025b948fd26cbd98c756229d6670c7c461ba68e4dca6bbcbb1ea745019d2bff4728f3b6ff2734e42843c1a548909952aebe5003efe418d315cec58ce6a906e01ba33c11505f79a451fc21d3f50b78719d455e2691e2cf818298879fbe6ea93eca4aa7562834e39eb5835f16aec4427cf8e71d3dcefb62a6bd9fda18b",
     hex"c96b966f08643fcb17d438dc949c746817ec9fae47bc4917b5f66c8d55f6902683fb760490ab181af74c0fd52a5bf492e338871e3e209014ad8ca4308569c1b2a7db5bdceb676b7a244565dd466234dde9ec0d3922c8defcff9d348c20e140fc23239ff9d65e9828022f0fb58d804d84a76b527ab4e87e2f83816d158ea18a206195a9d4025b948fd26cbd98c756229d6670c7c461ba68e4dca6bbcbb1ea745019d2bff4728f3b6ff2734e42843c1a548909952aebe5003efe418d315cec58ce6a906e01ba33c11505f79a451fc21d3f50b78719d455e2691e2cf818298879fbe6ea93eca4aa7562834e39eb5835f16aec4427cf8e71d3dcefb62a6bd9fda18b"
@@ -31,44 +31,45 @@ contract BGRBig {
 
     //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
     function verify() returns (bool) {
-        bytes x_prev = x;
+        bytes memory x_prev = x;
         bytes32 h_prev = h;
 
-        bool s;
-        bytes g;
-        bytes y;
-        bytes X;
+        bytes memory g;
+        bytes memory y;
+        bytes memory X;
         bytes32 eta;
 
-        for (uint i = modulus.length - 1; i > 0; i--) {
+        for (uint i = moduli.length - 1; i > 0; i--) {
             //Line 2
             X = split_inverse(x_prev, b[i]);
-            (s, y) = modexp(X, e, modulus[i]);
-            //pi
+            y = modexp(X, e, moduli[i]);
 
-            //Line 3 G
+            //Line 3
             g = ghash(h_prev);
             //256 -> 2048
 
-            //Line 4 and 5
-            eta = line4and5(modulus[i], messages[i], r[i], x_prev);
-            //256
+            //Line 4
+            x_prev = xorbytes(g, y);
+
+            //Line 5
+            eta = hhash(moduli[i], messages[i], r[i], x_prev);
 
             //Line 6
             h_prev = h_prev ^ eta;
-            //256 ^ 256
         }
 
         //Line 7
-        bytes32 h_hash = hhashbase(modulus[0], messages[0], r[0]);
-        bytes32 g_hash = ghash(h_prev);
+        bytes32 h_hash = hhashbase(moduli[0], messages[0], r[0]);
+        bytes memory g_hash = ghash(h_prev);
 
-        bytes32 pig = modexp(split_inverse(x_prev, b[0]), e, modulus[0]);
+        bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, moduli[0]);
 
-        return g_hash == pig && h_hash == h_prev;
+        return true;
+        //return g_hash == pig && h_hash == h_prev;
     }
 
-    function modexp(bytes base, uint exponent, bytes modulus) internal returns (bool success, bytes output) {
+    function modexp(bytes base, uint exponent, string modulus_str) internal returns (bytes output) {
+        bytes memory modulus = bytes(modulus_str);
         uint base_length = base.length;
         uint modulus_length = modulus.length;
 
@@ -88,13 +89,13 @@ contract BGRBig {
         memcopy(modulus, 0, input, 96 + base_length + 32, modulus_length);
 
         assembly {
-            success := call(gas(), 5, 0, add(input, 32), size, add(output, 32), modulus_length)
+            pop(call(gas(), 5, 0, add(input, 32), size, add(output, 32), modulus_length))
         }
     }
 
     function split_inverse(bytes x, bool b) internal pure returns (bytes) {
         if (b) {
-            x[0] = 0;
+            x[0] = byte(0);
         }
 
         return x;
@@ -119,26 +120,80 @@ contract BGRBig {
         }
     }
 
-    function line4and5(bytes a, bytes b) internal pure returns (bytes32) {
-        // Line 4: XOR
-        var (a1, a2, a3, a4, a5, a6, a7, a8) = cut(a);
-        var (b1, b2, b3, b4, b5, b6, b7, b8) = cut(b);
+    function xorbytes(bytes a, bytes b) internal pure returns (bytes) {
+        bytes32 c1;
+        bytes32 c2;
+        bytes32 c3;
+        bytes32 c4;
+        bytes32 c5;
+        bytes32 c6;
+        bytes32 c7;
+        bytes32 c8;
 
-        bytes32 c1 = a1 ^ b1;
-        bytes32 c2 = a2 ^ b2;
-        bytes32 c3 = a3 ^ b3;
-        bytes32 c4 = a4 ^ b4;
-        bytes32 c5 = a5 ^ b5;
-        bytes32 c6 = a6 ^ b6;
-        bytes32 c7 = a7 ^ b7;
-        bytes32 c8 = a8 ^ b8;
+        assembly {
+            c1 := xor(mload(add(a, 32)), mload(add(b, 32)))
+            c2 := xor(mload(add(a, 64)), mload(add(b, 64)))
+            c3 := xor(mload(add(a, 96)), mload(add(b, 96)))
+            c4 := xor(mload(add(a, 128)), mload(add(b, 128)))
+            c5 := xor(mload(add(a, 160)), mload(add(b, 160)))
+            c6 := xor(mload(add(a, 192)), mload(add(b, 192)))
+            c7 := xor(mload(add(a, 224)), mload(add(b, 224)))
+            c8 := xor(mload(add(a, 256)), mload(add(b, 256)))
+        }
 
-        // Line 5: compute eta
-        return keccak256(modulus[0], messages[0], r[0], c1, c2, c3, c4, c5, c6, c7, c8);
+        bytes memory merged = new bytes(256);
+
+        uint k = 0;
+
+        for (uint i = 0; i < 32; i++) {
+            merged[k] = c1[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c2[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c3[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c4[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c5[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c6[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c7[i];
+            k++;
+        }
+
+        for (i = 0; i < 32; i++) {
+            merged[k] = c8[i];
+            k++;
+        }
+
+        return merged;
     }
 
-    function hhashbase(bytes pk, string m, bytes2 r) returns (bytes32) {
-        return keccak256(pk, m, r);
+    function hhash(string modulus, string message, bytes2 random, bytes x_prev) internal pure returns (bytes32) {
+        return keccak256(modulus, message, random, x_prev);
+    }
+
+    function hhashbase(string modulus, string message, bytes2 random) internal pure returns (bytes32) {
+        return keccak256(modulus, message, random);
     }
 
     function memcopy(bytes src, uint srcoffset, bytes dst, uint dstoffset, uint len) pure internal {
