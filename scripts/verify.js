@@ -6,7 +6,7 @@ web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected 
 const web3helpers = require('../web3helpers');
 
 const bgrcontract = web3helpers.initTruffleContract(web3, 'BGR');
-const bgrsmall = web3helpers.initTruffleContract(web3, 'BGRSmall');
+const bgrsmall = web3helpers.initTruffleContract(web3, 'BGRBig');
 
 function sendRequest(bgrcontract) {
     web3.eth.getAccounts().then((accounts) => {

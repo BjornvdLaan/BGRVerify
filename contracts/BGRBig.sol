@@ -39,6 +39,7 @@ contract BGRBig {
         bytes memory X;
         bytes32 eta;
 
+
         for (uint i = moduli.length - 1; i > 0; i--) {
             //Line 2
             X = split_inverse(x_prev, b[i]);
@@ -46,7 +47,6 @@ contract BGRBig {
 
             //Line 3
             g = ghash(h_prev);
-            //256 -> 2048
 
             //Line 4
             x_prev = xorbytes(g, y);
@@ -64,8 +64,7 @@ contract BGRBig {
 
         bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, moduli[0]);
 
-        return true;
-        //return g_hash == pig && h_hash == h_prev;
+        return g_hash == pig && h_hash == h_prev;
     }
 
     function modexp(bytes base, uint exponent, string modulus_str) internal returns (bytes output) {
