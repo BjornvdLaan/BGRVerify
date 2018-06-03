@@ -21,8 +21,8 @@
       <file leaf-file-name="BGRBig.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+            <state relative-caret-position="220">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -79,7 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prepare_modexp</find>
       <find>max_bitlen</find>
       <find>b_extra</find>
       <find>^</find>
@@ -101,17 +100,21 @@
       <find>small</find>
       <find>hhashb</find>
       <find>modu</find>
-      <find>moduli</find>
       <find>moduli[0</find>
       <find>ri</find>
       <find>concat</find>
       <find>copy(</find>
       <find>fromby</find>
       <find>Memory.</find>
+      <find>modulus0</find>
+      <find>moduli</find>
+      <find>moduli[0]</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
       <replace>int256</replace>
+      <replace>moduli[0]</replace>
+      <replace>modulus0</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -275,12 +278,12 @@
       <workItem from="1527964419920" duration="2310000" />
       <workItem from="1527966880448" duration="4769000" />
       <workItem from="1528017802834" duration="6262000" />
-      <workItem from="1528027367427" duration="7760000" />
+      <workItem from="1528027367427" duration="8711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95109000" />
+    <option name="totallyTimeSpent" value="96060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -607,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+        <state relative-caret-position="220">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>

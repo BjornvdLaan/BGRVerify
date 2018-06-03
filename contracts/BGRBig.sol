@@ -34,11 +34,10 @@ contract BGRBig {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 
-
-    /*bytes memory g;
-    bytes memory y;
-    bytes memory X;
-    bytes32 eta;*/
+        bytes memory g;
+        bytes memory y;
+        bytes memory X;
+        bytes32 eta;
 
         /*
         for (uint i = moduli.length - 1; i > 0; i--) {
