@@ -23,12 +23,8 @@ contract BGRSmall {
     92733209039681599712767330020819907773031548378901671974778944208981299740979
     ];
 
-    /*
-        NOTE: test de split en split_inverse of die ook problemen hebben door circular.
-    */
-
-    //function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b) returns (bool) {
-    function verify() returns (bool) {
+    function verify(string[] messages, bytes32 x, bytes32 h, bytes2[] r, bool[] b, uint256 e, uint256[] modulus) returns (bool) {
+    //function verify() returns (bool) {
         bytes32 x_prev = x;
         bytes32 h_prev = h;
 

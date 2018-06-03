@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/backup/BGRSmall2.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backup/TestBGRSmall.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backup/libs/Bytes.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backup/libs/Memory.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/bgr_lib.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/cases_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/constants.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/structs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BGR/utils.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/gcd-constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/gcd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol" beforeDir="false" afterPath="$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/BGRBig.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGRBig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGRSmall.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGRSmall.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGRBig.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGRBig.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,63 +37,43 @@
       <file leaf-file-name="BGRBig.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BGRSmall.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup/BGRSmall.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="432">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="2_deploy_contracts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="truffle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/truffle.js">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="BigNumber.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup/BigNumber.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7326">
-              <caret line="407" column="44" selection-start-line="407" selection-start-column="38" selection-end-line="407" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BGR.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup/BGR.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="88" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/verify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="126">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Solidity Contract" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -98,8 +93,14 @@
       <find>x[0</find>
       <find>modulus</find>
       <find>modexp</find>
-      <find>xorbytes</find>
       <find>0x40</find>
+      <find>xorbytes</find>
+      <find>bytes2</find>
+      <find>small</find>
+      <find>hhashb</find>
+      <find>modu</find>
+      <find>moduli</find>
+      <find>moduli[0</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
@@ -123,13 +124,16 @@
         <option value="$PROJECT_DIR$/backup/BGRSmallThree.sol" />
         <option value="$PROJECT_DIR$/backup/BGRCURRENT.sol" />
         <option value="$PROJECT_DIR$/backup/BGRSmallOneT.sol" />
-        <option value="$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol" />
         <option value="$PROJECT_DIR$/backup/BGRSmallThreeTTT.sol" />
         <option value="$PROJECT_DIR$/contracts/BigNumber.sol" />
-        <option value="$PROJECT_DIR$/contracts/BGRSmall.sol" />
-        <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
         <option value="$PROJECT_DIR$/scripts/test.js" />
         <option value="$PROJECT_DIR$/scripts/verify.js" />
+        <option value="$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol" />
+        <option value="$PROJECT_DIR$/test/TestBGRSmall.sol" />
+        <option value="$PROJECT_DIR$/contracts/libs/Memory.sol" />
+        <option value="$PROJECT_DIR$/contracts/libs/Bytes.sol" />
+        <option value="$PROJECT_DIR$/contracts/BGRSmall.sol" />
+        <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
         <option value="$PROJECT_DIR$/contracts/BGRBig.sol" />
       </list>
     </option>
@@ -171,7 +175,7 @@
             <path>
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
               <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
-              <item name="backup" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
@@ -250,12 +254,13 @@
       <workItem from="1527940997084" duration="1550000" />
       <workItem from="1527944646358" duration="6588000" />
       <workItem from="1527964419920" duration="2310000" />
-      <workItem from="1527966880448" duration="1916000" />
+      <workItem from="1527966880448" duration="4769000" />
+      <workItem from="1528017802834" duration="6262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78234000" />
+    <option name="totallyTimeSpent" value="87349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -288,54 +293,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backup/BGRUtils.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/monitorTest.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/request.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/BGRSmall.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/BigNumber.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup/BGRUtils.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -542,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup/BigNumber.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7326">
@@ -564,20 +514,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+    <entry file="file://$PROJECT_DIR$/migrations/1_initial_migration.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/test.js">
+    <entry file="file://$PROJECT_DIR$/backup/BGRSmallThreeFFF.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="486">
+          <caret line="27" column="19" selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backup/BGRSmall.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/TestBGRSmall.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -588,10 +545,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backup/libs/Memory.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/BGRSmall2.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/libs/Bytes.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BGR/structs.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BGR/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/truffle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="32" />
+        <state relative-caret-position="432">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>
