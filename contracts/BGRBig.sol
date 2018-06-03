@@ -15,6 +15,12 @@ contract BGRBig {
     "MESSAGE 2"
     ];
 
+    /*
+        TODO:
+        - Betere oplossing voor moduli
+        - testen met de splits
+    */
+
     //Simulation of PKI
     uint256 constant e = 65537;
     bytes modulus0 = hex"d2264650bddeeb673c103af54ea8427b10f9ae12174168216ddb611b0c2e07c8d35fa3a8e110102a50183006d085925adeb6c3d8e234407601d098e5cef3649eebabcb55eebe4b2a7cb79278de0fcf5f6f93379a7ad631d1962fbd7166e9a4722c453ffcfacc7e69f9049e144d5d4a7f486fa7beb68afaf710633ea77b40f75ecc29f9a94594b89368de81cc6381f5054131e546634ebe2943b588344be75907817d5d6b46240c2e7be86e3fc8993209a05ac47d0e48a160c0c9cd0e0ef3e45ac8324d77d6772be05834ca05e9d60997af9a4042619b2afcd81299cd85ce0f43a8892fe0b027ec82c152f20a3ae43b0fb754c6d94cf622abfc3fdbbc30ed9117";
