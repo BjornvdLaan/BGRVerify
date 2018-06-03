@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGRBig.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGRBig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGRBig.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGRBig.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify.js" afterDir="false" />
     </list>
@@ -20,8 +22,8 @@
       <file leaf-file-name="BGRBig.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state relative-caret-position="288">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -38,7 +40,7 @@
       <file leaf-file-name="Bytes.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backup/libs/Bytes.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="1440">
               <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="89" selection-end-column="5" />
             </state>
           </provider>
@@ -71,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/verify.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="339">
-              <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -287,11 +289,12 @@
       <workItem from="1527966880448" duration="4769000" />
       <workItem from="1528017802834" duration="6262000" />
       <workItem from="1528027367427" duration="9339000" />
+      <workItem from="1528038633151" duration="1810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96688000" />
+    <option name="totallyTimeSpent" value="98498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -590,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backup/libs/Bytes.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="1440">
           <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="89" selection-end-column="5" />
         </state>
       </provider>
@@ -612,14 +615,14 @@
     <entry file="file://$PROJECT_DIR$/scripts/verify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGRBig.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="288">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
         </state>
       </provider>
     </entry>
