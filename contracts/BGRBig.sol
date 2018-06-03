@@ -30,7 +30,7 @@ contract BGRBig {
         return res;
     }
 
-    function verify() returns (bytes) {
+    function verify() returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 
@@ -66,8 +66,7 @@ contract BGRBig {
 
         bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, modulus0);
 
-        return g_hash;
-        //return  h_hash == h_prev; //equals(g_hash, pig) &&
+        return h_hash == h_prev && equals(g_hash, pig);
     }
 
     function modexp(bytes base, uint exponent, bytes modulus) internal returns (bytes output) {
