@@ -3,42 +3,31 @@ pragma experimental ABIEncoderV2;
 
 contract BGRBig {
 
-    bytes x = hex"2c8b8992f7eee1937afc9c3c9a708faed52aaf463189281058e7d9bf24718efcebc3c4fbc55ecce8b6bcd0a69e479b39df0324b53e1a92395767aa15e651501148b92c8e3ea2def9571a469e9e22fc8463fcfcf7319f6da24ad8578f978b114954edbea9c915236b8fa2fe88addbb571b8a1647ea22b47401e20e48e58f00e997099fecf6dd6791d820346a9313a74be3e77a4fcbf36da840fb29717bb9883504aa3be4b3e7982c32c412429890e53175e6dd263456b352fe36f9d264936ac4d0b18d6e7b448d12e4416e65fa86b1b236e7b9142d794ac747b07ffc4770a0ce2ec26ed298efb58cf72739c98175fd246ec4953ae41fbf29b0e5f9178493dfc21";
+   bytes x = hex"2c8b8992f7eee1937afc9c3c9a708faed52aaf463189281058e7d9bf24718efcebc3c4fbc55ecce8b6bcd0a69e479b39df0324b53e1a92395767aa15e651501148b92c8e3ea2def9571a469e9e22fc8463fcfcf7319f6da24ad8578f978b114954edbea9c915236b8fa2fe88addbb571b8a1647ea22b47401e20e48e58f00e997099fecf6dd6791d820346a9313a74be3e77a4fcbf36da840fb29717bb9883504aa3be4b3e7982c32c412429890e53175e6dd263456b352fe36f9d264936ac4d0b18d6e7b448d12e4416e65fa86b1b236e7b9142d794ac747b07ffc4770a0ce2ec26ed298efb58cf72739c98175fd246ec4953ae41fbf29b0e5f9178493dfc21";
     bytes32 h = bytes32(67769612547580043071070140004826438300680680461396437723132034795480894759009);
 
-    bool[] b = [false, false, true];
-    bytes16[] r = [bytes16(292515598745754236261268930538829626862), bytes16(143732175038022762536275231211399109350), bytes16(155010501534977254474133447094281593683)];
+    bool[] bg = [false, false, true];
+    bytes16[] rg = [bytes16(292515598745754236261268930538829626862), bytes16(143732175038022762536275231211399109350), bytes16(155010501534977254474133447094281593683)];
 
-    string[] messages = [
-    "MESSAGE 0",
-    "MESSAGE 1",
-    "MESSAGE 2"
-    ];
 
-    /*
-        TODO:
-        - Betere oplossing voor moduli
-        - testen met de splits
-    */
+   string[] messages = [
+   "MESSAGE 0",
+   "MESSAGE 1",
+   "MESSAGE 2"
+   ];
 
     //Simulation of PKI
+    uint n_signers = 3;
     uint256 constant e = 65537;
     bytes modulus0 = hex"c3f8da94ac41be90e0e4a89720b1ff18ffa4e910415165880e437d6cb36c39aef02a15b83dfbf6a38390d01bdefcfc6886ef922ead9a7b44b51b62008db6b70f50e4a30d33c43622be3bd1fcb29d84d7fb13dbfc1214f829f41875c796dacbb384b297b279aabb633d7fe1186edd2560ea5131f2eefb0c20863866356d4c3c9b53647de6a54e1b1b4c14d714beaf1495cdbf956a741cf0ad56f75b5ea1d81d3d9f36d9243ba7ccc2e21d2019e5b5c7469302cd2f9c3ed764b9ed2fdc9c4297c60f96c07b7ff9c5402c1865b95ff3389a49ace631919e48a19678ae8a4b7d6da6df28c556e75c29a2ef2ddbb31f2e62cc657499c23288df8b90fbc33c42d83ccf";
     bytes modulus1 = hex"ccd3cd5659e9ef107a3678459259bdca6917ce14406365123586795e378b99823912434ce21e6bc435b837c919c25667229423d123b0c57d6d9eacdb5415d896bd26b7b4f94f578bf45d34200f765945bb051cf154e2222e0ef5ba2bc87df22f10cc4f504c9e094d91e135e5d4fef65888d57d284550070824cdcbbe7b1056f67e3c5513777f45490376e35271890f136f961d5d62dfcce3da283d1c2922d15b7235b2eedc4ac212d88b64877463e2e2745159053c8a66e586ab86c90c00614d7321728891e9ad5ffdfc7ee8861d7bab95662eba1623fd1dbf38642f3218a2eea720f3e2660bac1bc76893e3d324edd91449d6af1f18289b305d2ba6f44197d5";
     bytes modulus2 = hex"bda03f516f29b82db329b8485d9e8b661d30f435ef956a36bd7b11f496ff5ea185946d06c606ac4202a33422cf659376f0ed171d8a7e32c3174abbb74052309ef3dc02d690599cd26700792f0bfb7961ef9d78abd76ba4ba3ec9dcb257062e5342f93a182e5beed2fe3768c540299db1bd05f61468b8eba6ce39821451d329b79e8b79511d5bd7f6fb81f1f0cbb876867be3822cd8f61c61116b959548e6119237cfda119c6b940d454fa002c322ddd05faa677ef120cee096231f7c6f27453eaa065b9161b539cacb23cfe16431f4185bf30cb3ecf782a411da855fc4b73bd66d778e5c9dfd77448bc4ffd3ff36309482733a6531a64650c2b495b487e0686b";
 
-
-function getModulus(uint i) returns (bytes) {
-        if (i == 0) {
-            return modulus0;
-        } else if (i == 1) {
-            return modulus1;
-        } else if (i == 2) {
-            return modulus2;
-        }
+    function test(string[] m) returns (string) {
+        return m[0];
     }
 
-    function verify() returns (bool) {
+    function verify(string[] messages, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 
@@ -47,7 +36,7 @@ function getModulus(uint i) returns (bytes) {
         bytes memory X;
         bytes32 eta;
 
-        for (uint i = 2; i > 0; i--) { //moduli.length - 1
+        for (uint i = n_signers - 1; i > 0; i--) {
             //Line 2
             X = split_inverse(x_prev, b[i]);
             y = modexp(X, e, getModulus(i));
@@ -72,6 +61,16 @@ function getModulus(uint i) returns (bytes) {
         bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, modulus0);
 
         return h_hash == h_prev && equals(g_hash, pig);
+    }
+
+    function getModulus(uint i) returns (bytes) {
+        if (i == 0) {
+            return modulus0;
+        } else if (i == 1) {
+            return modulus1;
+        } else if (i == 2) {
+            return modulus2;
+        }
     }
 
     function modexp(bytes base, uint exponent, bytes modulus) internal returns (bytes output) {

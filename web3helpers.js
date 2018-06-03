@@ -1,3 +1,5 @@
+const BN = require('bn.js');
+
 web3 = connectToNode();
 
 
@@ -121,6 +123,14 @@ function stringToHex(string){
     return result
 }
 
+function numToBytes16(num) {
+    let n = new BN(num).toString(16);
+    while (n.length < 32) {
+        n = "0" + n;
+    }
+    return "0x" + n;
+}
+
 function convertTo32ByteHex(data) {
     let hex;
 
@@ -183,5 +193,6 @@ module.exports = {
     getRandomIntInHex: getRandomIntInHex,
     connectToNode: connectToNode,
     evaluationSetup: evaluationSetup,
-    numberToHex: numberToHex
+    numberToHex: numberToHex,
+    numToBytes16: numToBytes16
 };
