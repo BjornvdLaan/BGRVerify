@@ -1,32 +1,20 @@
 pragma solidity 0.4.21;
 pragma experimental ABIEncoderV2;
 
-contract BGRBig {
-
-   //bytes x = hex"2c8b8992f7eee1937afc9c3c9a708faed52aaf463189281058e7d9bf24718efcebc3c4fbc55ecce8b6bcd0a69e479b39df0324b53e1a92395767aa15e651501148b92c8e3ea2def9571a469e9e22fc8463fcfcf7319f6da24ad8578f978b114954edbea9c915236b8fa2fe88addbb571b8a1647ea22b47401e20e48e58f00e997099fecf6dd6791d820346a9313a74be3e77a4fcbf36da840fb29717bb9883504aa3be4b3e7982c32c412429890e53175e6dd263456b352fe36f9d264936ac4d0b18d6e7b448d12e4416e65fa86b1b236e7b9142d794ac747b07ffc4770a0ce2ec26ed298efb58cf72739c98175fd246ec4953ae41fbf29b0e5f9178493dfc21";
-    //bytes32 h = bytes32(67769612547580043071070140004826438300680680461396437723132034795480894759009);
-
-    //bool[] b = [false, false, true];
-    //bytes16[] r = [bytes16(292515598745754236261268930538829626862), bytes16(143732175038022762536275231211399109350), bytes16(155010501534977254474133447094281593683)];
+contract BGR1 {
 
    string[] messages = [
-   "MESSAGE 0",
-   "MESSAGE 1",
-   "MESSAGE 2"
+   "MESSAGE 0"
    ];
 
     string[] labels = [
-    "example.com/api/0",
-    "example.com/api/1",
-    "example.com/api/2"
+    "example.com/api/0"
     ];
 
     //Simulation of PKI (assumed to be available)
-    uint n_signers = 3;
+    uint n_signers = 1;
     uint256 constant e = 65537;
-    bytes modulus0 = hex"eaf7bd0282869c00e714a274a1b09c1f356ef55474cbea696909e600b7626d7bb37e984907c54ecf3a11bc09fe9d3e1392fb561e42ba76044722e2ce1c2deb0f1d46a375416b4f040f36b16a82aba0b810398175469699e0f62ba07c56b25352e0ed761aef5397d08e2b389c9b5e65a8124d0ab3e7fac7e9100b7a5d3e852548fb208a05157fd90e3c9a4db6f73b0c870095a89b58452a908704d768b2c8512b6c667d1498d4fd17620c52013ea91ea19da68da07a6ed5e44ab8b903ca1a2abe938e9d075447eab3dc723fc8859bf80a87d742ed15cb59353f4c505d24dd5985725951ee8eb00878901cd817767436b8fbc8eebccbe2291be2c3b1207a26f5fb";
-    bytes modulus1 = hex"c7a740ca25a2512ac6b114da92669d356e7d12e3e5da2a9a99d68479e44b7cde46f1c9d0ba64bd49c444ccf190f94964b66fe29725abcd734955813689fc7542b5d4c3ffca665ad5171cabb2d5d75bf72a28dee8b646c01b3437464b42245fb07a1083886f6c4fddff173fb8651db617448b77959e2ca4e80699bf865b5665ae028d5868d6d6ae252e9afcbd060213772da7e7a74094c1555cd8fae676defe98759e21d4666baf41fce2ae7aaa1c85e966cd180d144769930a2fc3d9d20befa575c72432ef306f6f473a4b31f7a0941b220573cd3812e4f7375de3ea2aade444f1c5c8c8ef73aa3b34ff6e14dfa7cc6c6a78ed5b643fe839dbebd4993719eec9";
-    bytes modulus2 = hex"bc01e5ad5675b6b60d7ade455d1a9ee1d2a22d094857032571302f996150031000a6c3339f5c288baa3a6a7d4a8e65b21fd8e82bf2127be63cb7012936be3141fe499bc6400e90a8a69e6405ebf466872a3e30813be1393626d78f98a47ef84ded72f66c10f24b2ee1999ebc8f1164389555ab743b006c81dbe02265efc8f4d571fdff91e32252df45350c4f7bbf94a549eb8fc564514f846552b4d08bf137c7615a6bb91e7e1e97e6101a257c1f1b1b3da2e86f758467521d14628108d88cdb497393359b6b1acbe1769e04005cf80071e9291acbcbd7f73819335b794b41bbbcf5fc7afcb174a8d0da8f592b7e2657edd55250c0c8def7886ac30c575d585f";
+    bytes modulus0 = hex"aad23bc51a4e3420d163877caa1f61556c2033f7ce63f4860895ac59c1ee1afdfe19a26fc6f5f1c32ee77c6c610ce2fcb6d589a58821f0c598f5f227907da38d8ca76125cc9959bc001b757ce105ebe60317611524e115b5f02d6dab5b5e6cf907b165997897e54f032af7e60030a13a32f2b6c1b47df14a544be000d418ae2a0c535a6a2e6fd133949ff9728c7dee6a2d215fdfbadc8b6787e7cf8288177fd1ab55394fbdfb2917e8a7635feaccd0a61d7d918fa199dd8f5a5761062cef256bc356a93008da10f8e79725ca81c07299bc2ccb4925929c1db3e29d114cc2a8f60f2a31cf35b30e419ee4dca0a2f6fff259bfc73c30c307f15323c1c80a2a5e23";
 
     function verify(bytes m, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
@@ -67,15 +55,10 @@ contract BGRBig {
     function getModulus(uint i) view internal returns (bytes) {
         if (i == 0) {
             return modulus0;
-        } else if (i == 1) {
-            return modulus1;
-        } else if (i == 2) {
-            return modulus2;
         }
     }
 
     function modexp(bytes base, uint exponent, bytes modulus) internal returns (bytes output) {
-        //bytes memory modulus = bytes(modulus_str);
         uint base_length = base.length;
         uint modulus_length = modulus.length;
 

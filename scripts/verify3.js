@@ -32,7 +32,7 @@ function test(bgrcontract) {
 
         bgrcontract.deployed()
             .then((bgr) => {
-                return bgr.verify.call(messages, x, h, b, r, {
+                return bgr.verify(messages, x, h, b, r, {
                     from: requester,
                     gas: 10000000000,
                     value: 0

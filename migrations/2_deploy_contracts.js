@@ -1,10 +1,25 @@
 const BGRBig = artifacts.require("./BGRBig.sol");
-const BGR3 = artifacts.require("./BGR3.sol");
+const BGR1 = artifacts.require("./BGR1.sol");
 const BGR2 = artifacts.require("./BGR2.sol");
+const BGR3 = artifacts.require("./BGR3.sol");
 
+const ECMath = artifacts.require("./imported/ECMath.sol");
+const JsmnSolLib = artifacts.require("./imported/JsmnSolLib.sol");
+const tlsnutils = artifacts.require("./imported/tlsnutils.sol");
+const bytesutils = artifacts.require("./imported/bytesutils.sol");
+const BTCPriceFeed = artifacts.require("./imported/BTCPriceFeed.sol");
 
 module.exports = function(deployer) {
+    deployer.deploy(BGR1);
     deployer.deploy(BGR2);
-    deployer.deploy(BGRBig);
     deployer.deploy(BGR3);
+
+    deployer.deploy(JsmnSolLib);
+    deployer.deploy(ECMath);
+    deployer.deploy(bytesutils);
+    deployer.link(ECMath, tlsnutils);
+    deployer.deploy(tlsnutils);
+    deployer.link(JsmnSolLib, BTCPriceFeed);
+    deployer.link(tlsnutils, BTCPriceFeed);
+    deployer.deploy(BTCPriceFeed);
 };

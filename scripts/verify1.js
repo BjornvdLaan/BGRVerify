@@ -8,25 +8,24 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 const web3helpers = require('../web3helpers');
 
-const bgr = web3helpers.initTruffleContract(web3, 'BGR2');
+const bgr = web3helpers.initTruffleContract(web3, 'BGR1');
 
 function test(bgrcontract) {
     web3.eth.getAccounts().then((accounts) => {
         const requester = accounts[1];
 
-        const x = "0x"+"36210f1eaa58c9135c3e93b264268b4032ad2ac5aadb1672e77b166025a901a55e8cd1cf5fa69c9ae09554bad983ef97e97a85a374df19e6959e684fe1d67a9c9193225f90c59022363ca9c1a9cbbab1eccb3f1c35f4bf7390f2c955de9c0c832ac5c8c3f75066d18dae2deba2d943b22d35fff01c021b77f05973cbe0b1368bb10bc86f81574cb6e27951a149baa1c9d24d63046e65351b183bb33bad4e44d54d020238d506f4df0857a114a88e2161c4282f6b596aa4b9a1aaa21205f2197b55ab2f6c5894d36308baa1438b8f58b3cada1aeee01e55ca83e072f3595f4bee0a77ee75d338722c9287c59d6b7dce3ef3c41a2d51e070997536bb3185495114";
-        const h = "0x"+"69159ca66eb1013e224a028330df01af1853e578aea5cf2229b9fee5318d4eb4";
+        const x = "0x"+"1e1c7b9bc6bcec8b618ebe144dedba7ad7de6dcea0491c90023d6b7f2dce58cc3c5b37a935ee5605db228772f224d3cb432ce9a92d1147b7a3917c94ba5634d2a0a54045650e71a552480c78265c8857920709c8093d626ca509cdb8a0c8c9b825a5b25e1a73a87f90cce80ec6cbed8948837d0da46968978f1f35741a694e54f378911c16d9a228cd6f0556df245924f9ed9b5f81011cefe1331ffa977c595734a0c31417a6dd0e9f54b310cfbe4348e00465be8f4d48576e03350a25f9b943993269c37936bcd5a1b0a21699ee3b198c905d323522388aa61c8c6e1d0d1b2e92d54d2ee68e97068a5f9228354508087baca06963952e274ea4b85f093c848f";
+        const h = "0x"+"446aa0456833d61ead99a7d1998d9bf03b181c0405047509ec14eb4e3d68ade6";
 
         const file = fs.readFileSync(path.resolve(__dirname, "data.txt"));
         const messages = web3.utils.fromAscii(file.toString());
 
         const b = [
-            false, true
+            false
         ];
 
         const r = [
-           web3helpers.numToBytes16("295861542596530581502292159834468553591"),
-            web3helpers.numToBytes16("154686797698250898610729967226869016357"),
+           web3helpers.numToBytes16("335793088587930081617415486119028002169"),
         ];
 
         bgrcontract.deployed()
