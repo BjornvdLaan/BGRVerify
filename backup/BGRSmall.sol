@@ -1,6 +1,9 @@
 pragma solidity 0.4.21;
 pragma experimental ABIEncoderV2;
 
+/*
+Implementation of BGR verification on 256 bit moduli.
+*/
 contract BGRSmall {
 
     bytes32 x = bytes32(48574670302110873900186887930825348864862875264737285835557344117607811371373);
