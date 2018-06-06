@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/contracts/BGR.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/setup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/ba" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/BGR1.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGR1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/BGR2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGR2.json" afterDir="false" />
@@ -15,8 +14,15 @@
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/RSA.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/SolRsaVerify.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/SolRsaVerify.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testRSA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/BGR.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGR.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/BGR2.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGR2.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/BGR3.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGR3.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/setup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verify1.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verify2.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verify3.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify3.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,29 +36,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="verify1.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/verify1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ba" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/ba">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BGR3.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="93" column="5" selection-start-line="70" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BGR1.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2084">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BGR.sol" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="396">
+              <caret line="22" column="537" selection-start-line="22" selection-start-column="537" selection-end-line="22" selection-end-column="537" />
             </state>
           </provider>
         </entry>
@@ -60,58 +66,62 @@
       <file leaf-file-name="BGR2.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/BGR2.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="220" selection-end-column="5" />
+            <state relative-caret-position="18">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2_deploy_contracts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+      <file leaf-file-name="BGR1.sol" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="288">
+              <caret line="16" column="537" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="537" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RSA.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
+      <file leaf-file-name="BGR.sol" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="-846">
+              <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/data.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/verify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/verify2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="setup.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/setup.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="10" />
+              <caret column="1029" selection-start-column="5" selection-end-column="1029" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SolRsaVerify.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/SolRsaVerify.sol">
+      <file leaf-file-name="verify3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/verify3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verifyrsa.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/verifyrsa.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="263">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -127,7 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>small</find>
       <find>hhashb</find>
       <find>modu</find>
       <find>moduli[0</find>
@@ -155,8 +164,9 @@
       <find>sha256Pre</find>
       <find>raw</find>
       <find>bytes(</find>
-      <find>modexp</find>
       <find>toNumber</find>
+      <find>modulus1</find>
+      <find>modexp</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
@@ -193,25 +203,26 @@
         <option value="$PROJECT_DIR$/scripts/data.txt" />
         <option value="$PROJECT_DIR$/contracts/BGRBig.sol" />
         <option value="$PROJECT_DIR$/contracts/BGRBig3.sol" />
-        <option value="$PROJECT_DIR$/scripts/verify.js" />
         <option value="$PROJECT_DIR$/backup/BGRSmall.sol" />
-        <option value="$PROJECT_DIR$/contracts/BGR2.sol" />
-        <option value="$PROJECT_DIR$/scripts/verify3.js" />
         <option value="$PROJECT_DIR$/contracts/BGRUtils.sol" />
-        <option value="$PROJECT_DIR$/contracts/BGR1.sol" />
-        <option value="$PROJECT_DIR$/scripts/verify1.js" />
         <option value="$PROJECT_DIR$/contracts/BTCPriceFeed.sol" />
         <option value="$PROJECT_DIR$/scripts/verifyTLSN.js" />
         <option value="$PROJECT_DIR$/contracts/rsaverify.sol" />
-        <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
-        <option value="$PROJECT_DIR$/contracts/BGR3.sol" />
-        <option value="$PROJECT_DIR$/scripts/verify2.js" />
         <option value="$PROJECT_DIR$/scripts/verifyrsa.js" />
         <option value="$PROJECT_DIR$/test/testRSA.js" />
         <option value="$PROJECT_DIR$/contracts/RSA.sol" />
         <option value="$PROJECT_DIR$/contracts/SolRsaVerify.sol" />
+        <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
         <option value="$PROJECT_DIR$/scripts/setup.txt" />
+        <option value="$PROJECT_DIR$/scripts/verify.js" />
         <option value="$PROJECT_DIR$/contracts/BGR.sol" />
+        <option value="$PROJECT_DIR$/scripts/ba" />
+        <option value="$PROJECT_DIR$/contracts/BGR1.sol" />
+        <option value="$PROJECT_DIR$/contracts/BGR2.sol" />
+        <option value="$PROJECT_DIR$/scripts/verify2.js" />
+        <option value="$PROJECT_DIR$/contracts/BGR3.sol" />
+        <option value="$PROJECT_DIR$/scripts/verify3.js" />
+        <option value="$PROJECT_DIR$/scripts/verify1.js" />
       </list>
     </option>
   </component>
@@ -248,6 +259,16 @@
             <path>
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
               <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
+              <item name="backup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
@@ -345,12 +366,12 @@
       <workItem from="1528115032364" duration="9599000" />
       <workItem from="1528271043711" duration="8629000" />
       <workItem from="1528283048192" duration="1390000" />
-      <workItem from="1528286127749" duration="2429000" />
+      <workItem from="1528286127749" duration="8181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133088000" />
+    <option name="totallyTimeSpent" value="138840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -403,7 +424,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backup/BGRUtils.sol" />
     <entry file="file://$PROJECT_DIR$/backup/BGRSmallBase.sol" />
     <entry file="file://$PROJECT_DIR$/backup/BGRSmallTwoFT.sol" />
     <entry file="file://$PROJECT_DIR$/backup/BGRSmallTwoFF.sol" />
@@ -446,13 +466,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backup/libs/strings.sol" />
     <entry file="file://$PROJECT_DIR$/contracts/strings.sol" />
-    <entry file="file://$PROJECT_DIR$/scripts/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/utils.js" />
     <entry file="file://$PROJECT_DIR$/scripts/test.js" />
     <entry file="file://$PROJECT_DIR$/scripts/request.js" />
@@ -500,48 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="39" selection-start-line="16" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="93" column="5" selection-start-line="70" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR2.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="220" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/verifyrsa.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -566,14 +537,14 @@
     <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol">
+    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2084">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="270">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -583,14 +554,70 @@
     <entry file="file://$PROJECT_DIR$/scripts/setup.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="10" />
+          <caret column="1029" selection-start-column="5" selection-end-column="1029" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-846">
+          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ba">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="537" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="537" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR2.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verify2.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="537" selection-start-line="22" selection-start-column="537" selection-end-line="22" selection-end-column="537" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verify3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verify1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>

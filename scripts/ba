@@ -1,0 +1,57 @@
+
+func m3ain() {
+	sk, _ := rsa.GenerateKey(rand.Reader, 2048) //big: 2048, small: 256 bytes
+
+	sig := signPKCS15("MESSAGE", sk)
+	fmt.Println(sig)
+
+	fmt.Println(verifyPKCS15("MESSAGE", sig, sk.PublicKey))
+
+}
+
+func main() {
+	var keys []BGRKey
+	var messages []string
+	var labels []string
+
+	//Initialize
+	for i := 0; i < 1; i++ {
+		key := BGRKeyGen()
+		message := fmt.Sprintf("%s %d", "MESSAGE", i)
+		//message := read_message()
+		label := fmt.Sprintf("example.com/api/%d", i)
+
+		keys = append(keys, key)
+		messages = append(messages, message)
+		labels = append(labels, label)
+	}
+
+	for ki, ke := range keys {
+		fmt.Printf("pk%d: %x\n",ki, bytestohex(ke.pk.N.Bytes()))
+	}
+
+	//Run all variants
+	for num_signers := 1; num_signers < len(keys) + 1; num_signers++ {
+		sig := NewSig()
+
+		for j := 0; j < num_signers; j++ {
+			sig = BGRSign(messages[j], labels[j], keys[j], sig)
+		}
+
+		fmt.Printf("Signature for %d signers\n", num_signers)
+
+		if BGRVerify(keys, messages, labels, sig) {
+			fmt.Println("x hex",bytestohex(sig.x))
+			fmt.Println("h hex",bytestohex(sig.h))
+
+			fmt.Println("b", sig.b)
+
+			fmt.Println("randomness")
+			for j := 0; j < num_signers; j++ {
+				fmt.Printf("r%d: %d\n",j,new(big.Int).SetBytes(sig.r[j]))
+			}
+		} else {
+			os.Exit(2)
+		}
+
+	}

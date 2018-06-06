@@ -1,4 +1,4 @@
-const BGRBig = artifacts.require("./BGRBig.sol");
+const BGR = artifacts.require("./BGR.sol");
 const BGR1 = artifacts.require("./BGR1.sol");
 const BGR2 = artifacts.require("./BGR2.sol");
 const BGR3 = artifacts.require("./BGR3.sol");
@@ -13,6 +13,7 @@ const bytesutils = artifacts.require("./imported/bytesutils.sol");
 const BTCPriceFeed = artifacts.require("./imported/BTCPriceFeed.sol");*/
 
 module.exports = function(deployer) {
+    deployer.deploy(BGR);
     deployer.deploy(BGR1);
     deployer.deploy(BGR2);
     deployer.deploy(BGR3);

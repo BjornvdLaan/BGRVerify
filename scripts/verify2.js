@@ -14,24 +14,24 @@ function test(bgrcontract) {
     web3.eth.getAccounts().then((accounts) => {
         const requester = accounts[1];
 
-        const x = "0x"+"36210f1eaa58c9135c3e93b264268b4032ad2ac5aadb1672e77b166025a901a55e8cd1cf5fa69c9ae09554bad983ef97e97a85a374df19e6959e684fe1d67a9c9193225f90c59022363ca9c1a9cbbab1eccb3f1c35f4bf7390f2c955de9c0c832ac5c8c3f75066d18dae2deba2d943b22d35fff01c021b77f05973cbe0b1368bb10bc86f81574cb6e27951a149baa1c9d24d63046e65351b183bb33bad4e44d54d020238d506f4df0857a114a88e2161c4282f6b596aa4b9a1aaa21205f2197b55ab2f6c5894d36308baa1438b8f58b3cada1aeee01e55ca83e072f3595f4bee0a77ee75d338722c9287c59d6b7dce3ef3c41a2d51e070997536bb3185495114";
-        const h = "0x"+"69159ca66eb1013e224a028330df01af1853e578aea5cf2229b9fee5318d4eb4";
+        const x = "0x"+"59f65609aeac118ed7a91b184cd8711153e6d51578503f15e73334d405282608bddfad37d9ec7c6c5c5d5a3f8fc3d649beac7dc71cce0fc6b1329327292fe3a4c4323aaed143e27dd4ff8e51d9fc0e04deb1f34f5d1ff21c1e8addb1c26a58695bfe885667b1f9da1553c864897949c33ab6b3cfdc0041351096070e5c0afd823bec63ed85cb82a961d083b462b96a6d178d652973eeb1542ffd3134310c2cc6491ed27cad55da1717292417f5fd6e24984deff5c3083afb809451a9c78179f7baf44b0a7b68b6d7cd15b8bfd593dd84083070e499fc1ccab05c5f6df7fd6d24f3490f59d9141db1cc2964fe620bceb1d63c3520b56caceee98b243cfa970b17";
+        const h = "0x"+"7b2a7d809bedd3e6c3a1cffdd5925ffd38cabf53d42ba8b3abfaf735dcc34b11";
 
         const file = fs.readFileSync(path.resolve(__dirname, "data.txt"));
         const messages = web3.utils.fromAscii(file.toString());
 
         const b = [
-            false, true
+            true, false
         ];
 
         const r = [
-           web3helpers.numToBytes16("295861542596530581502292159834468553591"),
-            web3helpers.numToBytes16("154686797698250898610729967226869016357"),
+           web3helpers.numToBytes16("268948008018910961630238012180590377751"),
+            web3helpers.numToBytes16("317847985574777981571057484699486990870"),
         ];
 
         bgrcontract.deployed()
             .then((bgr) => {
-                return bgr.verify(messages, x, h, b, r, {
+                return bgr.verify.call(messages, x, h, b, r, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
