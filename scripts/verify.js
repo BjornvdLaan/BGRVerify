@@ -21,7 +21,7 @@ function verify(x, h, b, r) {
 
         bgrcontract.deployed()
             .then((bgr) => {
-                return bgr.verify.call(message, x, h, b, r, {
+                return bgr.verify(message, x, h, b, r, {
                     from: requester,
                     gas: 10000000000,
                     value: 0

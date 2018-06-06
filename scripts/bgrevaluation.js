@@ -1,6 +1,8 @@
 const verify = require("./verify");
 const web3helpers = require('../web3helpers');
 
+five();
+
 function one() {
     const x = "0x"+"040bb2f2151be77a766ffa74256a1f778bc45c4027d7ff6de44c14d77fc33a17efb6b18059af36d3a3c9b9db710412b25ad0393901f9877bf48bb95dbcc9b0a5679a52a92d32aac97d5f9b7e242c87049e528c31f229b3b2e115c80a0699ae25cd5564ba0056cc897126cba89221a2a6e516553c591f3406f05267513db8434d3ecf336bfc28b6998c12b5f07d96597ac32ea81a8e5f71b3ad37d4bda7ebd90a8c6fb2b27be797ac1ed1719f9978a55b98d194c55886b0db3dde6f8933632d0466a52a30944c877bcff04f79862a377d4779d5fcf69590bbedc39aaf0c1c2a3b29cbcd2e6c826ce4fb1f6ade94492ff8640412277e27ae86e7527d05da9c4d58";
     const h = "0x"+"382c197defb54043b80875be1de7fa4bb210c183e2e274c25296d9de5da09df1";
@@ -88,5 +90,3 @@ function five() {
 
     verify(x, h, b, r)
 }
-
-five();
