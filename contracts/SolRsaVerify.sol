@@ -22,6 +22,9 @@ pragma solidity ^0.4.19;
 
  */
 
+//Contract found at https://github.com/adriamb/SolRsaVerify
+//Improved using https://gist.github.com/axic/6ae83f0ab7ee2e8e69f4c240c5b90de8
+
 library SolRsaVerify {
 
     function memcpy(uint _dest, uint _src, uint _len) pure internal {
@@ -93,14 +96,6 @@ library SolRsaVerify {
         uint decipherlen = _m.length;
         bytes memory decipher = new bytes(decipherlen);
 
-        /*
-        bytes memory input = join(_s,_e,_m);
-        uint inputlen = input.length;
-        bool success;
-        assembly {
-            success := staticcall(sub(gas, 2000), 5, add(input,0x20), inputlen, add(decipher,0x20), decipherlen)
-            switch success case 0 { invalid }
-        }*/
         decipher = modexp(_s, _e, _m);
 
 
