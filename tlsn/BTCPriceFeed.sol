@@ -38,7 +38,7 @@ contract BTCPriceFeed {
         price0 = uint32(JsmnSolLib.parseInt(JsmnSolLib.getBytes(json, t.start, t.end)));
 		require(price0 > 0);
 
-		// Read time tag 
+		// Read time tag
         t = tokens[5];
         val = JsmnSolLib.getBytes(json, t.start, t.end);
 		require(JsmnSolLib.strCompare(val, "time") == 0);
@@ -67,7 +67,7 @@ contract BTCPriceFeed {
         t = tokens[14];
 		price1 = uint32(JsmnSolLib.parseInt(JsmnSolLib.getBytes(json, t.start, t.end)));
 		require(price1 > 0);
- 
+
 		// Get time tag
         t = tokens[15];
         val = JsmnSolLib.getBytes(json, t.start, t.end);
@@ -84,7 +84,15 @@ contract BTCPriceFeed {
 		require(timestamp1 > 0);
 
     }
- 
+
+    function verify(bytes memory proof) returns (bool) {
+        // Check if proof is valid
+        // Elliptic curve parameters for the TLS certificate of tls-n.org
+        uint256 qx = 0x0de2583dc1b70c4d17936f6ca4d2a07aa2aba06b76a97e60e62af286adc1cc09;
+        uint256 qy = 0x68ba8822c94e79903406a002f4bc6a982d1b473f109debb2aa020c66f642144a;
+        return tlsnutils.verifyProof(proof, qx, qy);
+    }
+
 
 	// Function that allows proof submission
     function submitProofOfPrice(bytes memory proof){
@@ -96,12 +104,12 @@ contract BTCPriceFeed {
 
         // Check HTTP Request
         bytes memory request = tlsnutils.getHTTPRequestURL(proof);
-        // Check that the first part is correct 
+        // Check that the first part is correct
         require(request.toSlice().startsWith("/proxy.py?url=https%3A//index.bitcoin.com/api/v0/lookup%3Ftime%3D".toSlice()));
         // Check that the second part is not too long
         require(request.toSlice().find("%3D".toSlice()).len() == 13);
 
-        // Check the host (kind of redundant due to signature check) 
+        // Check the host (kind of redundant due to signature check)
         bytes memory host = tlsnutils.getHost(proof);
         require(host.toSlice().equals("tls-n.org".toSlice()));
 
@@ -115,8 +123,8 @@ contract BTCPriceFeed {
 		// Parse the timestamps
         (timestamp0, price0, timestamp1, price1) = this.parseBitcoinComFeed(string(body));
 		// Insert the timestamps
-        timestamp_to_price[timestamp0] = price0; 
-        timestamp_to_price[timestamp1] = price1; 
+        timestamp_to_price[timestamp0] = price0;
+        timestamp_to_price[timestamp1] = price1;
     }
 
 	// Request a securely inserted price
