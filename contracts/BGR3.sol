@@ -3,54 +3,41 @@ pragma experimental ABIEncoderV2;
 
 contract BGR3 {
 
-   string[] messages = [
-   "MESSAGE 0",
-   "MESSAGE 1",
-   "MESSAGE 2"
-   ];
-
     string[] labels = [
     "example.com/api/0",
     "example.com/api/1",
     "example.com/api/2"
     ];
 
+    bytes message = hex"7b0a2020226f70656e223a207b0a20202020227072696365223a2039353931372c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333134323430302c0a2020202020202269736f223a2022323031362d31322d33315430303a30303a30302e3030305a220a202020207d0a20207d2c0a202022636c6f7365223a207b0a20202020227072696365223a2039363736302c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d2c0a2020226c6f6f6b7570223a207b0a20202020227072696365223a2039363736302c0a20202020226b223a20312c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d0a7d0a";
+
     //Simulation of PKI (assumed to be available)
     uint n_signers = 3;
     uint256 constant e = 65537;
-    bytes modulus0 = hex"a4c78dbbd8eb4037580a181a202112c050003445447a85d746864da969f32699d506dd025c23d326df89c674d9ae829ec5e0bda38f9dcd3e758f8e349192fb18f4bb932eed9adcaa34290deb2890c0a6856244e479af545d6a20ae3335e28e69e687545aff968173ccb1a6b90dec68d1c118fd625e55f186761b09ac9ee4494562b2f072710a07cef9caaa7197c517051619e452490c105c7d270479b21d9859499838ccecef9fdb9b60862bdb114d46c949b261bcecb8ff7a6613d9a794168ae8c17bdf58097703fdb829dd4ca14e50a6826f7e8f2f59c2c4b50de914d301e5a79e5587dc9f8e106ab91d9686e781bf32aba1969bfad0a30507a31da5d79603";
-    bytes modulus1 = hex"cea10cdeb393f9ad1d513b7b63418759030d375cd209eefae1ef32952bd8d769dbbdef56c27363a63eacc7b097733a8f19ff6efd6ac07e4bcbd3d2603859a56b39abd553ac1c8ec71a5f1a55954b52c0e7ea02e0bf10abe922807aedb3741bb0aa8ff785c0060f54fb5c524177a33d5e6ba3691f626a543c9703267c1a3d26a7fb3d093699482a06d3db431e40213d497652f2498b04a71cf061587dd49265eb6d5443c6a0b32d5d4bb2bb06fd42f46eba6a3d5366d8909f40975aef4713b08488938f5f834b4f19f1dba5fb2c527b7f17c45a0305237044446f2b0d4ae579c9c005fa9467eb698888c3aeae551589b6d47c738f388e9451d55cbf6b18cb1f6b";
-    bytes modulus2 = hex"c7a535c575242dce4348529aefd812907f97bf7e009cedb89a1c820e14ebd9d2795f5dd961991eb84c727843691ff7a2c82ed2e247bfd6ae7d1bb1628c127968433c1152e1adabfe3cf092622e12e8e9d521caeddc94b1d0d34dd8788679ee7dbb46c17960a117bf0456a9619fddefbf3a3b1e7e6a2419106365341b78ecce97c3d1926276dbf320fae73fbb6940914425fcfdf8a6b194321cc88c345ab1c4e89aadf27e87679bd21e1f2ad62c031f9bcaec2c6f52006f48cdee160709b712c767f7ff931c77a5b9840830806f012c75971cf6ef91be0e72d274b8ba1f52230c447497dce37c751d10c5711373faae17db5fc19039675776696f3a66433bfbfb";
-
+    bytes modulus0 = hex"f5407d119e5e43d17b48e6b441132680009ec0997862d873b8b4345120de55e8ae85529346ec57f526119fb2dbb7d8b83b249799be37a880d6efc04793319b43ec8190ae95ac1654492666406178e8699445d96dd437a6250caf49b61e10817fb9382c5d9c46fc490a631879ba7f111a00a2d135d6608b4fbdae383241cbd4bbf2ec317b292a6121082c4dd48ff8b91c717de3b144f0838e949cb06bddde59a3b34666736dd70ff2714f2af432665efefd4193b7ecf28bc8ba47e56cf29cbaf829e8ddd56261fa9f07f4d8f3af277ece37224cbfd6b4eb2d3e3c9bb08329eff1aa4d9e8b936037244119bd1e7352a18464575cf23e959cffa8c303c47b29aad7";
+    bytes modulus1 = hex"c5052db994c14fd03a0805b8124fd4f7ec36a25042b0db447c29545377f6b5ae8b1c8d001774194e1af7665ed62c2b8df15bb93ddeb39cfc2d0a2c19596cc41cd2da65c75c9787a7de80a0a123f910332162580f6f1f51e9723e325c132bac7627a377ffbe3a8d615c8f38596235b22de4b30ba3d51d657f190e5083641866d0e180a230ba3f7d8a784a0ac47bab01896ad2317a312df70d21f82a008899c67a194799442ba42517d51ed2a2b2c538882577fa2690266d3c31e749d3901a1bc430fa3f4191027c7c627930ea16043e1da02908c3f4b9f9cf2a5f4a0ef4e3f8f6e0243176cbe1a48962e1a76149ffb1a576c8ab0ccacabe01bc77224cb27a5e39";
+    bytes modulus2 = hex"bda76ec96b85fad66d75c60fd010042ad9d8d4cc7d52adc3540d8e491cacc316de7c8067bfd96f5ef3ce628d35b5acaad357d47f3e2fa3e2211c04b99a53dddf83b56f94c91a2a13e366cfde4f1d724cda23e6433328946a8931e0b4e2f5567d0fc06ca94217c840b96841b32e63b3692fe1e4c83072636b5e2c441ae361028414aa02ad564285306bc322b1765739b5e22bd9206acb55dd67a8abb529f771867e9e326ec8053a399144401dc1db90c3899c5fa5eb4385a36e6193610db7e5903bd010794e5aa0debe4f0ab0d2360faa5f35bf14a5c4079dddb35a4decb4faed268c3f41464249f3d09b6c390ebdd9a5a5b16100df259602e29b7bd64abfa96b";
+    
     function verify(bytes m, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 
-        bytes memory g;
         bytes memory y;
         bytes memory X;
-        bytes32 eta;
 
         for (uint i = n_signers - 1; i > 0; i--) {
             //Line 2
-            X = split_inverse(x_prev, b[i]);
-            y = modexp(X, e, getModulus(i));
+            y = modexp(split_inverse(x_prev, b[i]), e, getModulus(i));
 
-            //Line 3
-            g = ghash(h_prev);
+            //Line 3 and 4
+            x_prev = xorbytes(ghash(h_prev), y);
 
-            //Line 4
-            x_prev = xorbytes(g, y);
-
-            //Line 5
-            eta = hhash(getModulus(i), messages[i], labels[i], r[i], x_prev);
-
-            //Line 6
-            h_prev = h_prev ^ eta;
+            //Line 5 and 6
+            h_prev = h_prev ^ hhash(getModulus(i), getMessage(i), labels[i], r[i], x_prev);
         }
 
         //Line 7
-        bytes32 h_hash = hhashbase(modulus0, messages[0], labels[0], r[0]);
+        bytes32 h_hash = hhashbase(getModulus(0), getMessage(0), labels[0], r[0]);
         bytes memory g_hash = ghash(h_prev);
 
         bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, modulus0);
@@ -66,6 +53,10 @@ contract BGR3 {
         } else if (i == 2) {
             return modulus2;
         }
+    }
+
+    function getMessage(uint i) internal returns (bytes) {
+        return message;
     }
 
     function modexp(bytes base, uint exponent, bytes modulus) internal returns (bytes output) {
@@ -112,11 +103,11 @@ contract BGR3 {
         return res;
     }
 
-    function hhash(bytes modulus, string message, string label, bytes16 random, bytes x_prev) internal pure returns (bytes32) {
+    function hhash(bytes modulus, bytes message, string label, bytes16 random, bytes x_prev) internal pure returns (bytes32) {
         return keccak256(modulus, message, label, random, x_prev);
     }
 
-    function hhashbase(bytes modulus, string message, string label, bytes16 random) internal pure returns (bytes32) {
+    function hhashbase(bytes modulus, bytes message, string label, bytes16 random) internal pure returns (bytes32) {
         return keccak256(modulus, message, label, random);
     }
 
