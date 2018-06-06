@@ -35,14 +35,14 @@
     "absolutePath": "/home/bjorn/Projects/BGRVerify/contracts/RSA.sol",
     "exportedSymbols": {
       "RSA": [
-        715
+        792
       ]
     },
-    "id": 716,
+    "id": 793,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 684,
+        "id": 761,
         "literals": [
           "solidity",
           "0.4",
@@ -54,10 +54,10 @@
       {
         "absolutePath": "/home/bjorn/Projects/BGRVerify/contracts/SolRsaVerify.sol",
         "file": "./SolRsaVerify.sol",
-        "id": 685,
+        "id": 762,
         "nodeType": "ImportDirective",
-        "scope": 716,
-        "sourceUnit": 1165,
+        "scope": 793,
+        "sourceUnit": 1242,
         "src": "25:28:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -68,24 +68,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 715,
+        "id": 792,
         "linearizedBaseContracts": [
-          715
+          792
         ],
         "name": "RSA",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 687,
+            "id": 764,
             "libraryName": {
               "contractScope": null,
-              "id": 686,
+              "id": 763,
               "name": "SolRsaVerify",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1164,
+              "referencedDeclaration": 1241,
               "src": "80:12:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SolRsaVerify_$1164",
+                "typeIdentifier": "t_contract$_SolRsaVerify_$1241",
                 "typeString": "library SolRsaVerify"
               }
             },
@@ -95,10 +95,10 @@
           },
           {
             "constant": false,
-            "id": 690,
+            "id": 767,
             "name": "en",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "105:15:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -107,7 +107,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 688,
+              "id": 765,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "105:4:1",
@@ -119,7 +119,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635353337",
-              "id": 689,
+              "id": 766,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -138,10 +138,10 @@
           },
           {
             "constant": false,
-            "id": 693,
+            "id": 770,
             "name": "e",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "126:271:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -150,7 +150,7 @@
               "typeString": "bytes storage ref"
             },
             "typeName": {
-              "id": 691,
+              "id": 768,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "126:5:1",
@@ -162,7 +162,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001",
-              "id": 692,
+              "id": 769,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -181,10 +181,10 @@
           },
           {
             "constant": false,
-            "id": 696,
+            "id": 773,
             "name": "N",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "403:527:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -193,7 +193,7 @@
               "typeString": "bytes storage ref"
             },
             "typeName": {
-              "id": 694,
+              "id": 771,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "403:5:1",
@@ -205,7 +205,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "981738fcbbb695c3d97599593c39f153a386ff630b59bc566a34e86ca414db193976ccbe5680e063c1409278caa9ded202f2570f1f72f17f86338515c548de8473b024d25df8ed6270f3b949da6216b87e8b782677855275419470d258ba4f33646c3c09c790561deff7f0a340134d110c492a0389eef545f8a07bca8ded97e1691f591f172889ced1ffc5932d913debc28dd884ebc80f94b0b8b3fc50c76beb5558917b8758ebf05c9fcf8b09a8d68e30430bf0a9c4c19b09ae387bb32816a9fec1c7faa5c6a4958959cbc909f0113601fc36cf419d89af67ba42b3aefaec07ab0a2583c78c4243ae060d9236eee94395c37d608a6587fe419f38215b5488ed",
-              "id": 695,
+              "id": 772,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -224,7 +224,7 @@
           },
           {
             "body": {
-              "id": 713,
+              "id": 790,
               "nodeType": "Block",
               "src": "1565:75:1",
               "statements": [
@@ -234,11 +234,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 707,
+                        "id": 784,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 698,
+                        "referencedDeclaration": 775,
                         "src": "1616:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -247,11 +247,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 708,
+                        "id": 785,
                         "name": "_s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 700,
+                        "referencedDeclaration": 777,
                         "src": "1623:2:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -260,11 +260,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 709,
+                        "id": 786,
                         "name": "en",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
+                        "referencedDeclaration": 767,
                         "src": "1627:2:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -273,11 +273,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 710,
+                        "id": 787,
                         "name": "N",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 696,
+                        "referencedDeclaration": 773,
                         "src": "1631:1:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage",
@@ -306,32 +306,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 705,
+                        "id": 782,
                         "name": "SolRsaVerify",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1164,
+                        "referencedDeclaration": 1241,
                         "src": "1582:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_SolRsaVerify_$1164_$",
+                          "typeIdentifier": "t_type$_t_contract$_SolRsaVerify_$1241_$",
                           "typeString": "type(library SolRsaVerify)"
                         }
                       },
-                      "id": 706,
+                      "id": 783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "pkcs1Sha256VerifyRaw",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1077,
+                      "referencedDeclaration": 1154,
                       "src": "1582:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_delegatecall_view$_t_bytes_memory_ptr_$_t_bytes_memory_ptr_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bool_$",
                         "typeString": "function (bytes memory,bytes memory,uint256,bytes memory) view returns (bool)"
                       }
                     },
-                    "id": 711,
+                    "id": 788,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -345,15 +345,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 704,
-                  "id": 712,
+                  "functionReturnParameters": 781,
+                  "id": 789,
                   "nodeType": "Return",
                   "src": "1575:58:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 714,
+            "id": 791,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -361,15 +361,15 @@
             "name": "verify",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 701,
+              "id": 778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 698,
+                  "id": 775,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1527:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -378,7 +378,7 @@
                     "typeString": "bytes memory"
                   },
                   "typeName": {
-                    "id": 697,
+                    "id": 774,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1527:5:1",
@@ -392,10 +392,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 700,
+                  "id": 777,
                   "name": "_s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1540:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -404,7 +404,7 @@
                     "typeString": "bytes memory"
                   },
                   "typeName": {
-                    "id": 699,
+                    "id": 776,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1540:5:1",
@@ -421,15 +421,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 704,
+              "id": 781,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 780,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1559:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -438,7 +438,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 779,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1559:4:1",
@@ -453,14 +453,14 @@
               ],
               "src": "1558:6:1"
             },
-            "scope": 715,
+            "scope": 792,
             "src": "1511:129:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 716,
+        "scope": 793,
         "src": "55:1589:1"
       }
     ],
@@ -470,14 +470,14 @@
     "absolutePath": "/home/bjorn/Projects/BGRVerify/contracts/RSA.sol",
     "exportedSymbols": {
       "RSA": [
-        715
+        792
       ]
     },
-    "id": 716,
+    "id": 793,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 684,
+        "id": 761,
         "literals": [
           "solidity",
           "0.4",
@@ -489,10 +489,10 @@
       {
         "absolutePath": "/home/bjorn/Projects/BGRVerify/contracts/SolRsaVerify.sol",
         "file": "./SolRsaVerify.sol",
-        "id": 685,
+        "id": 762,
         "nodeType": "ImportDirective",
-        "scope": 716,
-        "sourceUnit": 1165,
+        "scope": 793,
+        "sourceUnit": 1242,
         "src": "25:28:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -503,24 +503,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 715,
+        "id": 792,
         "linearizedBaseContracts": [
-          715
+          792
         ],
         "name": "RSA",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 687,
+            "id": 764,
             "libraryName": {
               "contractScope": null,
-              "id": 686,
+              "id": 763,
               "name": "SolRsaVerify",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1164,
+              "referencedDeclaration": 1241,
               "src": "80:12:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SolRsaVerify_$1164",
+                "typeIdentifier": "t_contract$_SolRsaVerify_$1241",
                 "typeString": "library SolRsaVerify"
               }
             },
@@ -530,10 +530,10 @@
           },
           {
             "constant": false,
-            "id": 690,
+            "id": 767,
             "name": "en",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "105:15:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -542,7 +542,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 688,
+              "id": 765,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "105:4:1",
@@ -554,7 +554,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3635353337",
-              "id": 689,
+              "id": 766,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -573,10 +573,10 @@
           },
           {
             "constant": false,
-            "id": 693,
+            "id": 770,
             "name": "e",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "126:271:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -585,7 +585,7 @@
               "typeString": "bytes storage ref"
             },
             "typeName": {
-              "id": 691,
+              "id": 768,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "126:5:1",
@@ -597,7 +597,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001",
-              "id": 692,
+              "id": 769,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -616,10 +616,10 @@
           },
           {
             "constant": false,
-            "id": 696,
+            "id": 773,
             "name": "N",
             "nodeType": "VariableDeclaration",
-            "scope": 715,
+            "scope": 792,
             "src": "403:527:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -628,7 +628,7 @@
               "typeString": "bytes storage ref"
             },
             "typeName": {
-              "id": 694,
+              "id": 771,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "403:5:1",
@@ -640,7 +640,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "981738fcbbb695c3d97599593c39f153a386ff630b59bc566a34e86ca414db193976ccbe5680e063c1409278caa9ded202f2570f1f72f17f86338515c548de8473b024d25df8ed6270f3b949da6216b87e8b782677855275419470d258ba4f33646c3c09c790561deff7f0a340134d110c492a0389eef545f8a07bca8ded97e1691f591f172889ced1ffc5932d913debc28dd884ebc80f94b0b8b3fc50c76beb5558917b8758ebf05c9fcf8b09a8d68e30430bf0a9c4c19b09ae387bb32816a9fec1c7faa5c6a4958959cbc909f0113601fc36cf419d89af67ba42b3aefaec07ab0a2583c78c4243ae060d9236eee94395c37d608a6587fe419f38215b5488ed",
-              "id": 695,
+              "id": 772,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -659,7 +659,7 @@
           },
           {
             "body": {
-              "id": 713,
+              "id": 790,
               "nodeType": "Block",
               "src": "1565:75:1",
               "statements": [
@@ -669,11 +669,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 707,
+                        "id": 784,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 698,
+                        "referencedDeclaration": 775,
                         "src": "1616:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -682,11 +682,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 708,
+                        "id": 785,
                         "name": "_s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 700,
+                        "referencedDeclaration": 777,
                         "src": "1623:2:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -695,11 +695,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 709,
+                        "id": 786,
                         "name": "en",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
+                        "referencedDeclaration": 767,
                         "src": "1627:2:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -708,11 +708,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 710,
+                        "id": 787,
                         "name": "N",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 696,
+                        "referencedDeclaration": 773,
                         "src": "1631:1:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage",
@@ -741,32 +741,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 705,
+                        "id": 782,
                         "name": "SolRsaVerify",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1164,
+                        "referencedDeclaration": 1241,
                         "src": "1582:12:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_SolRsaVerify_$1164_$",
+                          "typeIdentifier": "t_type$_t_contract$_SolRsaVerify_$1241_$",
                           "typeString": "type(library SolRsaVerify)"
                         }
                       },
-                      "id": 706,
+                      "id": 783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "pkcs1Sha256VerifyRaw",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1077,
+                      "referencedDeclaration": 1154,
                       "src": "1582:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_delegatecall_view$_t_bytes_memory_ptr_$_t_bytes_memory_ptr_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bool_$",
                         "typeString": "function (bytes memory,bytes memory,uint256,bytes memory) view returns (bool)"
                       }
                     },
-                    "id": 711,
+                    "id": 788,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -780,15 +780,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 704,
-                  "id": 712,
+                  "functionReturnParameters": 781,
+                  "id": 789,
                   "nodeType": "Return",
                   "src": "1575:58:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 714,
+            "id": 791,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -796,15 +796,15 @@
             "name": "verify",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 701,
+              "id": 778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 698,
+                  "id": 775,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1527:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -813,7 +813,7 @@
                     "typeString": "bytes memory"
                   },
                   "typeName": {
-                    "id": 697,
+                    "id": 774,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1527:5:1",
@@ -827,10 +827,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 700,
+                  "id": 777,
                   "name": "_s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1540:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -839,7 +839,7 @@
                     "typeString": "bytes memory"
                   },
                   "typeName": {
-                    "id": 699,
+                    "id": 776,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1540:5:1",
@@ -856,15 +856,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 704,
+              "id": 781,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 780,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 791,
                   "src": "1559:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -873,7 +873,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 779,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1559:4:1",
@@ -888,14 +888,14 @@
               ],
               "src": "1558:6:1"
             },
-            "scope": 715,
+            "scope": 792,
             "src": "1511:129:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 716,
+        "scope": 793,
         "src": "55:1589:1"
       }
     ],
@@ -910,12 +910,12 @@
       "events": {},
       "links": {
         "rsaverify": "0x467da209f32f499bab40b9a91ae73bcd4dbb6a7e",
-        "SolRsaVerify": "0xd049135beab36110acd05332d50d5be18a28cf67"
+        "SolRsaVerify": "0x11f9c16bc9278d00e94af1007f4109d35d58c488"
       },
-      "address": "0x92a9e33118f56fea7b9635da55b61b79c5bfebe7",
-      "transactionHash": "0xffacf3200d23a61a0f3e52ce18dfafb13e913722902707a3db88e5737f6e9110"
+      "address": "0xc6abcc4a8e0b6de6d96d5b35981faa6d493f7e67",
+      "transactionHash": "0x98c7bdd76a5bc6e398b9f46b1ef6b2db18402627f9547cfd4014a377d60a49cd"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-06T19:04:51.784Z"
+  "updatedAt": "2018-06-06T19:14:47.950Z"
 }
