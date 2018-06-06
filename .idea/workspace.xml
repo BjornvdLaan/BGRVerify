@@ -12,9 +12,7 @@
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/RSA.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/BGR1.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGR1.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGR3.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGR3.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/verify1.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/verify3.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verify3.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -47,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BGR3.sol" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BGR3.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="537" selection-start-line="18" selection-start-column="537" selection-end-line="18" selection-end-column="537" />
+            <state relative-caret-position="576">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -101,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verify3.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="verify3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/verify3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -214,8 +212,8 @@
         <option value="$PROJECT_DIR$/scripts/verify2.js" />
         <option value="$PROJECT_DIR$/scripts/verify1.js" />
         <option value="$PROJECT_DIR$/contracts/BGR1.sol" />
-        <option value="$PROJECT_DIR$/contracts/BGR3.sol" />
         <option value="$PROJECT_DIR$/scripts/verify3.js" />
+        <option value="$PROJECT_DIR$/contracts/BGR3.sol" />
       </list>
     </option>
   </component>
@@ -359,12 +357,12 @@
       <workItem from="1528115032364" duration="9599000" />
       <workItem from="1528271043711" duration="8629000" />
       <workItem from="1528283048192" duration="1390000" />
-      <workItem from="1528286127749" duration="11682000" />
+      <workItem from="1528286127749" duration="13083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142341000" />
+    <option name="totallyTimeSpent" value="143742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -576,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
@@ -604,17 +595,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
+    <entry file="file://$PROJECT_DIR$/scripts/verify1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="537" selection-start-line="18" selection-start-column="537" selection-end-line="18" selection-end-column="537" />
+        <state relative-caret-position="414">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/verify3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR3.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
         </state>
       </provider>
     </entry>

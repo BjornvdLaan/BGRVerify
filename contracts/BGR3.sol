@@ -17,20 +17,14 @@ contract BGR3 {
     bytes modulus0 = hex"f5407d119e5e43d17b48e6b441132680009ec0997862d873b8b4345120de55e8ae85529346ec57f526119fb2dbb7d8b83b249799be37a880d6efc04793319b43ec8190ae95ac1654492666406178e8699445d96dd437a6250caf49b61e10817fb9382c5d9c46fc490a631879ba7f111a00a2d135d6608b4fbdae383241cbd4bbf2ec317b292a6121082c4dd48ff8b91c717de3b144f0838e949cb06bddde59a3b34666736dd70ff2714f2af432665efefd4193b7ecf28bc8ba47e56cf29cbaf829e8ddd56261fa9f07f4d8f3af277ece37224cbfd6b4eb2d3e3c9bb08329eff1aa4d9e8b936037244119bd1e7352a18464575cf23e959cffa8c303c47b29aad7";
     bytes modulus1 = hex"c5052db994c14fd03a0805b8124fd4f7ec36a25042b0db447c29545377f6b5ae8b1c8d001774194e1af7665ed62c2b8df15bb93ddeb39cfc2d0a2c19596cc41cd2da65c75c9787a7de80a0a123f910332162580f6f1f51e9723e325c132bac7627a377ffbe3a8d615c8f38596235b22de4b30ba3d51d657f190e5083641866d0e180a230ba3f7d8a784a0ac47bab01896ad2317a312df70d21f82a008899c67a194799442ba42517d51ed2a2b2c538882577fa2690266d3c31e749d3901a1bc430fa3f4191027c7c627930ea16043e1da02908c3f4b9f9cf2a5f4a0ef4e3f8f6e0243176cbe1a48962e1a76149ffb1a576c8ab0ccacabe01bc77224cb27a5e39";
     bytes modulus2 = hex"bda76ec96b85fad66d75c60fd010042ad9d8d4cc7d52adc3540d8e491cacc316de7c8067bfd96f5ef3ce628d35b5acaad357d47f3e2fa3e2211c04b99a53dddf83b56f94c91a2a13e366cfde4f1d724cda23e6433328946a8931e0b4e2f5567d0fc06ca94217c840b96841b32e63b3692fe1e4c83072636b5e2c441ae361028414aa02ad564285306bc322b1765739b5e22bd9206acb55dd67a8abb529f771867e9e326ec8053a399144401dc1db90c3899c5fa5eb4385a36e6193610db7e5903bd010794e5aa0debe4f0ab0d2360faa5f35bf14a5c4079dddb35a4decb4faed268c3f41464249f3d09b6c390ebdd9a5a5b16100df259602e29b7bd64abfa96b";
-    
-    function verify(bytes m, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
+
+    function verify(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 
-        bytes memory y;
-        bytes memory X;
-
         for (uint i = n_signers - 1; i > 0; i--) {
-            //Line 2
-            y = modexp(split_inverse(x_prev, b[i]), e, getModulus(i));
-
-            //Line 3 and 4
-            x_prev = xorbytes(ghash(h_prev), y);
+            //Line 2, 3 and 4
+            x_prev = xorbytes(ghash(h_prev), modexp(split_inverse(x_prev, b[i]), e, getModulus(i)));
 
             //Line 5 and 6
             h_prev = h_prev ^ hhash(getModulus(i), getMessage(i), labels[i], r[i], x_prev);
