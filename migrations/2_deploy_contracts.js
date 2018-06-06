@@ -1,7 +1,4 @@
 const BGR = artifacts.require("./BGR.sol");
-const BGR1 = artifacts.require("./BGR1.sol");
-const BGR2 = artifacts.require("./BGR2.sol");
-const BGR3 = artifacts.require("./BGR3.sol");
 const RSA = artifacts.require("./RSA.sol");
 const SolRsaVerify = artifacts.require("./SolRsaVerify.sol");
 
@@ -14,9 +11,6 @@ const BTCPriceFeed = artifacts.require("./imported/BTCPriceFeed.sol");*/
 
 module.exports = function(deployer) {
     deployer.deploy(BGR);
-    deployer.deploy(BGR1);
-    deployer.deploy(BGR2);
-    deployer.deploy(BGR3);
 
     deployer.deploy(SolRsaVerify);
     deployer.link(SolRsaVerify, RSA);

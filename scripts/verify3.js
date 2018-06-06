@@ -8,7 +8,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 const web3helpers = require('../web3helpers');
 
-const bgr = web3helpers.initTruffleContract(web3, 'BGR3');
+const bgr = web3helpers.initTruffleContract(web3, 'BGR');
 
 function test(bgrcontract) {
     web3.eth.getAccounts().then((accounts) => {

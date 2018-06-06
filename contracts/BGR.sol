@@ -1,7 +1,7 @@
 pragma solidity 0.4.21;
 pragma experimental ABIEncoderV2;
 
-contract BGR3 {
+contract BGR {
 
     string[] labels = [
     "example.com/api/0",
