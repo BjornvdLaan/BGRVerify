@@ -79,7 +79,7 @@ library SolRsaVerify {
       * @param _m is the modulus
       * @return 0 if success, >0 otherwise
     */
-    function pkcs1Sha256Verify(bytes32 _sha256, bytes _s, bytes _e, bytes _m) public view returns (bool) {
+    function pkcs1Sha256Verify(bytes32 _sha256, bytes _s, uint _e, bytes _m) public view returns (bool) {
 
         uint8[19] memory sha256Prefix = [
         0x30, 0x31, 0x30, 0x0d, 0x06, 0x09, 0x60, 0x86, 0x48, 0x01, 0x65, 0x03, 0x04, 0x02, 0x01, 0x05, 0x00, 0x04, 0x20
@@ -90,16 +90,19 @@ library SolRsaVerify {
         uint i;
 
         /// decipher
-        bytes memory input = join(_s,_e,_m);
-        uint inputlen = input.length;
-
         uint decipherlen = _m.length;
         bytes memory decipher = new bytes(decipherlen);
+
+        /*
+        bytes memory input = join(_s,_e,_m);
+        uint inputlen = input.length;
         bool success;
         assembly {
             success := staticcall(sub(gas, 2000), 5, add(input,0x20), inputlen, add(decipher,0x20), decipherlen)
             switch success case 0 { invalid }
-        }
+        }*/
+        decipher = modexp(_s, _e, _m);
+
 
         /// 0x00 || 0x01 || PS || 0x00 || DigestInfo
         /// PS is padding filled with 0xff
@@ -142,8 +145,57 @@ library SolRsaVerify {
       * @param _m is the modulus
       * @return 0 if success, >0 otherwise
     */
-    function pkcs1Sha256VerifyRaw(bytes _data, bytes _s, bytes _e, bytes _m) public view returns (bool) {
+    function pkcs1Sha256VerifyRaw(bytes _data, bytes _s, uint _e, bytes _m) public view returns (bool) {
         return pkcs1Sha256Verify(sha256(_data),_s,_e,_m);
+    }
+
+    function modexp(bytes base, uint exponent, bytes modulus) internal returns (bytes output) {
+        //bytes memory modulus = bytes(modulus_str);
+        uint base_length = base.length;
+        uint modulus_length = modulus.length;
+
+        uint size = (32 * 3) + base_length + 32 + modulus_length;
+        bytes memory input = new bytes(size);
+        output = new bytes(modulus_length);
+
+        assembly {
+            mstore(add(input, 32), base_length)
+            mstore(add(input, 64), 32)
+            mstore(add(input, 96), modulus_length)
+
+            mstore(add(input, add(128, base_length)), exponent)
+        }
+
+        memcopy(base, 0, input, 96, base_length);
+        memcopy(modulus, 0, input, 96 + base_length + 32, modulus_length);
+
+        assembly {
+            pop(call(gas(), 5, 0, add(input, 32), size, add(output, 32), modulus_length))
+        }
+    }
+
+    function memcopy(bytes src, uint srcoffset, bytes dst, uint dstoffset, uint len) pure internal {
+        assembly {
+            src := add(src, add(32, srcoffset))
+            dst := add(dst, add(32, dstoffset))
+
+        // copy 32 bytes at once
+            for
+            {}
+            iszero(lt(len, 32))
+            {
+                dst := add(dst, 32)
+                src := add(src, 32)
+                len := sub(len, 32)
+            }
+            {mstore(dst, mload(src))}
+
+        // copy the remainder (0 < len < 32)
+            let mask := sub(exp(256, sub(32, len)), 1)
+            let srcpart := and(mload(src), not(mask))
+            let dstpart := and(mload(dst), mask)
+            mstore(dst, or(srcpart, dstpart))
+        }
     }
 
 }
