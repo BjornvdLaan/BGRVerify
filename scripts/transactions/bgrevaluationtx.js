@@ -1,4 +1,4 @@
-const bgr = require("../verify");
+const bgr = require("../evaluation-utils/verify");
 const web3helpers = require('../../web3helpers');
 
 

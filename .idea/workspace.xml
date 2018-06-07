@@ -5,23 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGR.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ECMath.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ECMath.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/RSA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/bytesutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/bytesutils.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/tlsnutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/tlsnutils.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/BTCPriceFeed.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BTCPriceFeed.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/decode.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/decode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGR1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGR2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGR3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGRBig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGRBig3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/ECMath.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/RSAVerify.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/Test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/bytesutils.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/rsaverify.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/strings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/tlsnutils.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/total.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/total.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/verification.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/verification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-data/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/rsadata.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-data/rsadata.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/rsaevaluation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/setup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-data/setup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/t.proof" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-data/t.proof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/tls-n.proof" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-data/tls-n.proof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/transactions/tlsnevaluationtx.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/transactions/tlsnevaluationtx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/verifytlsn.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verifytlsn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verification/bgrevaluation.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verification/bgrevaluation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-utils/verify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verifyrsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/verifytlsn.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-utils/verifytlsn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web3helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/web3helpers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,58 +56,45 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/BGRVerify$verification.coverage" NAME="verification Coverage Results" MODIFIED="1528397138064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
+    <SUITE FILE_PATH="coverage/BGRVerify$transaction.coverage" NAME="transaction Coverage Results" MODIFIED="1528397142355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
+    <SUITE FILE_PATH="coverage/BGRVerify$total.coverage" NAME="total Coverage Results" MODIFIED="1528397150674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bgrevaluation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/verification/bgrevaluation.js">
+      <file leaf-file-name="rsaevaluationtx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+            <state relative-caret-position="64">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decode.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/decode.js">
+      <file leaf-file-name="total.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/results/total.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            <state relative-caret-position="252">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BTCPriceFeed.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/BTCPriceFeed.sol">
+      <file leaf-file-name="transaction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/transaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
+            <state relative-caret-position="18">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rsaevaluationveri.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js">
+      <file leaf-file-name="verification.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/verification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RSA.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verifytlsn.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/verifytlsn.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state relative-caret-position="72">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -92,26 +102,17 @@
       <file leaf-file-name="tlsnevaluationtx.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/transactions/tlsnevaluationtx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="414">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tlsnevaluationveri.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js">
+      <file leaf-file-name="verifyrsa.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web3helpers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web3helpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="5" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -128,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Memory.</find>
       <find>modulus0</find>
       <find>moduli</find>
       <find>moduli[0]</find>
@@ -158,6 +158,7 @@
       <find>modulus</find>
       <find>state.methodIDs</find>
       <find>decode</find>
+      <find>contrac</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
@@ -175,13 +176,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/TestBGRSmall.sol" />
         <option value="$PROJECT_DIR$/contracts/libs/Memory.sol" />
         <option value="$PROJECT_DIR$/contracts/libs/Bytes.sol" />
         <option value="$PROJECT_DIR$/contracts/BGRSmall.sol" />
         <option value="$PROJECT_DIR$/backup/libs/Bytes.sol" />
         <option value="$PROJECT_DIR$/scripts/test.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/contracts/libs/strings.sol" />
         <option value="$PROJECT_DIR$/contracts/strings.sol" />
         <option value="$PROJECT_DIR$/scripts/data.txt" />
@@ -203,29 +202,31 @@
         <option value="$PROJECT_DIR$/scripts/verify3.js" />
         <option value="$PROJECT_DIR$/scripts/evaluation.js" />
         <option value="$PROJECT_DIR$/scripts/rsadata.txt" />
-        <option value="$PROJECT_DIR$/truffle.js" />
         <option value="$PROJECT_DIR$/contracts/BGR.sol" />
         <option value="$PROJECT_DIR$/scripts/rsaevaluation.js" />
         <option value="$PROJECT_DIR$/scripts/bgrevaluation.js" />
         <option value="$PROJECT_DIR$/scripts/bgrevaluationtx.js" />
         <option value="$PROJECT_DIR$/scripts/rsaevaluationtx.js" />
         <option value="$PROJECT_DIR$/scripts/verify.js" />
-        <option value="$PROJECT_DIR$/web3helpers.js" />
         <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
         <option value="$PROJECT_DIR$/scripts/t.proof" />
         <option value="$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js" />
-        <option value="$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js" />
-        <option value="$PROJECT_DIR$/scripts/verifyrsa.js" />
         <option value="$PROJECT_DIR$/contracts/RSA.sol" />
         <option value="$PROJECT_DIR$/scripts/verification/bgrevaluation.js" />
         <option value="$PROJECT_DIR$/results/graph.py" />
-        <option value="$PROJECT_DIR$/results/transaction.py" />
-        <option value="$PROJECT_DIR$/results/verification.py" />
         <option value="$PROJECT_DIR$/scripts/decode.js" />
-        <option value="$PROJECT_DIR$/contracts/BTCPriceFeed.sol" />
         <option value="$PROJECT_DIR$/scripts/transactions/tlsnevaluationtx.js" />
+        <option value="$PROJECT_DIR$/contracts/BTCPriceFeed.sol" />
         <option value="$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js" />
         <option value="$PROJECT_DIR$/scripts/verifytlsn.js" />
+        <option value="$PROJECT_DIR$/scripts/verifyrsa.js" />
+        <option value="$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js" />
+        <option value="$PROJECT_DIR$/web3helpers.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/truffle.js" />
+        <option value="$PROJECT_DIR$/results/transaction.py" />
+        <option value="$PROJECT_DIR$/results/verification.py" />
+        <option value="$PROJECT_DIR$/results/total.py" />
       </list>
     </option>
   </component>
@@ -256,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,23 +273,6 @@
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
               <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BGRVerify" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="imported" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BGRVerify" type="b2602c69:ProjectViewProjectNode" />
@@ -322,6 +305,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,18 +319,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/evaluation-data" />
+      <recent name="$PROJECT_DIR$/scripts/evaluation-utils" />
       <recent name="$PROJECT_DIR$/scripts/verification" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/scripts/transactions" />
-      <recent name="$PROJECT_DIR$/tlsn" />
-      <recent name="$PROJECT_DIR$/contracts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/scripts/verification" />
       <recent name="$PROJECT_DIR$/results" />
       <recent name="$PROJECT_DIR$/scripts/transactions" />
       <recent name="$PROJECT_DIR$/contracts" />
-      <recent name="$PROJECT_DIR$/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -361,11 +345,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.bgrevaluation.js">
-    <configuration name="bgrevaluation.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/verification/bgrevaluation.js" working-dir="$PROJECT_DIR$/scripts" />
+  <component name="RunManager" selected="Python.total">
     <configuration name="rsaevaluation.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="rsaevaluation.js" working-dir="$PROJECT_DIR$/scripts" />
-    <configuration name="verifyrsa.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="verifyrsa.js" working-dir="$PROJECT_DIR$/scripts" />
-    <configuration name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="verifyrsa.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js" working-dir="$PROJECT_DIR$/scripts" />
+    <configuration name="total" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BGRVerify" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,7 +361,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/results/graph.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/results/total.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="transaction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BGRVerify" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/results/transaction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -404,13 +406,15 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.bgrevaluation.js" />
-      <item itemvalue="Node.js.rsaevaluation.js" />
-      <item itemvalue="Node.js.verifyrsa.js" />
+      <item itemvalue="Python.total" />
+      <item itemvalue="Python.transaction" />
+      <item itemvalue="Python.verification" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.bgrevaluation.js" />
+        <item itemvalue="Python.total" />
+        <item itemvalue="Python.transaction" />
+        <item itemvalue="Python.verification" />
       </list>
     </recent_temporary>
   </component>
@@ -459,58 +463,61 @@
       <workItem from="1528366545723" duration="4237000" />
       <workItem from="1528373594202" duration="272000" />
       <workItem from="1528374831076" duration="2363000" />
-      <workItem from="1528379844163" duration="5452000" />
+      <workItem from="1528379844163" duration="6088000" />
+      <workItem from="1528392562612" duration="421000" />
+      <workItem from="1528393027178" duration="482000" />
+      <workItem from="1528396363648" duration="261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164849000" />
+    <option name="totallyTimeSpent" value="166649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1311387" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32910052" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1311387" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32973558" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32973558" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32910052" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19104156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -521,22 +528,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/migrations/1_initial_migration.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/tls-n_example.proof" />
     <entry file="file://$PROJECT_DIR$/tlsn/BTCPriceFeed.sol" />
     <entry file="file://$PROJECT_DIR$/contracts/rsaverify.sol" />
     <entry file="file://$PROJECT_DIR$/tlsn/imported/tlsnutils.sol" />
     <entry file="file://$PROJECT_DIR$/test/testRSA.js" />
-    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify.js">
+    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol" />
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
@@ -548,43 +546,18 @@
     <entry file="file://$PROJECT_DIR$/contracts/BGR1.sol" />
     <entry file="file://$PROJECT_DIR$/scripts/verify1.js" />
     <entry file="file://$PROJECT_DIR$/scripts/ba" />
-    <entry file="file://$PROJECT_DIR$/scripts/setup.txt">
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-data/setup.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/truffle-config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/truffle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/SolRsaVerify.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="108" column="53" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/rsaevaluation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/SolRsaVerify.sol" />
     <entry file="file://$PROJECT_DIR$/scripts/btcfeed.proof" />
-    <entry file="file://$PROJECT_DIR$/contracts/imported/ECMath.sol">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/imported/ECMath.sol" />
     <entry file="file://$PROJECT_DIR$/scripts/verifyTLSN.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/t.proof">
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-data/t.proof">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
@@ -600,64 +573,14 @@
     <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/rsadata.txt">
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-data/rsadata.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" lean-forward="true" selection-start-line="11" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="4" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verifyrsa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/transaction.py" />
-    <entry file="file://$PROJECT_DIR$/results/verification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/total.py" />
-    <entry file="file://$PROJECT_DIR$/build/contracts/BGR.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1638">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/contracts/BGR.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-buffer-stub.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -667,13 +590,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/ethereum-input-data-decoder/dist/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="88" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/abi-decoder/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -689,10 +605,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web3helpers.js">
+    <entry file="file://$PROJECT_DIR$/contracts/BTCPriceFeed.sol" />
+    <entry file="file://$PROJECT_DIR$/scripts/verification/bgrevaluation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        <state relative-caret-position="792">
+          <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BTCPriceFeed.sol" />
+    <entry file="file://$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol" />
+    <entry file="file://$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -703,66 +636,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BTCPriceFeed.sol">
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-data/data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="378">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js">
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifytlsn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="5" selection-start-line="4" selection-end-line="5" />
+        <state relative-caret-position="371">
+          <caret line="49" column="38" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
+    <entry file="file://$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/bgrevaluation.js">
+    <entry file="file://$PROJECT_DIR$/scripts/rsaevaluation.js" />
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
+        <state relative-caret-position="522">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js">
+    <entry file="file://$PROJECT_DIR$/web3helpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="117" />
+        <state relative-caret-position="497">
+          <caret line="190" column="60" lean-forward="true" selection-start-line="190" selection-start-column="60" selection-end-line="190" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BTCPriceFeed.sol">
+    <entry file="file://$PROJECT_DIR$/truffle-config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/truffle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
+        <state relative-caret-position="162">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/transactions/tlsnevaluationtx.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        <state relative-caret-position="414">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/tlsnevaluationveri.js">
+    <entry file="file://$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verifytlsn.js">
+    <entry file="file://$PROJECT_DIR$/results/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state relative-caret-position="18">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/verification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/total.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>

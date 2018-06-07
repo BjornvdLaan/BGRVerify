@@ -1,4 +1,4 @@
-const verifyrsa = require("../verifyrsa");
+const verifyrsa = require("../evaluation-utils/verifyrsa");
 const web3helpers = require('../../web3helpers');
 
 const m = web3helpers.readfile();

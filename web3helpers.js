@@ -187,13 +187,8 @@ function evaluationSetup(testFunction) {
     });
 }
 
-function readtlsnproof() {
-    const file = fs.readFileSync(path.resolve(__dirname, "scripts/tls-n.proof"), 'utf8');
-    return file.toString()
-}
-
 function readfile() {
-    const file = fs.readFileSync(path.resolve(__dirname, "scripts/data.txt"));
+    const file = fs.readFileSync(path.resolve(__dirname, "scripts/evaluation-data/data.txt"));
     return file.toString()
 }
 
@@ -208,5 +203,4 @@ module.exports = {
     numberToHex: numberToHex,
     numToBytes16: numToBytes16,
     readfile: readfile,
-    readtlsnproof: readtlsnproof
 };

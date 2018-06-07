@@ -1,3 +1,9 @@
+# Truffle stuff
+build/contracts/*
+
+# Jetbrains
+.idea
+
 
 # Binaries for programs and plugins
 *.exe
