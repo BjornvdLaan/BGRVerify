@@ -1,0 +1,39 @@
+S"^ $ ÿÿ4,¶yV.4¶yV@GG´¼4/­ä9Ú¶Éæ\!ºõªÐH&ù/2-¿£)µâ4ÈægîgÔÏý¶a±ÏAi#oZËÚIGET /proxy.py?url=https%3A//index.bitcoin.com/api/v0/lookup%3Ftime%3D1501545600 HTTP/1.1
+Host: tls-n.org
+Connection: keep-alive
+
+HËÆ×]HQW¨¹<´~HTTP/1.1 200 OK
+Date: Fri, 11 Aug 2017 12:47:10 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux) OpenSSL/1.0.1e-fips PHP/5.4.16 mod_nss/1.0.14 NSS/3.30.1
+Connection: close
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Expires: Sat, 12 Aug 2017 00:15:00 GMT
+Content-Length: 389
+ETag: W/"185-h+qcuMZj3tpp+ZnK/qOp6A"
+Content-Type: application/json; charset=utf-8
+
+Bc^PzpÆòlxîn{
+  "open": {
+    "price": 274435,
+    "time": {
+      "unix": 1501459200,
+      "iso": "2017-07-31T00:00:00.000Z"
+    }
+  },
+  "close": {
+    "price": 283918,
+    "time": {
+      "unix": 1501545600,
+      "iso": "2017-08-01T00:00:00.000Z"
+    }
+  },
+  "lookup": {
+    "price": 283918,
+    "k": 1,
+    "time": {
+      "unix": 1501545600,
+      "iso": "2017-08-01T00:00:00.000Z"
+    }
+  }
+}a¿tyeuÝÿUõ(

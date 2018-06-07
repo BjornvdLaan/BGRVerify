@@ -31,6 +31,13 @@ contract BGR {
     bytes modulus8 = hex"b5be3e236c62a3e03d0d993ba5ccfc639620e5237bdc53e7dd52d24a0b7236f3143b16c7ff4d1cf31a5f9c6671f303a1504a50fd91137b4edf5e37fdb672b68ad14ace39d968da3ae3cfb83b1ee0a2550903e98d21b122a6fc34fa5f4ddc1f06fe659ccad06df638abf858019af66e291f84c5f394211764c50cdc46786a30d874cfcd0046e3e5d9ad899eaad543e32a3b1437088b22bbf443332026a1e46c7574713da7d0a6ab0a1822f9fda463c561d8d5d503dde26dfd323c80d8bb6831cfc9872b647d7ced6683125ec816a00e721f65b4aca5e1d861aa50901d9bbb5e9d9266122e39725b2ca7e575d3cbdab5f75a562d586a0b157acf8468757f78ce25";
     bytes modulus9 = hex"a68c37147fb740f3007c0794d7ece6168c6c465ee1c562cd22578fef2a6e884ba149bbc979e2463bde14fe21c3ae0ae34257156fa92db4e6c7eb6fc0597a4b5196fdc9be4032c47f4a4d76211244361b1a9b7d2629610fbe10ae6811ca1ccf0686198fe158d7d932a20bdf7a02e6ea9208f33fb989952cedb6c64db4a15cac40d053746499b9d6682974f911a403ea5add15c2a7f918cbfad784ef7536a68ef7678a613fe45aed0cfd5e4ae772f41b4f5f43129fcf7e550268f0781bc26e721bea3893b02c52a537e3a342833117b9c419fda280f307a258ef162c5b2dc0d48ae88de34f785b0368dca5310cbf5f434843d77797898a6b4faebb89079d15a60b";
 
+    /**
+    This method is used to measure only the transaction costs
+    */
+    function doNothing(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
+        revert();
+    }
+
     function verify(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;

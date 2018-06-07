@@ -1,10 +1,26 @@
-const bgr = require("./verify");
-const web3helpers = require('../web3helpers');
-const BN = require('bn.js');
-const fs = require('fs');
-const path = require("path");
+const bgr = require("../verify");
+const web3helpers = require('../../web3helpers');
 
-one();
+
+switch (parseInt(process.argv[2])) {
+    case 1:
+        one();
+        break;
+    case 2:
+        two();
+        break;
+    case 3:
+        three();
+        break;
+    case 4:
+        four();
+        break;
+    case 5:
+        five();
+        break;
+    default:
+        console.log("Destination unknown");
+}
 
 function one() {
     const m = web3helpers.readfile();
@@ -20,7 +36,7 @@ function one() {
         web3helpers.numToBytes16("39591481140754388166925179461058716055"),
     ];
 
-    bgr.verify(m, x, h, b, r)
+    bgr.measure(m, x, h, b, r)
 }
 
 function two() {
@@ -38,7 +54,7 @@ function two() {
         web3helpers.numToBytes16("290836363966245791631489528113304322240"),
     ];
 
-    bgr.verify(m+m, x, h, b, r)
+    bgr.measure(m+m, x, h, b, r)
 }
 
 function three() {
@@ -57,7 +73,7 @@ function three() {
         web3helpers.numToBytes16("196668985635432548435435474890493737120")
     ];
 
-    bgr.verify(m+m+m, x, h, b, r)
+    bgr.measure(m+m+m, x, h, b, r)
 }
 
 function four() {
@@ -78,7 +94,7 @@ function four() {
 
     ];
 
-    bgr.verify(m+m+m+m, x, h, b, r)
+    bgr.measure(m+m+m+m, x, h, b, r)
 }
 
 function five() {
@@ -99,5 +115,5 @@ function five() {
         web3helpers.numToBytes16("189042677990858424565418419772348442800")
     ];
 
-    bgr.verify(m+m+m+m+m, x, h, b, r)
+    bgr.measure(m+m+m+m+m, x, h, b, r)
 }
