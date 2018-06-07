@@ -32,7 +32,7 @@ exports.measure = function(data) {
                     })
             })
             .catch(e => {
-                console.log("BGR contract not deployed");
+                console.log("BPF contract not deployed");
                 console.log(e);
             });
 
@@ -40,14 +40,14 @@ exports.measure = function(data) {
 };
 
 exports.verify = function(m) {
-    const bgrcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
+    const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
 
     web3.eth.getAccounts().then((accounts) => {
         const requester = accounts[1];
 
-        bgrcontract.deployed()
-            .then((bgr) => {
-                return bgr.submitProofOfPrice.call(m, {
+        bpfcontract.deployed()
+            .then((bpf) => {
+                return bpf.sendNothing( {
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -63,7 +63,7 @@ exports.verify = function(m) {
                     })
             })
             .catch(e => {
-                console.log("BGR contract not deployed");
+                console.log("BPF contract not deployed");
                 console.log(e);
             });
 
