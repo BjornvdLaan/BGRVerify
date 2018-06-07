@@ -1,6 +1,3 @@
-# Truffle stuff
-build/contracts/*
-
 # Jetbrains
 .idea
 
