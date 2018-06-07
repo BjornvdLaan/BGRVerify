@@ -14,6 +14,6 @@ plt.plot(signers, tx_tlsn_single, color='gold', label='TLS-N')
 
 plt.xlabel('Number of signers')
 plt.ylabel('Gas expenditure')
-plt.title('Transaction costs')
+plt.title('Transaction')
 plt.legend(loc='upper left')
 plt.show()
