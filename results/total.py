@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 
+font = {'size'   : 18}
+
+plt.rc('font', **font)
+
 def main():
     all()
     bgr_rsa()
