@@ -53,7 +53,7 @@ contract RSA {
     This method is used to measure only the verification costs
     */
     function sendNothing() {
-        uint n = 5; //NOTE: change this parameter to set the amount of signatures that will be verified
+        uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint i = 0; i < n; i++) {
             SolRsaVerify.pkcs1Sha256VerifyRaw(message, getSignature(0), e, getModulus(0));

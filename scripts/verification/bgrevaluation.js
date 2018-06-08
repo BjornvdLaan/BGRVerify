@@ -17,9 +17,25 @@ switch (parseInt(process.argv[2])) {
     case 5:
         five();
         break;
+    case 6:
+        six();
+        break;
+    case 7:
+        seven();
+        break;
+    case 8:
+        eight();
+        break;
+    case 9:
+        nine();
+        break;
+    case 10:
+        ten();
+        break;
     default:
         console.log("Destination unknown");
 }
+
 
 function one() {
     const m = web3helpers.readfile();
@@ -115,4 +131,135 @@ function five() {
     ];
 
     bgr.verify(m+m+m+m+m, x, h, b, r)
+}
+
+function six() {
+    const m = web3helpers.readfile();
+
+    const x = "0x"+"4312a1f9bf4cb26d343f49d6bc0fdd1b65bfc46f323606ecfb917f9abcccba0758411d7a5bb54eec287b3b3e5078097039a901d2d9c0ce0341c64ec83c41ef2550a985e684e9b0897ea74271943183c4f110e41bf42ce82e7c5f06b66c62271cb4ee1cd3269884bdef5df68240abf6bbfcc7c97a07c28bff7dca19b016c1cd1df08e804fcfeef10e7839d693c5618129c61da5187a5214fea6fd38381b6c9940b030b58b0c3a4c51f6144adbb9b273478480e1a98812d7a5277498a0830edd7a65ac1ea3de4c1a96a5b702b30af576c88f400abd5be56e149846d9d9080ac5ac9d39b2a3afeb2fb47ed9294dae69ad2a8f694ec58540641559a4618280fb2638";
+    const h = "0x"+"4239a1c8930631323449ae7ab9d1efce15c43501c20e13774fbb4955f5b72022";
+
+    const b = [
+        true, false, false, true, false, false
+    ];
+
+    const r = [
+        web3helpers.numToBytes16("153243340113747608506668048222788411723"),
+        web3helpers.numToBytes16("279452430051790593275660243786036419850"),
+        web3helpers.numToBytes16("104127680137387994528620332631817216725"),
+
+        web3helpers.numToBytes16("4884179320831182815951711518937612913"),
+        web3helpers.numToBytes16("239825810692772998290666485870126900883"),
+        web3helpers.numToBytes16("172206688718692229927521775142281610213")
+    ];
+
+    bgr.verify(m+m+m+m+m+m, x, h, b, r)
+}
+
+function seven() {
+    const m = web3helpers.readfile();
+
+    const x = "0x"+"52bc307509a653fed13e268c24fb85ac65a122bc66781fb8071ee965ff56c6a70c56eaf40bacee7447e81d30d20165b96b221cc65e8fbd0b4ccf8fd1c9f5c8c053a779898b45080c14687ba1120303ced3622401bb54fda2f168bab16217ea90eb9432b74acc6127dc8ea2c9ad69ccd35b660d5227a0bca9150cb8b1fb1f3894de0d6f2fab9aa4677386dcadf0fb41169eb6ae234582e2896d9fc3186ac88f8038825f8d33cb09d5063bc931f1a10c97223bc72a526f80c5b4441897332487ff8bc3cd6bcd8841c297a2a45441d516339ef4a5ca10ac4d57932f36e5ac41b8829f2ff1200df2da47ccdd8e30da02aaa78993aaa113af42cee194714c3350b432";
+    const h = "0x"+"8ba947632e289eaa902d5ace4aee601a48d9d3d165758c1986d32c706d75e25a";
+
+    const b = [
+        false, false, true, false, false, false, true
+    ];
+
+    const r = [
+        web3helpers.numToBytes16("171137253985817534131558940837451129929"),
+        web3helpers.numToBytes16("140118924115475325061528320539341380653"),
+        web3helpers.numToBytes16("308478012007120559521360900818108781682"),
+
+        web3helpers.numToBytes16("323914090618950798027715003180512448240"),
+        web3helpers.numToBytes16("227148227436302685486907246320731916609"),
+        web3helpers.numToBytes16("329499866876781782504596408555787365901"),
+
+        web3helpers.numToBytes16("193956288216274721883342864830219064704")
+    ];
+
+    bgr.verify(m+m+m+m+m+m+m, x, h, b, r)
+}
+
+function eight() {
+    const m = web3helpers.readfile();
+
+    const x = "0x"+"6c8c15ea63079beec997b9aa6e5b11492ec2c69fae6b8a3d0f069f950abf90bf64eb14f2307e0d44b591517e871ab80bfcd22171fb7c8cb334bed51d20c8f23f3e5357b4d66eba61e382a859861e4d60911d002712ac0d478b7c26df111849a184fb04fafc114ac14db75126730e83e2e97a126d4b51bed232361043b739f027b1289d78f6c090c190f223693113babd8512e31ac07c835d31cf5e789caebc45a32bd23455b36e48014324d3bf852cf2dc85e6e8f9790d217dd1fcb30679cbd26e148e162dfc2a4e7018c30293ca347f3533e68c361596c8d8073558c43ebbb1002a54f314a241d360c25a19d2c4bfb50d34c6c281809eb473a01f71e10319de";
+    const h = "0x"+"097fcf04c7e3590ed8cef52f2e26c49044e6b7c4288d242ad3e83b6dba487935";
+
+    const b = [
+        true, false, false, false, false, false, false, false
+    ];
+
+    const r = [
+        web3helpers.numToBytes16("130273717170018648818359332983562062328"),
+        web3helpers.numToBytes16("296342049952083473928827226616419588086"),
+        web3helpers.numToBytes16("196467917594476684608792737711658876816"),
+
+        web3helpers.numToBytes16("207582153045114618578888429407922664648"),
+        web3helpers.numToBytes16("302515353227608900558927882458963579793"),
+        web3helpers.numToBytes16("116911147150432321957374857476471124176"),
+
+        web3helpers.numToBytes16("187489731500543610027979030461062720435"),
+        web3helpers.numToBytes16("262130065272450825195690791466042441597")
+    ];
+
+    bgr.verify(m+m+m+m+m+m+m+m, x, h, b, r)
+}
+
+function nine() {
+    const m = web3helpers.readfile();
+
+    const x = "0x"+"08606ad3459d90c354b14ae92fd91f78f83b22c2d1842366e7fc7e223205c602963162fe921116a256986aa0c13afaa44b97fda1923a0b928634ed6df429b93ef3db9a4fe8e0042b831871159acb8897ebd79d62659a06854dd35ba16e692da2889123fbaa50fe2ed71f178171382492beccd0beea3a6169bb76e68f6263033139d7eaffcacb278deac6f3f5f1316c839b3de93308df4d9feba8d91bccda891924e2d68741d0b4d62e86b5f6a17bebc912388b3921319269d2c9865ed6aa3222b2b8844edbd409f8251d955c258d1c076615208df06cb0030f748787bf50140d42cb7db41f993f556a317766b01bff2d7019ca3a9e4984b50ae438f2a7b83e71";
+    const h = "0x"+"afab64bb9bfdbc4c5e2f3f273f2437d2201b1422682413514ac12f4955f29386";
+
+    const b = [
+        false, false, false, false, true, true, true, false, false
+    ];
+
+    const r = [
+        web3helpers.numToBytes16("107054470184585471655497344868923330500"),
+        web3helpers.numToBytes16("124564422088024159041986957054831636325"),
+        web3helpers.numToBytes16("77907883868475648318832068582843591699"),
+
+        web3helpers.numToBytes16("194898074989828285542220913972420279575"),
+        web3helpers.numToBytes16("331127070123430868902841314892372268723"),
+        web3helpers.numToBytes16("5102535536799747286592598057102878652"),
+
+        web3helpers.numToBytes16("65661849790239891886038228539811183591"),
+        web3helpers.numToBytes16("160232482189283750841670823891839133973"),
+        web3helpers.numToBytes16("74038135052239349828014493534624794824"),
+        web3helpers.numToBytes16("199412226259426740228555528866801913670")
+    ];
+
+    bgr.verify(m+m+m+m+m+m+m+m+m, x, h, b, r)
+}
+
+
+function ten() {
+    const m = web3helpers.readfile();
+
+    const x = "0x"+"645b60506f7dd9602ef18d94b4f395b2149bd00291e0c0b94f8caa5add04015892c5e0fa44f997e716e5a8ebe649c7d12ebf7ee131dddc44f700cdf59e12d792dc60e9cec9dc8e4bbbf513a46ff66c5821d1d723108ad72b22d5fa13624f53acd98ea4720f352d29c05d43b302b5ff9083693d35c14f44e831f03d31defb0cf8ab6689084c81a3429859f4bed3ece66c4dfc01bc27e68f95ef6db2e152602a7661c7367349a38a48b5b44ec37437bdf3677bc5a0f95e30e8f41458e38dec4c0cb7cf60c7a989a6f0250f3a792ee5dc8381a3a9c1da2051591e1bad909c5678219f030b001002dfc0cad1200a951d8459bd0d5155ef46694b379f12dc8aa98339";
+    const h = "0x"+"f5e0973a3a76d0d8ef64473a148257129c76adab8f6ecc72a4c37516db90b302";
+
+    const b = [
+        false, false, false, true, false, false, true, false, false, false
+    ];
+
+    const r = [
+        web3helpers.numToBytes16("180133809256460994280622929044160755500"),
+        web3helpers.numToBytes16("32192968618982417732858997789378373171"),
+        web3helpers.numToBytes16("276727187769640947872730957758714066109"),
+
+        web3helpers.numToBytes16("90482917056467491009167217146950459607"),
+        web3helpers.numToBytes16("82562876228044666014433604548063822840"),
+        web3helpers.numToBytes16("163392913560155702569207560846808028755"),
+
+        web3helpers.numToBytes16("90014744203677727580414377800636896061"),
+        web3helpers.numToBytes16("277265258534971516640862010827047513047"),
+        web3helpers.numToBytes16("74038135052239349828014493534624794824"),
+        web3helpers.numToBytes16("198279746822885933745717753972469816073")
+    ];
+
+    bgr.verify(m+m+m+m+m+m+m+m+m+m, x, h, b, r)
 }
