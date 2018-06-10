@@ -8,10 +8,6 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 // connect to ethereum node
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 
-function test() {
-    const m = web3helpers.readtlsnproof();
-    this.measure(m)
-}
 
 exports.measure = function(m, s) {
     const contract = web3helpers.initTruffleContract(web3, 'RSA');
@@ -106,5 +102,3 @@ exports.total = function(m, s) {
 
     })
 };
-
-

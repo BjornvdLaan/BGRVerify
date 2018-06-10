@@ -9,7 +9,7 @@ import (
 	"crypto/rsa"
 )
 
-func signPKCS15(msg string, rsaPrivateKey *rsa.PrivateKey) ([]byte) {
+func signRSA(msg string, rsaPrivateKey *rsa.PrivateKey) ([]byte) {
 
 	// crypto/rand.Reader is a good source of entropy for blinding the RSA
 	// operation.
@@ -24,7 +24,7 @@ func signPKCS15(msg string, rsaPrivateKey *rsa.PrivateKey) ([]byte) {
 	// of writing (2016).
 	hashed := sha256.Sum256(message)
 
-	signature, err := rsa.SignPKCS1v15(rng, rsaPrivateKey, crypto.SHA256, hashed[:])
+	signature, err := rsa.SignPSS(rng, rsaPrivateKey, crypto.SHA256, hashed[:], nil)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error from signing: %s\n", err)
@@ -39,7 +39,7 @@ func signPKCS15(msg string, rsaPrivateKey *rsa.PrivateKey) ([]byte) {
 	return signature
 }
 
-func verifyPKCS15(msg string, signature []byte, rsaPublicKey rsa.PublicKey) (bool) {
+func verifyRSA(msg string, signature []byte, rsaPublicKey rsa.PublicKey) (bool) {
 
 	message := []byte(msg)
 	//signature, _ := hex.DecodeString("ad2766728615cc7a746cc553916380ca7bfa4f8983b990913bc69eb0556539a350ff0f8fe65ddfd3ebe91fe1c299c2fac135bc8c61e26be44ee259f2f80c1530")
@@ -51,7 +51,7 @@ func verifyPKCS15(msg string, signature []byte, rsaPublicKey rsa.PublicKey) (boo
 	// of writing (2016).
 	hashed := sha256.Sum256(message)
 
-	err := rsa.VerifyPKCS1v15(&rsaPublicKey, crypto.SHA256, hashed[:], signature)
+	err := rsa.VerifyPSS(&rsaPublicKey, crypto.SHA256, hashed[:], signature, nil)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error from verification: %s\n", err)

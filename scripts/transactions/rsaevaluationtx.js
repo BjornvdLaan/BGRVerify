@@ -51,12 +51,12 @@ switch (parseInt(process.argv[2])) {
 }
 
 function one() {
-    const S = s0;
-    verifyrsa.measure(m, S)
+    verifyrsa.measure(m, s0)
 }
 
 function two() {
     const S = s0+s1;
+
     verifyrsa.measure(m+m, S)
 }
 

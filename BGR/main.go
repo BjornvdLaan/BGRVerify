@@ -22,10 +22,10 @@ func rsaverify() {
 	for i := 0; i < number_of_signers; i++ {
 		sk, _ := rsa.GenerateKey(rand.Reader, 2048)
 		message := read_file()
-		sig := signPKCS15(message, sk)
+		sig := signRSA(message, sk)
 
 		//verify signature
-		if verifyPKCS15(message, sig, sk.PublicKey) {
+		if verifyRSA(message, sig, sk.PublicKey) {
 			signatures = append(signatures, sig)
 			publickeys = append(publickeys, sk.PublicKey)
 		} else {
