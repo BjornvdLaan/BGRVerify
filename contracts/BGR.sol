@@ -31,6 +31,18 @@ contract BGR {
     bytes modulus8 = hex"b5be3e236c62a3e03d0d993ba5ccfc639620e5237bdc53e7dd52d24a0b7236f3143b16c7ff4d1cf31a5f9c6671f303a1504a50fd91137b4edf5e37fdb672b68ad14ace39d968da3ae3cfb83b1ee0a2550903e98d21b122a6fc34fa5f4ddc1f06fe659ccad06df638abf858019af66e291f84c5f394211764c50cdc46786a30d874cfcd0046e3e5d9ad899eaad543e32a3b1437088b22bbf443332026a1e46c7574713da7d0a6ab0a1822f9fda463c561d8d5d503dde26dfd323c80d8bb6831cfc9872b647d7ced6683125ec816a00e721f65b4aca5e1d861aa50901d9bbb5e9d9266122e39725b2ca7e575d3cbdab5f75a562d586a0b157acf8468757f78ce25";
     bytes modulus9 = hex"a68c37147fb740f3007c0794d7ece6168c6c465ee1c562cd22578fef2a6e884ba149bbc979e2463bde14fe21c3ae0ae34257156fa92db4e6c7eb6fc0597a4b5196fdc9be4032c47f4a4d76211244361b1a9b7d2629610fbe10ae6811ca1ccf0686198fe158d7d932a20bdf7a02e6ea9208f33fb989952cedb6c64db4a15cac40d053746499b9d6682974f911a403ea5add15c2a7f918cbfad784ef7536a68ef7678a613fe45aed0cfd5e4ae772f41b4f5f43129fcf7e550268f0781bc26e721bea3893b02c52a537e3a342833117b9c419fda280f307a258ef162c5b2dc0d48ae88de34f785b0368dca5310cbf5f434843d77797898a6b4faebb89079d15a60b";
 
+    //example signature for measuring storage
+    bytes x_ex = hex"040bb2f2151be77a766ffa74256a1f778bc45c4027d7ff6de44c14d77fc33a17efb6b18059af36d3a3c9b9db710412b25ad0393901f9877bf48bb95dbcc9b0a5679a52a92d32aac97d5f9b7e242c87049e528c31f229b3b2e115c80a0699ae25cd5564ba0056cc897126cba89221a2a6e516553c591f3406f05267513db8434d3ecf336bfc28b6998c12b5f07d96597ac32ea81a8e5f71b3ad37d4bda7ebd90a8c6fb2b27be797ac1ed1719f9978a55b98d194c55886b0db3dde6f8933632d0466a52a30944c877bcff04f79862a377d4779d5fcf69590bbedc39aaf0c1c2a3b29cbcd2e6c826ce4fb1f6ade94492ff8640412277e27ae86e7527d05da9c4d58";
+    bytes32 h_ex = hex"382c197defb54043b80875be1de7fa4bb210c183e2e274c25296d9de5da09df1";
+    bytes16 r_ex = bytes16(39591481140754388166925179461058716055);
+    bool b_ex = false;
+
+    //NOTE: add elements to set the number of messages signatures that will be stored in function store.
+    bytes16[] r_arr = [r_ex, r_ex, r_ex, r_ex, r_ex,
+                        r_ex, r_ex, r_ex, r_ex, r_ex];
+    bool[] b_arr = [b_ex, b_ex, b_ex, b_ex, b_ex,
+                        b_ex, b_ex, b_ex, b_ex, b_ex];
+
     /**
     This method is used to measure only the transaction costs
     */
@@ -38,6 +50,33 @@ contract BGR {
         revert();
     }
 
+    /**
+    This method is used to measure only the storage costs
+    */
+    uint32 counter = 0;
+    mapping(uint32 => bytes) msg_storage;
+    mapping(uint32 => bytes) x_storage;
+    mapping(uint32 => bytes32) h_storage;
+    mapping(uint32 => bytes16[]) r_storage;
+    mapping(uint32 => bool[]) b_storage;
+    function store() {
+
+        uint n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
+
+        x_storage[counter] = x_ex;
+        h_storage[counter] = h_ex;
+        r_storage[counter] = r_arr;
+        b_storage[counter] = b_arr;
+
+        for (uint i = 0; i < n; i++) {
+            msg_storage[counter] = message;
+            counter = counter + 1;
+        }
+    }
+
+    /**
+    This method is used to measure the total costs
+    */
     function verify(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
@@ -58,7 +97,20 @@ contract BGR {
 
         bytes memory pig = modexp(split_inverse(x_prev, b[0]), e, modulus0);
 
-        return h_hash == h_prev && equals(g_hash, pig);
+        //Perform check
+        //require(h_hash == h_prev && equals(g_hash, pig));
+
+        //Store proof and messages
+        x_storage[counter] = x_prev;
+        h_storage[counter] = h_prev;
+        r_storage[counter] = r;
+        b_storage[counter] = b;
+        for (uint j = 0; j < n_signers; j++) {
+            msg_storage[counter] = message;
+            counter = counter + 1;
+        }
+
+        return true;
     }
 
     function getModulus(uint i) view internal returns (bytes) {

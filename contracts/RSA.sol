@@ -6,14 +6,6 @@ import "./SolRsaVerify.sol";
 contract RSA {
     using SolRsaVerify for *;
 
-   /* struct Delivery {
-        bytes data;
-        bytes s;
-    }*/
-
-    //uint counter = 0;
-    //mapping (uint => Delivery) deliveries;
-
     //Simulation of PKI (assumed to be available)
     uint constant e = 65537;
     //bytes e = hex"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001";
@@ -42,15 +34,29 @@ contract RSA {
     bytes signature9 = hex"a6a04b4add67db244b4f70dfc222ea121b341316bc997d985719ab1fd543fbb6a5734341534367786563b17d7c7daae499a3d303eef818328fae71672a1e83261f9c17f04a92facc2dda05bfca1948682d48d90711a1b72b0db2766b62bcbf97a7a8255aa62149a4bc9eaba579fa7863f7f7b9ba2b7997cdd5fea0fee7ff5b5535597fba6619b22e0aa9224a4bc28ad232f72c1b5a7e9230bfdc4899cb35bb387fe93cce69f4b05e173e7e855cd4ab9b0d7b40ed8fb28cd7df3b7dd59e99fb7a8afe0691fdddc38563502cfd16253e16ea49325cf13e23e1b5fbd1a49d8288b64fb31add5e6e8f62098d97a4a36a42ad516276dc03e4f7a773f15d2f072722a6";
 
 
-    function testPSS(bytes _data, bytes _s, bytes _n) returns (bool) {
-        SolRsaVerify.pkcs1Sha256VerifyRaw(_data, _s, e, _n);
-    }
-
     /**
     This method is used to measure only the transaction costs
     */
     function doNothing(bytes _data, bytes _s) returns (bool) {
-        revert();
+        return true;
+    }
+
+    /**
+    This method is used to measure only the storage costs
+    */
+    uint32 counter = 0;
+    mapping(uint32 => bytes) msg_storage;
+    mapping(uint32 => bytes) sig_storage;
+    function store() {
+
+        uint n = 1; //NOTE: change this parameter to set the number of messages signatures that will be stored
+
+        for (uint i = 0; i < n; i++) {
+            msg_storage[counter] = message;
+            sig_storage[counter] = getSignature(i);
+
+            counter = counter + 1;
+        }
     }
 
     /**
@@ -60,7 +66,7 @@ contract RSA {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint i = 0; i < n; i++) {
-            SolRsaVerify.pkcs1Sha256VerifyRaw(message, getSignature(0), e, getModulus(0));
+            SolRsaVerify.pkcs1Sha256VerifyRaw(message, getSignature(i), e, getModulus(i));
         }
     }
 

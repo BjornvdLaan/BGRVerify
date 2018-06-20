@@ -47,7 +47,7 @@ exports.verify = function() {
 
         bpfcontract.deployed()
             .then((bpf) => {
-                return bpf.sendNothing( {
+                return bpf.sendNothing({
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -69,4 +69,67 @@ exports.verify = function() {
 
     })
 };
+
+exports.store = function() {
+    const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
+
+    web3.eth.getAccounts().then((accounts) => {
+        const requester = accounts[1];
+
+        bpfcontract.deployed()
+            .then((bpf) => {
+                return bpf.store({
+                    from: requester,
+                    gas: 10000000000,
+                    value: 0
+                })
+                    .then(function (result) {
+                        console.log(result);
+                        process.exit();
+                    })
+                    .catch(e => {
+                        console.log("Error");
+                        console.log(e);
+                        process.exit();
+                    })
+            })
+            .catch(e => {
+                console.log("BPF contract not deployed");
+                console.log(e);
+            });
+
+    })
+};
+
+exports.real = function(m) {
+    const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
+
+    web3.eth.getAccounts().then((accounts) => {
+        const requester = accounts[1];
+
+        bpfcontract.deployed()
+            .then((bpf) => {
+                return bpf.verifyProof(m, {
+                    from: requester,
+                    gas: 10000000000,
+                    value: 0
+                })
+                    .then(function (result) {
+                        console.log(result);
+                        process.exit();
+                    })
+                    .catch(e => {
+                        console.log("Error");
+                        console.log(e);
+                        process.exit();
+                    })
+            })
+            .catch(e => {
+                console.log("BPF contract not deployed");
+                console.log(e);
+            });
+
+    })
+};
+
 

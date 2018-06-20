@@ -36,7 +36,6 @@ switch (parseInt(process.argv[2])) {
         console.log("Destination unknown");
 }
 
-
 function one() {
     const m = web3helpers.readfile();
 
@@ -229,7 +228,6 @@ function nine() {
         web3helpers.numToBytes16("65661849790239891886038228539811183591"),
         web3helpers.numToBytes16("160232482189283750841670823891839133973"),
         web3helpers.numToBytes16("74038135052239349828014493534624794824"),
-        web3helpers.numToBytes16("199412226259426740228555528866801913670")
     ];
 
     bgr.verify(m+m+m+m+m+m+m+m+m, x, h, b, r)
