@@ -1,8 +1,13 @@
 pragma solidity ^0.4.14;
+pragma experimental ABIEncoderV2;
 
 
 //https://github.com/jstoxrocky/zksnarks_example
 contract BLS {
+
+    //Representative example to measure storage costs
+    bytes message_ex = hex"7b0a2020226f70656e223a207b0a20202020227072696365223a2039353931372c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333134323430302c0a2020202020202269736f223a2022323031362d31322d33315430303a30303a30302e3030305a220a202020207d0a20207d2c0a202022636c6f7365223a207b0a20202020227072696365223a2039363736302c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d2c0a2020226c6f6f6b7570223a207b0a20202020227072696365223a2039363736302c0a20202020226b223a20312c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d0a7d0a6578616d706c652e636f6d2f6170692f31";
+    uint[] signature_ex = [11181692345848957662074290878138344227085597134981019040735323471731897153462, 6479746447046570360435714249272776082787932146211764251347798668447381926167];
 
     struct G1Point {
         uint X;
@@ -33,8 +38,8 @@ contract BLS {
     /**
     This method is used to measure only the transaction costs
     */
-    function doNothing(uint[] _sig, bytes _messages) returns (bool) {
-        return true;
+    function doNothing(uint[] _sigs, bytes _messages) returns (bool) {
+       revert();
     }
 
     /**
@@ -45,11 +50,11 @@ contract BLS {
     mapping(uint32 => bytes) msg_storage;
     function store() {
 
-        uint n = 1; //NOTE: change this parameter to set the number of messages signatures that will be stored
+        uint n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
 
         for (uint i = 0; i < n; i++) {
-            //msg_storage[counter] = message;
-            //sig_storage[counter] = getSignature(i);
+            msg_storage[counter] = message_ex;
+            sig_storage[counter] = signature_ex;
 
             counter = counter + 1;
         }
@@ -62,10 +67,13 @@ contract BLS {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint i = 0; i < n; i++) {
-            //verifyBGLS(message, getSignature(i), e, getModulus(i));
+            verifyBLSTest();
         }
     }
 
+    /*
+    Verification with internal keys
+    */
     function verify(uint[] memory sig, bytes msg) returns (bool) {
         bytes memory message = msg;
 
@@ -75,6 +83,21 @@ contract BLS {
             [18523194229674161632574346342370534213928970227736813349975332190798837787897, 5725452645840548248571879966249653216818629536104756116202892528545334967238],
             [3816656720215352836236372430537606984911914992659540439626020770732736710924, 677280212051826798882467475639465784259337739185938192379192340908771705870]
         );
+
+        G1Point memory h = hashToG1(message);
+
+        return pairing2(negate(signature), P2(), h, v);
+    }
+
+    /*
+    Verification with external keys
+    */
+    function verifyBLS(uint[] memory sig, uint[] vs, bytes msg) returns (bool) {
+        bytes memory message = msg;
+
+        G1Point memory signature = G1Point(sig[0], sig[1]);
+
+        G2Point memory v = G2Point([vs[0], vs[1]], [vs[2], vs[3]]);
 
         G1Point memory h = hashToG1(message);
 

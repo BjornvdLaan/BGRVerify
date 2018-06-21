@@ -9,7 +9,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 
 
-exports.measure = function(m, s) {
+exports.measure = function(sig, msg) {
     const contract = web3helpers.initTruffleContract(web3, 'BLS');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -17,7 +17,7 @@ exports.measure = function(m, s) {
 
         contract.deployed()
             .then((c) => {
-                return c.doNothing(m, s, {
+                return c.doNothing(sig, msg, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -71,8 +71,38 @@ exports.store = function() {
     })
 };
 
+exports.verify = function() {
+    const contract = web3helpers.initTruffleContract(web3, 'BLS');
 
-exports.verify = function(sig, msg) {
+    web3.eth.getAccounts().then((accounts) => {
+        const requester = accounts[1];
+
+        contract.deployed()
+            .then((c) => {
+                return c.sendNothing({
+                    from: requester,
+                    gas: 10000000000,
+                    value: 0
+                })
+                    .then(function (result) {
+                        console.log(result);
+                        process.exit();
+                    })
+                    .catch(e => {
+                        console.log("Error");
+                        console.log(e);
+                        process.exit();
+                    })
+            })
+            .catch(e => {
+                console.log("BTCPriceFeed contract not deployed");
+                console.log(e);
+            });
+
+    })
+};
+
+exports.real = function(sig, msg) {
     const contract = web3helpers.initTruffleContract(web3, 'BLS');
 
     web3.eth.getAccounts().then((accounts) => {
