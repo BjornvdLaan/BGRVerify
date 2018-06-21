@@ -1,89 +1,21 @@
-const verifybgls = require("../evaluation-utils/verifybgls");
+const bgls = require("../evaluation-utils/verifybgls");
 const web3helpers = require('../../web3helpers');
+const BN = require("web3").utils.BN;
 
+//load message
 const m = web3helpers.readfile();
 
-switch (parseInt(process.argv[2])) {
-    case 1:
-        one();
-        break;
-    case 2:
-        two();
-        break;
-    case 3:
-        three();
-        break;
-    case 4:
-        four();
-        break;
-    case 5:
-        five();
-        break;
-    case 6:
-        six();
-        break;
-    case 7:
-        seven();
-        break;
-    case 8:
-        eight();
-        break;
-    case 9:
-        nine();
-        break;
-    case 10:
-        ten();
-        break;
-    default:
-        console.log("Destination unknown");
-}
+measureTransactionCost(parseInt(process.argv[2]));
 
-function one() {
-    verifybgls.measure()
-}
+function measureTransactionCost(number_of_signers) {
+    //create message of right size
+    let message = "";
+    for (let i = 0; i < number_of_signers; i++) {
+        message += m;
+    }
 
-function two() {
-    const S = s0+s1;
+    //an example signature (size is always constant anyway)
+    const sig = [new BN('5184658216108236166487848590876511837733486685529854097237373095672855537357'), new BN('8330930853020054953908886276405410407605755848046343130652944150060164059116')];
 
-    verifybgls.measure(m+m, S)
-}
-
-function three() {
-    const S = s0+s1+s2;
-    verifybgls.measure(m+m+m, S)
-}
-
-function four() {
-    const S = s0+s1+s2+s3;
-    verifybgls.measure(m+m+m+m, S)
-}
-
-function five() {
-    const S = s0+s1+s2+s3+s4;
-    verifybgls.measure(m+m+m+m+m, S)
-}
-
-function six() {
-    const S = s0+s1+s2+s3+s4+s5;
-    verifybgls.measure(m+m+m+m+m+m, S)
-}
-
-function seven() {
-    const S = s0+s1+s2+s3+s4+s5+s6;
-    verifybgls.measure(m+m+m+m+m+m+m, S)
-}
-
-function eight() {
-    const S = s0+s1+s2+s3+s4+s5+s6+s7;
-    verifybgls.measure(m+m+m+m+m+m+m+m, S)
-}
-
-function nine() {
-    const S = s0+s1+s2+s3+s4+s5+s6+s7+s8;
-    verifybgls.measure(m+m+m+m+m+m+m+m+m, S)
-}
-
-function ten() {
-    const S = s0+s1+s2+s3+s4+s5+s6+s7+s8+s9;
-    verifybgls.measure(m+m+m+m+m+m+m+m+m+m, S)
+    bgls.transactioncost(sig, message)
 }

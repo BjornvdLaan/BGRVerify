@@ -5,23 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/storage/blsevaluationtx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/verification/blsevaluationveri.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/evaluation-data/bglsdata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/storage/bglsevaluation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/verification/bglsevaluation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGLS.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGLS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGR.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BLS.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BLS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ECMath.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ECMath.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/RSA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/bytesutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/bytesutils.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/tlsnutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/tlsnutils.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGLS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGLSA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGLST.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BGR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BLS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/ECMath.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/bytesutils.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/tlsnutils.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/BGLS.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BGLS.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/BLS.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/BLS.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/evaluation-utils/verifybls.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-utils/verifybls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,29 +39,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BLS.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/BLS.sol">
+      <file leaf-file-name="verifybgls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BGLS.sol" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bgrevaluationtx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/storage/bgrevaluationtx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bglsevaluation.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/verification/bglsevaluation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BGLS.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/BGLS.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BGR.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
+      <file leaf-file-name="bglsevaluationtx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="13" selection-start-line="20" selection-end-line="21" />
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blsevaluationtx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/storage/blsevaluationtx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blsevaluationtx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="21" selection-start-line="2" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bglsevaluation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/storage/bglsevaluation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -75,9 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parseBitcoinComFeed</find>
-      <find>S</find>
-      <find>btc</find>
       <find>_data</find>
       <find>bytes</find>
       <find>decipher</find>
@@ -105,6 +159,9 @@
       <find>RSA</find>
       <find>verifyrsa</find>
       <find>&quot;0x&quot;+</find>
+      <find>signature</find>
+      <find>bgr</find>
+      <find>v</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
@@ -118,6 +175,9 @@
       <replace>BGLS</replace>
       <replace>BLS</replace>
       <replace>verifybls</replace>
+      <replace>v</replace>
+      <replace>bgls</replace>
+      <replace>message</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -126,10 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/contracts/BGR2.sol" />
-        <option value="$PROJECT_DIR$/scripts/verify2.js" />
-        <option value="$PROJECT_DIR$/scripts/verify1.js" />
-        <option value="$PROJECT_DIR$/contracts/BGR1.sol" />
         <option value="$PROJECT_DIR$/contracts/BGR3.sol" />
         <option value="$PROJECT_DIR$/scripts/setup.txt" />
         <option value="$PROJECT_DIR$/scripts/verify3.js" />
@@ -167,16 +223,20 @@
         <option value="$PROJECT_DIR$/scripts/evaluation-utils/verify.js" />
         <option value="$PROJECT_DIR$/contracts/BGR.sol" />
         <option value="$PROJECT_DIR$/scripts/verification/bgrevaluation.js" />
-        <option value="$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js" />
-        <option value="$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js" />
         <option value="$PROJECT_DIR$/results/total.py" />
         <option value="$PROJECT_DIR$/migrations/2_deploy_contracts.js" />
-        <option value="$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js" />
         <option value="$PROJECT_DIR$/scripts/storage/blsevaluationtx.js" />
         <option value="$PROJECT_DIR$/scripts/verification/blsevaluationveri.js" />
         <option value="$PROJECT_DIR$/scripts/evaluation-utils/verifybls.js" />
         <option value="$PROJECT_DIR$/contracts/BLS.sol" />
+        <option value="$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js" />
+        <option value="$PROJECT_DIR$/scripts/evaluation-data/bglsdata.txt" />
+        <option value="$PROJECT_DIR$/scripts/verification/bglsevaluation.js" />
+        <option value="$PROJECT_DIR$/scripts/storage/bglsevaluation.js" />
+        <option value="$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js" />
+        <option value="$PROJECT_DIR$/scripts/verification/bglsevaluationtotal.js" />
         <option value="$PROJECT_DIR$/contracts/BGLS.sol" />
+        <option value="$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js" />
       </list>
     </option>
   </component>
@@ -298,8 +358,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts/verification" />
       <recent name="$PROJECT_DIR$/scripts/storage" />
+      <recent name="$PROJECT_DIR$/scripts/verification" />
       <recent name="$PROJECT_DIR$/scripts/evaluation-utils" />
       <recent name="$PROJECT_DIR$/scripts/transactions" />
       <recent name="$PROJECT_DIR$/contracts" />
@@ -458,12 +518,12 @@
       <workItem from="1529514311790" duration="7594000" />
       <workItem from="1529564374250" duration="3991000" />
       <workItem from="1529569977868" duration="340000" />
-      <workItem from="1529578494565" duration="4660000" />
+      <workItem from="1529578494565" duration="10951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213317000" />
+    <option name="totallyTimeSpent" value="219608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -521,16 +581,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/pandas/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/contracts/BGR.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-buffer-stub.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -656,29 +706,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/storage/bgrevaluationtx.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/bgrevaluation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="230" selection-start-line="230" selection-end-line="230" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/storage/rsaevaluationtx.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGLSA.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1854">
@@ -686,24 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/total.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -721,62 +735,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2196">
-          <caret line="122" column="5" selection-start-line="100" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/web3/index.d.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/storage/blsevaluationtx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" selection-start-line="16" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/verification/blsevaluationveri.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -787,24 +752,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
+    <entry file="file://$PROJECT_DIR$/scripts/verification/bgrevaluation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="13" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="1777">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verification/blsevaluationveri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BLS.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+        <state relative-caret-position="18">
+          <caret line="1" column="25" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-data/bglsdata.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/transactions/bgrevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verification/rsaevaluationveri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifyrsa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="103" column="2" selection-start-line="74" selection-end-line="103" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/evaluation-utils/verifybgls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGLS.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/storage/bgrevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/storage/blsevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/transactions/blsevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="21" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/storage/bglsevaluation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/transactions/bglsevaluationtx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verification/bglsevaluationtotal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/verification/bglsevaluation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
