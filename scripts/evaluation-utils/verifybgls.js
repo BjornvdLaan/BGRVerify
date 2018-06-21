@@ -17,7 +17,7 @@ exports.measure = function() {
 
         contract.deployed()
             .then((c) => {
-                return c.verifyBLS.call({
+                return c.verifyBGLS.call({
                     from: requester,
                     gas: 10000000000,
                     value: 0
