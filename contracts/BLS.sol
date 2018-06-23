@@ -71,7 +71,7 @@ contract BLS {
     mapping(uint32 => bytes) msg_storage;
     function store() {
 
-        uint n = 1; //NOTE: change this parameter to set the number of messages signatures that will be stored
+        uint n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
 
         for (uint i = 0; i < n; i++) {
             msg_storage[counter] = getMessage(i);
