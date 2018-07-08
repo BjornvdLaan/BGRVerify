@@ -12,14 +12,14 @@ contract BTCPriceFeed {
     /**
     This method is used to measure only the transaction costs
     */
-    function doNothing(bytes memory proof) returns (bool) {
+    function transactioncost(bytes memory proof) returns (bool) {
         revert();
     }
 
     /**
     This method is used to measure only the verification costs
     */
-    function sendNothing() {
+    function verificationcost() {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint i = 0; i < n; i++) {
@@ -32,7 +32,7 @@ contract BTCPriceFeed {
     */
     // Mapping from timestamp to BTC price in USD cents (= 10**-2 USD)
     mapping(uint32 => uint32) timestamp_to_price;
-    function store() returns (bool) {
+    function storagecost() returns (bool) {
 
         uint n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
 

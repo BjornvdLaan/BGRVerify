@@ -123,7 +123,7 @@ contract BGLS {
     */
     function verificationcost() {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
-        verifyBGLSInternal(getSignature(n), message0, n);
+        verifyBGLSInternal(getSignature(n), getMessage(n), n);
     }
 
     /**

@@ -8,7 +8,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 // connect to ethereum node
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 
-exports.measure = function(data) {
+exports.transactioncost = function(data) {
     const bgrcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -16,7 +16,7 @@ exports.measure = function(data) {
 
         bgrcontract.deployed()
             .then((bgr) => {
-                return bgr.doNothing(data, {
+                return bgr.transactioncost(data, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -39,7 +39,7 @@ exports.measure = function(data) {
     })
 };
 
-exports.verify = function() {
+exports.verificationcost = function() {
     const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -47,7 +47,7 @@ exports.verify = function() {
 
         bpfcontract.deployed()
             .then((bpf) => {
-                return bpf.sendNothing({
+                return bpf.verificationcost({
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -70,7 +70,7 @@ exports.verify = function() {
     })
 };
 
-exports.store = function() {
+exports.storagecost = function() {
     const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -78,38 +78,7 @@ exports.store = function() {
 
         bpfcontract.deployed()
             .then((bpf) => {
-                return bpf.store({
-                    from: requester,
-                    gas: 10000000000,
-                    value: 0
-                })
-                    .then(function (result) {
-                        console.log(result);
-                        process.exit();
-                    })
-                    .catch(e => {
-                        console.log("Error");
-                        console.log(e);
-                        process.exit();
-                    })
-            })
-            .catch(e => {
-                console.log("BPF contract not deployed");
-                console.log(e);
-            });
-
-    })
-};
-
-exports.real = function(m) {
-    const bpfcontract = web3helpers.initTruffleContract(web3, 'BTCPriceFeed');
-
-    web3.eth.getAccounts().then((accounts) => {
-        const requester = accounts[1];
-
-        bpfcontract.deployed()
-            .then((bpf) => {
-                return bpf.verifyProof(m, {
+                return bpf.storagecost({
                     from: requester,
                     gas: 10000000000,
                     value: 0

@@ -46,7 +46,7 @@ contract BGR {
     /**
     This method is used to measure only the transaction costs
     */
-    function doNothing(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
+    function transactioncost(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         revert();
     }
 
@@ -59,7 +59,7 @@ contract BGR {
     mapping(uint32 => bytes32) h_storage;
     mapping(uint32 => bytes16[]) r_storage;
     mapping(uint32 => bool[]) b_storage;
-    function store() {
+    function storagecost() {
 
         uint n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
 
@@ -77,7 +77,7 @@ contract BGR {
     /**
     This method is used to measure the total costs
     */
-    function verify(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
+    function totalcost(bytes data, bytes x, bytes32 h, bool[] b, bytes16[] r) returns (bool) {
         bytes memory x_prev = x;
         bytes32 h_prev = h;
 

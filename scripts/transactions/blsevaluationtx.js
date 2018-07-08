@@ -19,5 +19,5 @@ function measureTransactionCost(number_of_signers) {
         }
     }
 
-    bls.measure(signatures, message)
+    bls.transactioncost(signatures, message)
 }

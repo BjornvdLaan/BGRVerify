@@ -13,15 +13,17 @@ const bytesutils = artifacts.require("./imported/bytesutils.sol");
 const BTCPriceFeed = artifacts.require("./imported/BTCPriceFeed.sol");
 
 module.exports = function(deployer) {
-    //deployer.deploy(BGR);
-
-    deployer.deploy(BLS);
-    deployer.deploy(BGLS);
-
-   /* deployer.deploy(SolRsaVerify);
+    //MUSCLE-TP
+    deployer.deploy(BGR);
+    //RSA
+    deployer.deploy(SolRsaVerify);
     deployer.link(SolRsaVerify, RSA);
     deployer.deploy(RSA);
-
+    //MUSCLE-BP
+    deployer.deploy(BGLS);
+    //BLS
+    deployer.deploy(BLS);
+    //TLSN
     deployer.deploy(JsmnSolLib);
     deployer.deploy(ECMath);
     deployer.deploy(bytesutils);
@@ -29,5 +31,5 @@ module.exports = function(deployer) {
     deployer.deploy(tlsnutils);
     deployer.link(JsmnSolLib, BTCPriceFeed);
     deployer.link(tlsnutils, BTCPriceFeed);
-    deployer.deploy(BTCPriceFeed);*/
+    deployer.deploy(BTCPriceFeed);
 };

@@ -9,7 +9,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 
 
-exports.measure = function(m, s) {
+exports.transactioncost = function(m, s) {
     const contract = web3helpers.initTruffleContract(web3, 'RSA');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -17,7 +17,7 @@ exports.measure = function(m, s) {
 
         contract.deployed()
             .then((c) => {
-                return c.doNothing(m, s, {
+                return c.transactioncost(m, s, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -40,7 +40,7 @@ exports.measure = function(m, s) {
     })
 };
 
-exports.store = function() {
+exports.storagecost = function() {
     const contract = web3helpers.initTruffleContract(web3, 'RSA');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -48,7 +48,7 @@ exports.store = function() {
 
         contract.deployed()
             .then((c) => {
-                return c.store({
+                return c.storagecost({
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -72,7 +72,7 @@ exports.store = function() {
 };
 
 
-exports.verify = function() {
+exports.verificationcost = function() {
     const contract = web3helpers.initTruffleContract(web3, 'RSA');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -80,7 +80,7 @@ exports.verify = function() {
 
         contract.deployed()
             .then((c) => {
-                return c.sendNothing({
+                return c.verificationcost({
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -96,7 +96,7 @@ exports.verify = function() {
                     })
             })
             .catch(e => {
-                console.log("BTCPriceFeed contract not deployed");
+                console.log("RSA contract not deployed");
                 console.log(e);
             });
 

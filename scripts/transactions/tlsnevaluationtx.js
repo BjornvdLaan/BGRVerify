@@ -40,41 +40,41 @@ switch (parseInt(process.argv[2])) {
 
 
 function one() {
-    tlsn.measure("0x"+m)
+    tlsn.transactioncost("0x"+m)
 }
 
 function two() {
-    tlsn.measure("0x"+m+m)
+    tlsn.transactioncost("0x"+m+m)
 }
 
 function three() {
-    tlsn.measure("0x"+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m)
 }
 
 function four() {
-    tlsn.measure("0x"+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m)
 }
 
 function five() {
-    tlsn.measure("0x"+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m)
 }
 
 function six() {
-    tlsn.measure("0x"+m+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m+m)
 }
 
 function seven() {
-    tlsn.measure("0x"+m+m+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m+m+m)
 }
 
 function eight() {
-    tlsn.measure("0x"+m+m+m+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m+m+m+m)
 }
 
 function nine() {
-    tlsn.measure("0x"+m+m+m+m+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m+m+m+m+m)
 }
 
 function ten() {
-    tlsn.measure("0x"+m+m+m+m+m+m+m+m+m+m)
+    tlsn.transactioncost("0x"+m+m+m+m+m+m+m+m+m+m)
 }

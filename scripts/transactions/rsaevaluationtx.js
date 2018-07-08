@@ -53,51 +53,51 @@ switch (parseInt(process.argv[2])) {
 function one() {
     const S = "0x"+s1;
 
-    verifyrsa.measure(m, S)
+    verifyrsa.transactioncost(m, S)
 }
 
 function two() {
     const S = "0x"+s0+s1;
 
-    verifyrsa.measure(m+m, S)
+    verifyrsa.transactioncost(m+m, S)
 }
 
 function three() {
     const S = "0x"+s0+s1+s2;
-    verifyrsa.measure(m+m+m, S)
+    verifyrsa.transactioncost(m+m+m, S)
 }
 
 function four() {
     const S = "0x"+s0+s1+s2+s3;
-    verifyrsa.measure(m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m, S)
 }
 
 function five() {
     const S = "0x"+s0+s1+s2+s3+s4;
-    verifyrsa.measure(m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m, S)
 }
 
 function six() {
     const S = "0x"+s0+s1+s2+s3+s4+s5;
-    verifyrsa.measure(m+m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m+m, S)
 }
 
 function seven() {
     const S = "0x"+s0+s1+s2+s3+s4+s5+s6;
-    verifyrsa.measure(m+m+m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m+m+m, S)
 }
 
 function eight() {
     const S = "0x"+s0+s1+s2+s3+s4+s5+s6+s7;
-    verifyrsa.measure(m+m+m+m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m+m+m+m, S)
 }
 
 function nine() {
     const S = "0x"+s0+s1+s2+s3+s4+s5+s6+s7+s8;
-    verifyrsa.measure(m+m+m+m+m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m+m+m+m+m, S)
 }
 
 function ten() {
     const S = "0x"+s0+s1+s2+s3+s4+s5+s6+s7+s8+s9;
-    verifyrsa.measure(m+m+m+m+m+m+m+m+m+m, S)
+    verifyrsa.transactioncost(m+m+m+m+m+m+m+m+m+m, S)
 }

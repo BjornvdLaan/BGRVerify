@@ -100,35 +100,3 @@ exports.storagecost = function() {
 
     })
 };
-
-
-exports.totalcost = function(sig, msgs, i) {
-    const bglscontract = web3helpers.initTruffleContract(web3, 'BGLS');
-
-    web3.eth.getAccounts().then((accounts) => {
-        const requester = accounts[1];
-
-        bglscontract.deployed()
-            .then((bgls) => {
-                return bgls.verifyBGLS(sig, msgs, i, {
-                    from: requester,
-                    gas: 10000000000,
-                    value: 0
-                })
-                    .then(function (result) {
-                        console.log(result);
-                        process.exit();
-                    })
-                    .catch(e => {
-                        console.log("Error");
-                        console.log(e);
-                        process.exit();
-                    })
-            })
-            .catch(e => {
-                console.log("BGLS contract not deployed");
-                console.log(e);
-            });
-
-    })
-};

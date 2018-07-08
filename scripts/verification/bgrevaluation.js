@@ -1,4 +1,4 @@
-const bgr = require("../evaluation-utils/verify");
+const bgr = require("../evaluation-utils/verifybgr");
 const web3helpers = require('../../web3helpers');
 
 switch (parseInt(process.argv[2])) {
@@ -50,7 +50,7 @@ function one() {
         web3helpers.numToBytes16("39591481140754388166925179461058716055"),
     ];
 
-    bgr.verify(m, x, h, b, r)
+    bgr.verificationcost(m, x, h, b, r)
 }
 
 function two() {
@@ -68,7 +68,7 @@ function two() {
         web3helpers.numToBytes16("290836363966245791631489528113304322240"),
     ];
 
-    bgr.verify(m+m, x, h, b, r)
+    bgr.verificationcost(m+m, x, h, b, r)
 }
 
 function three() {
@@ -87,7 +87,7 @@ function three() {
         web3helpers.numToBytes16("196668985635432548435435474890493737120")
     ];
 
-    bgr.verify(m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m, x, h, b, r)
 }
 
 function four() {
@@ -108,7 +108,7 @@ function four() {
 
     ];
 
-    bgr.verify(m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m, x, h, b, r)
 }
 
 function five() {
@@ -129,7 +129,7 @@ function five() {
         web3helpers.numToBytes16("189042677990858424565418419772348442800")
     ];
 
-    bgr.verify(m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m, x, h, b, r)
 }
 
 function six() {
@@ -152,7 +152,7 @@ function six() {
         web3helpers.numToBytes16("172206688718692229927521775142281610213")
     ];
 
-    bgr.verify(m+m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m+m, x, h, b, r)
 }
 
 function seven() {
@@ -177,7 +177,7 @@ function seven() {
         web3helpers.numToBytes16("193956288216274721883342864830219064704")
     ];
 
-    bgr.verify(m+m+m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m+m+m, x, h, b, r)
 }
 
 function eight() {
@@ -203,7 +203,7 @@ function eight() {
         web3helpers.numToBytes16("262130065272450825195690791466042441597")
     ];
 
-    bgr.verify(m+m+m+m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m+m+m+m, x, h, b, r)
 }
 
 function nine() {
@@ -230,7 +230,7 @@ function nine() {
         web3helpers.numToBytes16("74038135052239349828014493534624794824"),
     ];
 
-    bgr.verify(m+m+m+m+m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m+m+m+m+m, x, h, b, r)
 }
 
 
@@ -259,5 +259,5 @@ function ten() {
         web3helpers.numToBytes16("198279746822885933745717753972469816073")
     ];
 
-    bgr.verify(m+m+m+m+m+m+m+m+m+m, x, h, b, r)
+    bgr.verificationcost(m+m+m+m+m+m+m+m+m+m, x, h, b, r)
 }

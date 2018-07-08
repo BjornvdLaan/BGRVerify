@@ -37,7 +37,7 @@ contract RSA {
     /**
     This method is used to measure only the transaction costs
     */
-    function doNothing(bytes _data, bytes _s) returns (bool) {
+    function transactioncost(bytes _data, bytes _s) returns (bool) {
         return true;
     }
 
@@ -47,7 +47,7 @@ contract RSA {
     uint32 counter = 0;
     mapping(uint32 => bytes) msg_storage;
     mapping(uint32 => bytes) sig_storage;
-    function store() {
+    function storagecost() {
 
         uint n = 1; //NOTE: change this parameter to set the number of messages signatures that will be stored
 
@@ -62,7 +62,7 @@ contract RSA {
     /**
     This method is used to measure only the verification costs
     */
-    function sendNothing() {
+    function verificationcost() {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint i = 0; i < n; i++) {
