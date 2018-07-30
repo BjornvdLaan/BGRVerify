@@ -17,6 +17,10 @@ func main() {
 	//bgr()
 }
 
+func ecdsa() {
+	//sk := KeyGen()
+	fmt.Println("efse")
+}
 
 func bls() {
 	curve := CurveSystem(Altbn128)
