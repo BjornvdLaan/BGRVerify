@@ -1,16 +1,32 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.24;
 
 
 /**
- * Based on https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ECRecovery.sol
+ * Solution from https://ethereum.stackexchange.com/questions/55474/verification-of-externally-created-ecdsa-signatures-in-solidity/55487#55487
+ * Helper methods from https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ECRecovery.sol
  */
 
 contract ECDSA {
 
+    /**
+     * toEthSignedMessageHash
+     * @dev prefix a bytes32 value with "\x19Ethereum Signed Message:"
+     * and hash the result
+     */
+    function toEthSignedMessageHash(string message) internal pure returns (bytes32) {
+        // 32 is the length in bytes of hash,
+        // enforced by the type signature above
+        return keccak256(
+            "\x19Ethereum Signed Message:\n32", keccak256(message)
+        );
+    }
+
     function verificationcost() public returns (bool) {
-        bytes32 message = 0x2b350a58f723b94ef3992ad0d3046f2398aef2fe117dc3a36737fb29df4a706a;
-        bytes memory sig = hex"e6ca6508de09cbb639216743721076bc8beb7bb45e796e0e3422872f9f0fcd362e693be7ca40e2123dd1efaf71ebb94d38052458281ad3b69ec8977c8294928400";
-        address addr = 0x8e6a1f13a9c6b9443fea4393291308ac4c965b69;
+        //bytes32 message = 0x2b350a58f723b94ef3992ad0d3046f2398aef2fe117dc3a36737fb29df4a706a;
+        bytes32 message = toEthSignedMessageHash("TEST");
+
+        bytes memory sig = hex"bceab59162da5e511fb9c37fda207d443d05e438e5c843c57b2d5628580ce9216ffa0335834d8bb63d86fb42a8dd4d18f41bc3a301546e2c47aa1041c3a1823701";
+        address addr = 0x999471bb43b9c9789050386f90c1ad63dca89106;
 
         return recover(message, sig) == addr;
     }
@@ -53,17 +69,4 @@ contract ECDSA {
             return ecrecover(hash, v, r, s);
         }
     }
-
-    /**
-     * toEthSignedMessageHash
-     * @dev prefix a bytes32 value with "\x19Ethereum Signed Message:"
-     * and hash the result
-     */
-    /*function toEthSignedMessageHash(bytes32 _hash) internal pure returns (bytes32) {
-        // 32 is the length in bytes of hash,
-        // enforced by the type signature above
-        return keccak256(
-            abi.encodePacked("\x19Ethereum Signed Message:\n32", _hash)
-        );
-    }*/
 }
