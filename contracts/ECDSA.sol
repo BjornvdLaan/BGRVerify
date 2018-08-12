@@ -1,27 +1,18 @@
-pragma solidity ^0.4.20;
+pragma solidity ^0.4.21;
 
 
 /**
- * @title Elliptic curve signature operations
- * @dev Based on https://gist.github.com/axic/5b33912c6f61ae6fd96d6c4a47afde6d
- * TODO Remove this library once solidity supports passing a signature to ecrecover.
- * See https://github.com/ethereum/solidity/issues/864
+ * Based on https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ECRecovery.sol
  */
 
 contract ECDSA {
 
-    //bytes32 hash = hex"852daa74cc3c31fe64542bb9b8764cfb91cc30f9acf9389071ffb44a9eefde46";
-    //string message = "TEST";
-    //bytes32 hash = keccak256("\x19Ethereum Signed Message:\n", len(message), message);
-    bytes32 hash = hex"fb96181ff706848b10a93f4028537caf17026e28ce5c0cce90af46b4d3ad04c6";
-    bytes sig = hex"cd044278098c2e5e36cc716423638509bbc818b0daadd7b7bba6322a99de67373255201bac6634b6adeb29d4c3bd9b3a6a14363c4e5b5eb3087c7882c7ebca6800";
-    bytes publickey = hex"0485d169380f762e82da692c4b50c8873b1ef9820f15ae6cd96d0d4741056a1b9c828f4f027d0374f22311cba8ceb5845232549e6e4df7ae490b6903a5ee1447be";
+    function verificationcost() public returns (bool) {
+        bytes32 message = 0x2b350a58f723b94ef3992ad0d3046f2398aef2fe117dc3a36737fb29df4a706a;
+        bytes memory sig = hex"e6ca6508de09cbb639216743721076bc8beb7bb45e796e0e3422872f9f0fcd362e693be7ca40e2123dd1efaf71ebb94d38052458281ad3b69ec8977c8294928400";
+        address addr = 0x8e6a1f13a9c6b9443fea4393291308ac4c965b69;
 
-    function verificationcost() returns(address)
-    {
-        return address(keccak256(publickey));
-        //return recover(hash, sig);
-        //return address addr = address(keccak256(publickey));
+        return recover(message, sig) == addr;
     }
 
     /**
@@ -29,8 +20,7 @@ contract ECDSA {
      * @param hash bytes32 message, the hash is the signed message. What is recovered is the signer address.
      * @param sig bytes signature, the signature is generated using web3.eth.sign()
      */
-    function recover(bytes32 hash, bytes sig) returns (address)
-    {
+    function recover(bytes32 hash, bytes sig) internal returns (address) {
         bytes32 r;
         bytes32 s;
         uint8 v;
@@ -64,25 +54,16 @@ contract ECDSA {
         }
     }
 
-
+    /**
+     * toEthSignedMessageHash
+     * @dev prefix a bytes32 value with "\x19Ethereum Signed Message:"
+     * and hash the result
+     */
+    /*function toEthSignedMessageHash(bytes32 _hash) internal pure returns (bytes32) {
+        // 32 is the length in bytes of hash,
+        // enforced by the type signature above
+        return keccak256(
+            abi.encodePacked("\x19Ethereum Signed Message:\n32", _hash)
+        );
+    }*/
 }
-
-
-/*
-contract ECDSA {
-
-    bytes publickey = hex"040ee1cd09d77dcbd9c4f78515c5d5091fa5f9633838128e7cf1f3babe5ce840475c845b1fcdbeebdd7c3b7406d54ad61d2cc77a105e5a5e762ee3c83a22af5c56";
-    bytes32 hash = hex"852daa74cc3c31fe64542bb9b8764cfb91cc30f9acf9389071ffb44a9eefde46";
-    bytes32 r = hex"bbf5cb59e1139f4be32dc3f32f67a5929dc39b1299a9fb5334727603a0fe1798";
-    bytes32 s = hex"526344939d5ada61fe2810d7db49558f5322afdb03900e7874e8b8159344492a";
-    uint8 v = 0;
-
-    function verificationcost() returns(address)
-    {
-        address addr = address(keccak256(publickey));
-
-        return ecrecover(hash, v, r, s);
-        //return ecrecover(hash, v, r, s) == addr;
-    }
-}
-*/
