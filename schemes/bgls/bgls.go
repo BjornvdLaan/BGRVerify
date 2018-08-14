@@ -44,7 +44,6 @@ func ComputePublicKey(curve CurveSystem, sk *big.Int) (Point, Point) {
 // Creates a signature on a message with a private key, with prepending the public key to the message.
 func Sign(curve CurveSystem, x *big.Int, v Point, msg []byte) Point {
 	//Prepend public key to message
-	//m := append(v.MarshalUncompressed(), msg...)
 	m := msg
 
 	//Hash message to element in G1
@@ -80,11 +79,12 @@ func VerifyAggregateSignature(curve CurveSystem, aggsig Point, keys []Point, mes
 		return false
 	}
 
-	//Prepend public key
+	//Prepend public key (optional modification proposed by Boneh et al.)
 	/*msgs := make([][]byte, len(messages))
 	for i := 0; i < len(msgs); i++ {
 		msgs[i] = append(keys[i].MarshalUncompressed(), messages[i]...)
 	}*/
+
 	msgs := messages
 
 	//array of hashes
