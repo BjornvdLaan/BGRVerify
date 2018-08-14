@@ -8,7 +8,7 @@ const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
 // connect to ethereum node
 web3.eth.abi ? console.log('Web3 successful') : console.log('Web3 not connected error');
 
-exports.transactioncost = function(sig, msgs) {
+exports.transactioncost = function(sigs, msgs) {
     const ecdsacontract = web3helpers.initTruffleContract(web3, 'ECDSA');
 
     web3.eth.getAccounts().then((accounts) => {
@@ -16,7 +16,7 @@ exports.transactioncost = function(sig, msgs) {
 
         ecdsacontract.deployed()
             .then((ecdsa) => {
-                return ecdsa.transactioncost(sig, msgs, {
+                return ecdsa.transactioncost(sigs, msgs, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
