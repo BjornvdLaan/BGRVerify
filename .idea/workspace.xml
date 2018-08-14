@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7573f931-05d8-4703-aa2a-e9d30a4edac7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/storage/ecdsaevaluation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/transactions/ecdsaevaluationtx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGLS.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGLS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BGR.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BGR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BLS.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BLS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BLSE.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BLSE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/BTCPriceFeed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ECDSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ECDSA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ECMath.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ECMath.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/JsmnSolLib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/RSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/RSA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/SolRsaVerify.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/bytesutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/bytesutils.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/tlsnutils.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/tlsnutils.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/ECDSA.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ECDSA.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schemes/bgls/bgls.go" beforeDir="false" afterPath="$PROJECT_DIR$/schemes/bgls/bgls.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +22,8 @@
       <file leaf-file-name="ECDSA.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/ECDSA.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="100" selection-start-line="27" selection-start-column="100" selection-end-line="27" selection-end-column="100" />
+            <state relative-caret-position="702">
+              <caret line="141" column="30" selection-start-line="141" selection-start-column="30" selection-end-line="141" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -48,9 +31,16 @@
       <file leaf-file-name="BGLS.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/BGLS.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+            <state relative-caret-position="2088">
+              <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-end-line="117" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSA.sol" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-432" />
           </provider>
         </entry>
       </file>
@@ -67,8 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>RSA</find>
-      <find>verifyrsa</find>
       <find>&quot;0x&quot;+</find>
       <find>signature</find>
       <find>v</find>
@@ -97,6 +85,8 @@
       <find>sig</find>
       <find>bytes</find>
       <find>getMessage</find>
+      <find>getS</find>
+      <find>counter</find>
     </findStrings>
     <replaceStrings>
       <replace>byte[32]</replace>
@@ -479,12 +469,12 @@
       <workItem from="1532971731841" duration="19000" />
       <workItem from="1532972410836" duration="272000" />
       <workItem from="1534081620760" duration="3414000" />
-      <workItem from="1534255061276" duration="2128000" />
+      <workItem from="1534255061276" duration="2752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238507000" />
+    <option name="totallyTimeSpent" value="239131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
@@ -769,11 +759,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/schemes/gist.go" />
-    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/transactions/rsaevaluationtx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -788,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/BGLS.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BGR.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342">
@@ -802,10 +780,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/RSA.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/BGLS.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/ECDSA.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="100" selection-start-line="27" selection-start-column="100" selection-end-line="27" selection-end-column="100" />
+        <state relative-caret-position="702">
+          <caret line="141" column="30" selection-start-line="141" selection-start-column="30" selection-end-line="141" selection-end-column="30" />
         </state>
       </provider>
     </entry>
