@@ -1,4 +1,4 @@
-const bls = require("../evaluation-utils/verifybls");
+const ecdsa = require("../evaluation-utils/verifyecdsa");
 const web3helpers = require('../../web3helpers');
 const BN = require("web3").utils.BN;
 
@@ -12,13 +12,11 @@ function measureTransactionCost(number_of_signers) {
     //create message of right size
     let message = "";
     let signatures = "0x";
+
     for (let i = 0; i < number_of_signers; i++) {
         message += m;
-
-        if (i > 0) {
-            signatures += s0;
-        }
+        signatures += s0;
     }
 
-    bls.transactioncost(signatures, message)
+    ecdsa.transactioncost(signatures, message)
 }

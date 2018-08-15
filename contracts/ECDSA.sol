@@ -8,10 +8,14 @@ pragma solidity ^0.4.24;
 
 contract ECDSA {
 
+    bytes message0 = hex"7b0a2020226f70656e223a207b0a20202020227072696365223a2039353931372c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333134323430302c0a2020202020202269736f223a2022323031362d31322d33315430303a30303a30302e3030305a220a202020207d0a20207d2c0a202022636c6f7365223a207b0a20202020227072696365223a2039363736302c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d2c0a2020226c6f6f6b7570223a207b0a20202020227072696365223a2039363736302c0a20202020226b223a20312c0a202020202274696d65223a207b0a20202020202022756e6978223a20313438333232383830302c0a2020202020202269736f223a2022323031372d30312d30315430303a30303a30302e3030305a220a202020207d0a20207d0a7d0a6578616d706c652e636f6d2f6170692f31";
+    bytes signature0 = hex"f6da5793bcdbb8dba81fcbdba6b1b65121c326e0bc446d3ed8ae43d89b1a9f2b1009f3befd307edd50f6ddafd6c61183156c72658174997ec70aabccc0e6e3c200";
+    address address0 = 0xc8bc9062c7b85f0f1feac5e4923b409ad93bd4cb;
+
     /**
     This method is used to measure only the transaction costs
     */
-    function transactioncost(bytes msgs, bytes sigs) returns (bool) {
+    function transactioncost(bytes msgs, bytes sigs) public returns (bool) {
         revert();
     }
 
@@ -20,7 +24,7 @@ contract ECDSA {
    */
     mapping(uint32 => bytes) msg_storage;
     mapping(uint32 => bytes) sig_storage;
-    function storagecost() {
+    function storagecost() public {
 
         uint32 n = 10; //NOTE: change this parameter to set the number of messages signatures that will be stored
 
@@ -33,7 +37,7 @@ contract ECDSA {
     /**
     This method is used to measure only the verification costs
     */
-    function verificationcost() {
+    function verificationcost() public {
         uint n = 10; //NOTE: change this parameter to set the amount of signatures that will be verified
 
         for (uint32 i = 0; i < n; i++) {
@@ -41,13 +45,11 @@ contract ECDSA {
         }
     }
 
-    function verifyTest() public returns (bool) {
-        bytes32 message = ethMessageHash("TEST");
 
-        bytes memory sig = hex"bceab59162da5e511fb9c37fda207d443d05e438e5c843c57b2d5628580ce9216ffa0335834d8bb63d86fb42a8dd4d18f41bc3a301546e2c47aa1041c3a1823701";
-        address addr = 0x999471bb43b9c9789050386f90c1ad63dca89106;
+    function verifyTest() internal returns (bool) {
+        bytes32 message = ethMessageHashHex(message0);
 
-        return recover(message, sig) == addr;
+        return recover(message, signature0) == address0;
     }
 
     /**
@@ -55,7 +57,7 @@ contract ECDSA {
      * @param hash bytes32 message, the hash is the signed message. What is recovered is the signer address.
      * @param sig bytes signature, the signature is generated using web3.eth.sign()
      */
-    function recover(bytes32 hash, bytes sig) internal returns (address) {
+    function recover(bytes32 hash, bytes sig) pure internal returns (address) {
         bytes32 r;
         bytes32 s;
         uint8 v;
@@ -106,5 +108,5 @@ contract ECDSA {
             "\x19Ethereum Signed Message:\n32", keccak256(message)
         );
     }
-    
+
 }

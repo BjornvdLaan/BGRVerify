@@ -16,7 +16,7 @@ exports.transactioncost = function(sigs, msgs) {
 
         ecdsacontract.deployed()
             .then((ecdsa) => {
-                return ecdsa.transactioncost(sigs, msgs, {
+                return ecdsa.transactioncost(msgs, sigs, {
                     from: requester,
                     gas: 10000000000,
                     value: 0
@@ -47,7 +47,7 @@ exports.verificationcost = function() {
 
         contract.deployed()
             .then((c) => {
-                return c.verificationcost.call({
+                return c.verificationcost({
                     from: requester,
                     gas: 10000000000,
                     value: 0
