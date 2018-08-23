@@ -25,6 +25,7 @@ def tx():
     line12 = ax1.plot(x, data.tx['rsa'], linestyle=data.rsa_ls, color=data.rsa_color)
     line15 = ax1.plot(x, data.tx['mtlsn'], linestyle=data.mtlsn_ls, color=data.mtlsn_color, marker=data.mtlsn_marker)
     line16 = ax1.plot(x, data.tx['tlsn'], linestyle=data.tlsn_ls, color=data.tlsn_color, marker=data.tlsn_marker)
+    line17 = ax1.plot(x, data.tx['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     ax1.xaxis.set_ticks(x)
 
@@ -35,9 +36,9 @@ def tx():
     ax1.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0]),
-                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N'),
-                  loc='lower center', ncol=3, labelspacing=0.)
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
+                  loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
     fig.savefig("tx.pdf", bbox_inches='tight', dpi=300)
@@ -55,6 +56,7 @@ def storage():
     line14 = ax1.plot(x, data.store['bls'], linestyle=data.bls_ls, color=data.bls_color)
     line15 = ax1.plot(x, data.store['mtlsn'], linestyle=data.mtlsn_ls, color=data.mtlsn_color, marker=data.mtlsn_marker)
     line16 = ax1.plot(x, data.store['tlsn'], linestyle=data.tlsn_ls, color=data.tlsn_color, marker=data.tlsn_marker)
+    line17 = ax1.plot(x, data.store['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     ax1.xaxis.set_ticks(x)
 
@@ -65,9 +67,9 @@ def storage():
     ax1.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0]),
-                  ('MUSCLE', 'BLS', 'BGR', 'RSA', '(MULTI)-TLS-N'),
-                  loc='lower center', ncol=3, labelspacing=0.)
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
+                  loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
     fig.savefig("storage.pdf", bbox_inches='tight', dpi=300)
@@ -85,11 +87,13 @@ def verify():
     line14 = ax1.plot(x, data.verify['bls'], linestyle=data.bls_ls, color=data.bls_color)
     line15 = ax1.plot(x, data.verify['mtlsn'], linestyle=data.mtlsn_ls, color=data.mtlsn_color, marker=data.mtlsn_marker)
     line16 = ax1.plot(x, data.verify['tlsn'], linestyle=data.tlsn_ls, color=data.tlsn_color, marker=data.tlsn_marker)
+    line17 = ax1.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     line21 = ax2.plot(x, data.verify['bgr'], linestyle=data.bgr_ls, color=data.bgr_color)
     line22 = ax2.plot(x, data.verify['rsa'], linestyle=data.rsa_ls, color=data.rsa_color)
     line23 = ax2.plot(x, data.verify['bgls'], linestyle=data.bgls_ls, color=data.bgls_color)
     line24 = ax2.plot(x, data.verify['bls'], linestyle=data.bls_ls, color=data.bls_color)
+    line25 = ax1.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     ax1.xaxis.set_ticks(x)
     ax2.xaxis.set_ticks(x)
@@ -102,9 +106,9 @@ def verify():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0]),
-                  ('MUSCLE', 'BLS', 'BGR', 'RSA', '(MULTI)-TLS-N'),
-                  loc='lower center', ncol=3, labelspacing=0.)
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
+                  loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
     fig.savefig("verification.pdf", bbox_inches='tight', dpi=300)
@@ -122,11 +126,13 @@ def total():
     line14 = ax1.plot(x, data.total['bls'], linestyle=data.bls_ls, color=data.bls_color)
     line15 = ax1.plot(x, data.total['mtlsn'], linestyle=data.mtlsn_ls, color=data.mtlsn_color, marker=data.mtlsn_marker)
     line16 = ax1.plot(x, data.total['tlsn'], linestyle=data.tlsn_ls, color=data.tlsn_color, marker=data.tlsn_marker)
+    line17 = ax1.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     line21 = ax2.plot(x, data.total['bgr'], linestyle=data.bgr_ls, color=data.bgr_color)
     line22 = ax2.plot(x, data.total['rsa'], linestyle=data.rsa_ls, color=data.rsa_color)
     line23 = ax2.plot(x, data.total['bgls'], linestyle=data.bgls_ls, color=data.bgls_color)
     line24 = ax2.plot(x, data.total['bls'], linestyle=data.bls_ls, color=data.bls_color)
+    line25 = ax1.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     ax1.xaxis.set_ticks(x)
     ax2.xaxis.set_ticks(x)
@@ -139,9 +145,9 @@ def total():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0]),
-                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N'),
-                  loc='lower center', ncol=3, labelspacing=0.)
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
+                  loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
     fig.savefig("total.pdf", bbox_inches='tight', dpi=300)

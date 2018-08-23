@@ -16,7 +16,7 @@ function measureTransactionCost(number_of_signers) {
     for (let i = 0; i < number_of_signers; i++) {
         message += m;
         signatures += s0;
-    }
+        }
 
     ecdsa.transactioncost(signatures, message)
 }
