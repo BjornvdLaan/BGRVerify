@@ -45,8 +45,8 @@ def tx():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line15[0], line16[0], line13[0], line14[0], line11[0], line12[0], line17[0]),
-                  ('MULTI-TLS-N', 'TLS-N', 'BGLS', 'BLS', 'BGR', 'RSA', 'ECDSA'),
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
                   loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
@@ -85,8 +85,8 @@ def storage():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line15[0], line16[0], line13[0], line14[0], line11[0], line12[0], line17[0]),
-                  ('MULTI-TLS-N', 'TLS-N', 'BGLS', 'BLS', 'BGR', 'RSA', 'ECDSA'),
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
                   loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
@@ -124,8 +124,8 @@ def verify():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line15[0], line16[0], line13[0], line14[0], line11[0], line12[0], line17[0]),
-                  ('MULTI-TLS-N', 'TLS-N', 'BGLS', 'BLS', 'BGR', 'RSA', 'ECDSA'),
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
                   loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 
@@ -146,10 +146,10 @@ def total():
     line16 = ax1.plot(x, data.total['tlsn'], linestyle=data.tlsn_ls, color=data.tlsn_color, marker=data.tlsn_marker)
     line17 = ax1.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
-    #line21 = ax2.plot(x, data.total['bgr'], linestyle=data.bgr_ls, color=data.bgr_color)
-    #line22 = ax2.plot(x, data.total['rsa'], linestyle=data.rsa_ls, color=data.rsa_color)
-    #line23 = ax2.plot(x, data.total['bgls'], linestyle=data.bgls_ls, color=data.bgls_color)
-    #line24 = ax2.plot(x, data.total['bls'], linestyle=data.bls_ls, color=data.bls_color)
+    line21 = ax2.plot(x, data.total['bgr'], linestyle=data.bgr_ls, color=data.bgr_color)
+    line22 = ax2.plot(x, data.total['rsa'], linestyle=data.rsa_ls, color=data.rsa_color)
+    line23 = ax2.plot(x, data.total['bgls'], linestyle=data.bgls_ls, color=data.bgls_color)
+    line24 = ax2.plot(x, data.total['bls'], linestyle=data.bls_ls, color=data.bls_color)
     line25 = ax2.plot(x, data.verify['ecdsa'], linestyle=data.ecdsa_ls, color=data.ecdsa_color)
 
     ax1.xaxis.set_ticks(x)
@@ -163,8 +163,8 @@ def total():
     ax2.set_position([box.x0, box.y0 - box.height * 0.15,
                       box.width, box.height])
 
-    plt.figlegend((line15[0], line16[0], line13[0], line14[0], line11[0], line12[0], line17[0]),
-                  ('MULTI-TLS-N', 'TLS-N', 'BGLS', 'BLS', 'BGR', 'RSA', 'ECDSA'),
+    plt.figlegend((line13[0], line14[0], line11[0], line12[0], line15[0], line16[0], line17[0]),
+                  ('MUSCLE', 'BLS', 'BGR', 'RSA', 'MULTI-TLS-N', 'TLS-N', 'ECDSA'),
                   loc='lower center', ncol=4, labelspacing=0.)
     plt.show()
 

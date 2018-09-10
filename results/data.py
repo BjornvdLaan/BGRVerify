@@ -42,22 +42,13 @@ total = {
     "ecdsa": [417655, 811440, 1205099, 1598953, 1992615, 2386409, 2780076, 3173874, 3567546, 3961347]
 }
 
-'''
-bgr_color = 'xkcd:blue'
-rsa_color = 'xkcd:red'
-bgls_color = 'xkcd:green'
-bls_color = 'xkcd:goldenrod'
-mtlsn_color = 'xkcd:maroon'
-tlsn_color = 'xkcd:orchid'
-'''
-
 bgls_color = 'b'
 bgr_color = 'g'
 rsa_color = 'm'
 bls_color = 'r'
 mtlsn_color = 'c'
 tlsn_color = 'y'
-ecdsa_color = 'b'
+ecdsa_color = 'y'
 
 bgls_ls = '-'
 bgr_ls = ':'
@@ -65,7 +56,7 @@ rsa_ls = '-.'
 bls_ls = '--'
 mtlsn_ls = '-'
 tlsn_ls = '-'
-ecdsa_ls = '-'
+ecdsa_ls = '-.'
 
 mtlsn_marker = 'o'
 tlsn_marker = 'x'
